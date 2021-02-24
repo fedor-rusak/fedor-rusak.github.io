@@ -1,5 +1,14 @@
 "use strict";
 
+import {
+	moveCursor,
+	deleteLine,
+	cursorDown,
+	cursorUp,
+	scrollTextUpper
+} from '../lib/vt100-sequences.js';
+import {readGistAsync, writeGistAsync} from '../lib/gist-helpers.js';
+
 const getMutableStream = (writeable) => {
 	let muted = false;
 
@@ -47,11 +56,13 @@ const moveLeft = (backend, index) => {
 
 	if (((index+1) % width) === 0) {
 		let alternate = backend.stdout.buffer.alternate;
+		//works because xterm API returns starting from 0 while
+		//vt100 sequence starts from 1 
 		let resultY = alternate.cursorY;
-		backend.mutableOutput.write("\u001b["+resultY+";"+width+"H");
+		moveCursor(width, resultY, backend.mutableOutput);
 	}
 	else {
-		backend.mutableOutput.write("\x08");
+		backend.mutableOutput.write("\u001b[D");
 	}
 }
 
@@ -60,18 +71,20 @@ const moveRight = (backend, bufferState, writeAsUserBugWTF) => {
 	let width = backend.stdout.cols;
 	let height = backend.stdout.rows;
 
+	//in case of move right that goes to a new line with empty element
 	if ((index % width) === 0) {
 		let alternate = backend.stdout.buffer.alternate;
 		let resultY = alternate.cursorY+2;
+		//when happens near bottom
 		if (resultY > height) {
-			backend.mutableOutput.write("\u001b["+(resultY-height)+"S");
+			scrollTextUpper(1, backend.mutableOutput);
 			resultY = height;
 		}
 		if (writeAsUserBugWTF) {
 			//cursor does not match position on screen
 			resultY += Math.floor(bufferState.data.length/width);
 		}
-		backend.mutableOutput.write("\u001b["+resultY+";"+0+"H");
+		moveCursor(0, resultY, backend.mutableOutput);
 	}
 	else {
 		backend.mutableOutput.write("\u001b[C");
@@ -89,43 +102,36 @@ const redrawInputPart = (backend, bufferState) => {
 	let width = backend.stdout.cols;
 	let startCursorY = alternate.cursorY;
 
-	//another ugly hack to support backspace
+	//hack to support backspace
 	// that leads cursor to previous line end
 	let backspaceFix = 0;
-	if (oldIndex > bufferState.index && ((oldIndex %width) === 0)) {
+	if ((oldIndex > bufferState.index) && ((oldIndex % width) === 0)) {
 		backspaceFix = 1;
 	}
 
-	//this is a way to handle backspace and insert and redraw only
-	//necessary parts
+	//this is a way to handle backspace and insert and redraw of only
+	//affected substring
 	let smallestIndex = 
 		bufferState.oldIndex > bufferState.index ?
 			bufferState.index : bufferState.oldIndex;
-
-	//we redraw only lines that were affected
 	let indexForSubstring = Math.floor(smallestIndex / width)*width;
 	let data = bufferState.data.substring(indexForSubstring);
 	//first we clean possibly broken buffer lines
 	let count = Math.floor(data.length/width)+1;
-	backend.mutableOutput.write("\u001b["+count+"M")
+	deleteLine(count, backend.mutableOutput);
 	//then we calculate cursor position after insert
-	// API gives like it it starts from 0
+	//xterm API gives it like it starts from 0
 	//while vt100 sequences assume it starts from 1
 	let cursorX = bufferState.index % width + 1;
-	let cursorY = startCursorY+1;
+	let cursorY = startCursorY+1-backspaceFix;
 	//set cursor in the beginning of current line 
-	backend.mutableOutput.write("\u001b["+(cursorY-backspaceFix)+";"+0+"H");
+	moveCursor(0, cursorY, backend.mutableOutput);
 	//render line
 	backend.mutableOutput.write(data);
 	//calculate final line
-	cursorY += Math.ceil(bufferState.data.length/width)-1-Math.floor(smallestIndex/width);
+	cursorY += Math.ceil(data.length/width)-1-backspaceFix;
 	//set cursor to final position
-	backend.mutableOutput.write("\u001b["+cursorY+";"+cursorX+"H");
-	//hack for insert near buffer bottom
-	if (cursorY > height) {
-		console.log("maybe down!");
-		backend.mutableOutput.write("\u001b[1B");
-	}
+	moveCursor(cursorX, cursorY, backend.mutableOutput);
 
 
 	//this is a fix for pasting at the end of input
@@ -140,18 +146,16 @@ const redrawInputPart = (backend, bufferState) => {
 		&& (indexJump > 0)
 		&& ((bufferState.index % width) === 0)
 		&& (scrolledLines > 0)) {
-			backend.mutableOutput.write("\u001b[1S");
+			scrollTextUpper(1, backend.mutableOutput);
 	}
 
-	//this a fix for inserting characters NOT in the end of input
-	//while being near buffer bottom. When autoscroll kicks in.
-	//this code fixes final cursor position.
+	//this code moves cursor up to match the edited line
 	let newLinesAfterCurrentIndex =
 		Math.ceil((bufferState.data.length - bufferState.index + (bufferState.index % width))/width)-1;
-	let cursorUps = newLinesAfterCurrentIndex;
+	let cursorUps = newLinesAfterCurrentIndex - backspaceFix;
 
-	if ((cursorUps > 0) && (indexJump > 0)) {
-		backend.mutableOutput.write("\u001b["+(cursorUps)+"A");
+	if (cursorUps > 0) {
+		cursorUp(cursorUps, backend.mutableOutput);
 	}
 }
 
@@ -204,7 +208,8 @@ const initialKeyCallback = (backend, bufferState, appState, event) => {
 			let data = bufferState.data;
 			bufferState.data = data.substring(0, data.length-1);
 			bufferState.index -= 1;
-			moveLeft(backend, bufferState.index)
+			moveLeft(backend, bufferState.index);
+			//delete character
 			backend.mutableOutput.write("\u001b[1P");
 		}
 		else if (bufferState.index > 0) {
@@ -306,10 +311,23 @@ const specializedCallbackChainKeyListener =
 	}
 }
 
-const request = (method, url, token, name, data) => {
+/**
+ * Request to Github Gist service
+ * @param {string} [name] - Description field value of gist
+ *
+ * @return {Promise<string>} - Response text
+ */
+const request = (method, path, token, name, data) => {
+	let nameIsWrong = 
+		name === null || name === undefined || name === "";
+	let methodIsModification = method === "POST" || method === "PATCH";
+	if (nameIsWrong && methodIsModification) {
+		return Promise.reject("gist-name is wrong");
+	}
+
 	return new Promise(function (resolve, reject) {
 		var xhr = new XMLHttpRequest();
-		xhr.open(method, url);
+		xhr.open(method, "https://api.github.com"+path);
 		xhr.setRequestHeader('Accept', 'application/vnd.github.v3+json');
 		xhr.setRequestHeader('Authorization', 'token '+token);
 
@@ -319,8 +337,9 @@ const request = (method, url, token, name, data) => {
 		    if (this.status == 200 || this.status == 201) {
 		        resolve(xhr.responseText);
 		    }
-
-		    reject(this.status);
+		    else {
+		    	reject(this.status);
+			}
 		};
 		if (method === "POST" || method === "PATCH") {
 			let dataToSend = {
@@ -337,6 +356,24 @@ const request = (method, url, token, name, data) => {
 			xhr.send();
 		}
 	});
+}
+
+const xhrGet = (path, callback) => {
+	var xhr = new XMLHttpRequest();
+	xhr.open("GET", path);
+
+	xhr.onreadystatechange = function () {
+		if (this.readyState != 4) return;
+
+	    if (this.status == 200) {
+			callback(null, xhr.responseText);
+		} 
+		else { 
+			callback(this.status);
+		}
+	};
+
+	xhr.send();
 }
 
 const getBrowserBackend = (appState) => {
@@ -413,8 +450,8 @@ const getBrowserBackend = (appState) => {
 		mode: "gist"
 	}
 
-	dataLayer.readFileSync = (path) => {
-		throw new Error("Not supported!");
+	dataLayer.readBundledData = (path, callback) => {
+		xhrGet("../"+path, callback);
 	};
 	dataLayer.readFile = (path, callback) => {
 		setTimeout(()=>{callback("Not supported!");},0);
@@ -424,43 +461,7 @@ const getBrowserBackend = (appState) => {
 	};
 	dataLayer.readData = (callback) => {
 		if (dataLayer.mode === "gist") {
-			request("GET",
-					"https://api.github.com/gists",
-					dataLayer.gistToken
-			).then(
-				(allGists) => {
-					let gistId = "";
-					allGists = JSON.parse(allGists);
-
-					for (let i = 0; i < allGists.length; i++) {
-						let gist = allGists[i];
-						if (gist.public === true) {
-							continue
-						}
-						if (gist.description === dataLayer.gistName) {
-							gistId = gist.id;
-							break;
-						}
-					}
-
-					if (gistId === "") {
-						return Promise.reject("Gist not found!");
-					}
-					else {
-						return request("GET",
-							"https://api.github.com/gists/"+gistId,
-							dataLayer.gistToken
-						);
-					}
-				}
-			)
-			.then((gistResponse) => {
-				let response = JSON.parse(gistResponse);
-
-				return Promise.resolve(response.files["data.json"].content);
-			})
-			.then((data)=>{callback(null, data);})
-			.catch(callback);
+			readGistAsync(request, dataLayer, callback);
 		}
 		else {
 			setTimeout(()=>{callback("Not supported!")},0);
@@ -468,48 +469,7 @@ const getBrowserBackend = (appState) => {
 	};
 	dataLayer.writeData = (data, callback) => {
 		if (dataLayer.mode === "gist") {
-			console.log("1")
-			request("GET",
-					"https://api.github.com/gists",
-					dataLayer.gistToken
-			).then(
-				(allGists) => {
-					let gistId = "";
-					allGists = JSON.parse(allGists);
-
-					for (let i = 0; i < allGists.length; i++) {
-						let gist = allGists[i];
-						if (gist.public === true) {
-							continue
-						}
-						if (gist.description === dataLayer.gistName) {
-							gistId = gist.id;
-							break;
-						}
-					}
-
-					if (gistId === "") {
-						return request(
-							"POST",
-							"https://api.github.com/gists",
-							dataLayer.gistToken,
-							dataLayer.gistName,
-							data
-						)
-					}
-					else {
-						return request(
-							"PATCH",
-							"https://api.github.com/gists/"+gistId,
-							dataLayer.gistToken,
-							dataLayer.gistName,
-							data
-						)
-					}
-				}
-			)
-			.then((data)=>{callback(null, data);})
-			.catch(callback);
+			writeGistAsync(request, dataLayer, data, callback);
 		}
 		else {
 			setTimeout(()=>{callback("Not supported!")},0);
