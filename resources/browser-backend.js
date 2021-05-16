@@ -388,11 +388,12 @@ const getBrowserBackend = (appState) => {
             cursor: '#777',
             selection: '#888'
         },
-        bellStyle: 'sound'
+        bellStyle: 'sound',
+        fontSize: 20,
+        fontFamily: 'courier-new, courier, monospace'
     });
     const fitAddon = new FitAddon.FitAddon()
     term.loadAddon(fitAddon);
-    term.setOption('fontSize', 20);
     term.open(document.getElementById('terminal'));
     const mutableOutput = getMutableStream(term);
     fitAddon.fit();
