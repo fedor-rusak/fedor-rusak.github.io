@@ -1,64 +1,43 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 	<head>
-		<link rel="stylesheet" href="resources/xterm.css" />
-		<script src="resources/xterm.js"></script>
-		<script src="resources/xterm-addon-fit.js"></script>
-		<script type="module">
-			"use strict";
-			import {createAppState} from "./lib/data-helpers.js";
-			import {render} from "./lib/render-helpers.js";
-			import {getLineListener, getKeyListener} from "./lib/app-callbacks.js";
-			import getBrowserBackend from "./resources/browser-backend.js";
-			import {setAlternativeBuffer} from "./lib/vt100-sequences.js";
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
+		<meta charset="utf-8">
+		<title>Welcome!</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
 
-			window.onload = () => {
+		<!-- Mobile Specific Metas
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-				let appState = createAppState({
-					dataFilePath: "not_supported",
-					initialCommands: [
-						[
-							{color: "grey", text: "# Sources and docs at https://github.com/fedor-rusak/thoughts"}
-						],
-						[
-							{color: "grey", text: "# Enter "},
-							{color: "cyan", text: "gist-token"}
-						],
-						[
-							{color: "grey", text: "# Then "},
-							{color: "cyan", text: "gist-name"}
-						],
-						[
-							{color: "grey", text: "# Time to write down some thoughts!"}
-						]
-					]
-				});
+		<link href="resources/font.css" rel="stylesheet" type="text/css">
 
-				let browserBackend = getBrowserBackend(appState);
-				appState.terminalSize = browserBackend.getTerminalSize();
-
-				//setup and first render
-				setAlternativeBuffer(browserBackend.stdout);
-				render(appState.terminalSize, appState.commands, browserBackend.mutableOutput);
-
-				const lineListener = getLineListener(browserBackend, appState);
-				const keyListener = getKeyListener(browserBackend, appState);
-
-				browserBackend.onLine(lineListener);
-				browserBackend.onKey(keyListener);
-			}
-		</script>
-		<style>
-			html, body {
-				height: 100%;
-				padding-left: 3px;
-				margin: 0;
-				background-color: #EEE;
-			}
-		</style>
+		<link rel="stylesheet" href="resources/normalize.css">
+		<link rel="stylesheet" href="resources/skeleton.css">
+		<link rel="stylesheet" href="resources/custom.css">
 	</head>
-	<body>
-		<div id="terminal" style="width:100%;min-height: 100%;"></div>
+
+	<body class="code-snippets-visible" style="text-align: justify;">
+		<div class="container">
+			<section class="header" style="margin-top: 140px;">
+				<h2 class="title">Welcome!</h2>
+				<div class="value-props row">
+					<div class="four columns value-prop">
+						<img class="value-img" style="height:70px; padding-bottom: 7px;" src="resources/pencil.svg">
+						Experimental console-UI note taking app - <a href="thoughts/index.html">Thoughts</a>.
+					</div>
+					<div class="four columns value-prop">
+						<img class="value-img" style="height:70px; padding-bottom: 7px;" src="resources/page.svg">
+						For my miniature hobby I made an <a href="archive/index.html">archive</a>.
+					</div>
+					<div class="four columns value-prop">
+						<img class="value-img" style="height:70px; padding-bottom: 7px;" src="resources/smile.svg">
+						Have a good day!
+					</div>
+				</div>
+			</section>
+		</div>
 	</body>
 </html>

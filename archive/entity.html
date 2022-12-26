@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Entity-related content</title>
+		<style>
+			body {
+				margin: 0px;
+			}
+
+			.section {
+				font-size: 20px;
+				margin: 20px;
+				padding: 20px;
+			}
+			.container {
+				display: inline-flex;
+				flex-wrap: wrap;
+				width: calc(100% - 16px);
+				padding: 7px;
+			}
+
+			.child {
+				min-width: 300px;
+				aspect-ratio: 1 / 1;
+				margin:7px;
+				width: calc(50% - 14px);
+			}
+			@media screen and (max-width: 1010px) {
+				.child {
+					width: 100%;
+				}
+			}
+
+			.child:nth-child(odd) {
+				background-color: #ddd;
+			}
+
+			.child:nth-child(even) {
+				background-color: #eee;
+			}
+
+			.carousel > * {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			.carousel {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+			}
+
+			.slider {
+				width: 100%;
+				height: 100%;
+				display: flex;
+    			flex-direction: row;
+				overflow: hidden; /* <===  */
+				white-space: nowrap;
+				border-radius: 15px;
+			}
+
+			.slide {
+				width: 100%;
+				transition: all 0.5s;
+				flex-shrink: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center; 
+			}
+
+			.slide img {
+				width: 100%;
+				border-radius: 15px;
+			}
+
+			.btn {
+				position: absolute;
+				width: 40px;
+				height: 40px;
+				padding: 10px;
+				padding-top: 7px;
+				border: none;
+				border-radius: 50%;
+				z-index: 10px;
+				cursor: pointer;
+				background-color: #fff;
+				font-size: 18px;
+			}
+			.btn:active {
+				transform: scale(1.1);
+			}
+			.btn-prev {
+				top: 48%;
+				left: 2%;
+			}
+
+			.btn-next {
+				top: 48%;
+				right: 2%;
+			}
+
+			table {
+				width: 100%;
+				font-family: 'Times New Roman', Times, serif;
+				border-width: 0px;
+				border-collapse: collapse;
+				display: table;
+				font-size: 23px;
+			}
+
+			td {
+				padding: 15px;
+			}
+
+			table tr:nth-child(odd) {
+				background-color: #ddd;
+			}
+
+			table tr:nth-child(even) {
+				background-color: #eee;
+			}
+			table tr td:nth-child(1) {
+				text-align: right;
+				width:30%;
+				padding-right: 5px;
+				vertical-align: top;
+				font-weight: bold;
+			}
+			.version {
+				width: 20%;
+				display: inline-block;
+				vertical-align: middle;
+				text-align: center;
+			}
+			.version-btn {
+				padding: 10px 20px 10px 20px;
+			}
+			.text-vertical-middle {
+				vertical-align: middle !important;
+			}
+		</style>
+		<script type="text/javascript" src="data.js"></script>
+		<script>
+			const byId = (query) => {
+				return document.querySelector(query);
+			};
+
+			const slideState = {
+				currentSlideIndex: 0,
+				maxSlideIndex: 0
+			};
+
+			const moveSlide = (slides, current) => {
+				slides.forEach((slide, indx) => {
+				slide.style.transform = `translateX(${-100 *slideState.currentSlideIndex}%)`;
+				});
+			}
+
+			const nextSlide = () => {
+				if (slideState.maxSlideIndex === -1) return;
+
+				if (slideState.currentSlideIndex === slideState.maxSlideIndex) {
+					slideState.currentSlideIndex = 0;
+				} else {
+					slideState.currentSlideIndex++;
+				}
+
+				moveSlide(slideState.slides, slideState.currentSlideIndex);
+			};
+
+			const previousSlide = () => {
+				if (slideState.maxSlideIndex === -1) return;
+
+				if (slideState.currentSlideIndex === 0) {
+					slideState.currentSlideIndex = slideState.maxSlideIndex;
+				} else {
+					slideState.currentSlideIndex--;
+				}
+
+				moveSlide(slideState.slides, slideState.currentSlideIndex);
+			};
+
+			const clearSlideState = () => {
+				slideState.currentSlideIndex = 0;
+				slideState.maxSlideIndex = -1;
+				slideState.slides = undefined;
+
+				const slider = byId("#slider");
+				while(slider.childNodes.length > 0) {
+					slider.removeChild(slider.lastChild);
+				}
+			}
+
+			const setupSlidesState = () => {
+				slideState.slides = document.querySelectorAll(".slide");
+
+				slideState.currentSlideIndex = 0;
+				slideState.maxSlideIndex = slideState.slides.length - 1;
+			}
+
+			const showEntity = (version, editable) => {
+				byId("#version").innerHTML = version;
+				byId("#name").innerHTML = editable.name;
+				byId("#comment").innerHTML = editable.comment.replaceAll("\n", "<br>");
+			}
+
+			const main = () => {
+				const expectedId = window.location.search.substring(4);
+				let id = parseInt(expectedId);
+
+				if (isNaN(id)) {
+					alert("Failed to get entityId from URL paramater");
+					throw new Error("no correct entityId in page URL");
+				}
+
+
+				const entity = data.entities.find( item => item.id === id);
+				const state = {
+					"version": entity.version,
+					"history": data.history.filter( item => item.entityId === entity.id)
+				};
+
+
+				const addImageToSlider = (src) => {
+					const div = document.createElement("div");
+					div.className = "slide";
+					const img = document.createElement("img");
+					img.src = src;
+					div.appendChild(img);
+					byId("#slider").appendChild(div);
+				}
+
+				const populateSlides = (entity) => {
+					const type = entity.type;
+					if (type === "image") {
+						addImageToSlider("images/"+entity.data.src);
+					}
+					else if (entity.data.relations !== undefined) {
+						const relations = entity.data.relations;
+						if (relations.images !== undefined) {
+							if (Array.isArray(relations.images)) {
+								relations.images.forEach((imageEntityId => {
+									const relatedImage = data.entities.find( item => item.id === imageEntityId);
+								addImageToSlider("images/"+relatedImage.editable.data.src);
+								}));
+								setupSlidesState();
+							}
+							else {
+								const relatedImage = data.entities.find( item => item.id === relations.images);
+								addImageToSlider("images/"+relatedImage.editable.data.src);
+							}
+						}
+					}
+				};
+
+				const showVersionOfEntity = (version) => {
+					const toShow = state.history[version - 1].changedTo;
+					showEntity(version, toShow);
+					clearSlideState();
+					populateSlides(toShow);
+				}
+
+				showVersionOfEntity(state.version);
+
+				byId("#previousVersion").addEventListener("click", () => {
+					if (state.version > 1) {
+						state.version -= 1;
+						showVersionOfEntity(state.version);
+					}
+				});
+				byId("#nextVersion").addEventListener("click", () => {
+					if (state.version < state.history.length) {
+						state.version += 1;
+						showVersionOfEntity(state.version);
+					}
+				});
+
+				document.querySelector("#next")
+					.addEventListener("click", nextSlide);
+				document.querySelector("#previous")
+					.addEventListener("click", previousSlide);
+			};
+
+			window.addEventListener("load", main);
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="child carousel">
+				<div class="slider" id="slider">
+				</div>
+
+				<!-- Control buttons -->
+				<button class="btn btn-next" id="next"> > </button>
+				<button class="btn btn-prev" id="previous"> < </button>
+			</div>
+			<div class="child" >
+				<table>
+					<tbody>
+						<tr>
+							<td class="text-vertical-middle">Version:</td>
+							<td><button class="version-btn" id="previousVersion">  <<  </button><div class="version" id="version">1</div><button class="version-btn" id="nextVersion">  >>  </button></td>
+						</tr>
+						<tr>
+							<td>Name:</td>
+							<td id="name">model name</td>
+						</tr>
+						<tr>
+							<td>Comment:</td>
+							<td id="comment">Here you can write whatever you want regarding current state of model or maybe steps to paint it ot improve with modifications.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

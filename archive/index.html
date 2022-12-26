@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Archive for miniature painting hobby</title>
+		<style>
+			body {
+				margin: 0px;
+			}
+
+			.section {
+				font-size: 20px;
+				margin: 20px;
+				padding: 20px;
+				text-transform: uppercase;
+			}
+			.container {
+				display: inline-flex;
+				flex-wrap: wrap;
+				width: calc(100% - 16px);
+				padding: 7px;
+			}
+
+			.child {
+				aspect-ratio: 1 / 1;
+				margin:7px;
+				text-align: center;
+				font-size: 30px;
+				padding: 20px;
+				cursor: pointer;
+			}
+
+			.child-image {
+				padding: 0px;
+			}
+
+			.centered {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+			}
+
+			@media screen and (max-width: 1010px) {
+				.child {
+					width: calc(50% - 54px);
+				}
+				.child-image {
+					width: calc(50% - 14px);
+				}
+			}
+
+			@media screen and (min-width: 1011px) and (max-width: 1500px) {
+				.child {
+					width: calc(33.3% - 54px);
+				}
+				.child-image {
+					width: calc(33.3% - 14px);
+				}
+			}
+
+			@media screen and (min-width: 1501px) {
+				.child {
+					width: calc(25% - 54px);
+				}
+				.child-image {
+					width: calc(25% - 14px);
+				}
+			}
+
+			.child:nth-child(odd) {
+				background-color: #ddd;
+			}
+
+			.child:nth-child(even) {
+				background-color: #eee;
+			}
+
+			/* FIX OF UGLY SELECT */
+			select {
+				background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+				background-position: calc(100% - 0.75rem) center !important;
+				-moz-appearance:none !important;
+				-webkit-appearance: none !important; 
+				appearance: none !important;
+				padding-right: 2rem !important;
+				border-radius: 8px;
+				border-color: lightslategray;
+				border-width: 1px;
+				box-shadow: none;
+			}
+
+			.slide {
+				width: 100%;
+				transition: all 0.5s;
+				flex-shrink: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center; 
+			}
+
+			.child img {
+				width: 100%;
+				border-radius: 15px;
+			}
+		</style>
+		<script type="text/javascript" src="data.js"></script>
+		<script>
+			const byId = (query) => {
+				return document.querySelector(query);
+			};
+
+			const main = () => {
+				const types = [];
+
+				data.entities.forEach((item) => {
+					const type = item.editable.type;
+
+					if (types.indexOf(type) === -1) {
+						types.push(type);
+					}
+				});
+
+				const typesDiv = byId("#types");
+				types.forEach((type) => {
+					const button = document.createElement("button");
+					button.id = type;
+					button.innerHTML = type;
+					button.className = "section";
+					typesDiv.appendChild(button);
+				});
+
+				const container = byId("#container");
+				data.entities.forEach((entity) => {
+					const id = entity.id;
+					const name = entity.editable.name;
+
+					const item = document.createElement("div");
+					item.classList = "child centered";
+					if (entity.editable.type === "image") {
+						const img = document.createElement("img");
+						img.src = "images/" + entity.editable.data.src;
+						item.appendChild(img);
+						item.classList += " child-image";
+					}
+					else {
+						item.innerHTML = name;
+					}
+					container.appendChild(item);
+					item.addEventListener("click", () => {location.href='entity.html?id=' + id;});
+				});
+			};
+
+			window.addEventListener("load", main);
+		</script>
+	</head>
+	<body>
+		<div id="types" style="text-align: center;">
+		</div>
+		<div style="text-align: center; width: calc(100% - 16px); margin: 10px;margin-bottom: 20px;">
+			<select style="font-size: 20px; margin: 10px; padding: 15px; " id="sort">
+				<option value="idAsc">By Id Ascending</option>
+				<option value="idDesc">By Id Descending</option>
+				<option value="updatedAsc">By Updated Ascending</option>
+				<option value="updatedDesc">By Update Descending</option>
+			</select>
+		</div>
+		<div class="container" id="container">
+		</div>
+	</body>
+</html>

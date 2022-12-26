@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Entity modification page</title>
+		<style>
+			body {
+				margin: 0px;
+			}
+
+			.section {
+				font-size: 20px;
+				margin: 20px;
+				padding: 20px;
+			}
+			.container {
+				display: inline-flex;
+				flex-wrap: wrap;
+				border-width: 0px;
+				width: calc(100% - 16px);
+				padding: 7px;
+			}
+
+			.child {
+				min-width: 300px;
+				aspect-ratio: 1 / 1;
+				margin:7px;
+				width: calc(50% - 14px);
+			}
+			@media screen and (max-width: 1010px) {
+				.child {
+					width: 100%;
+				}
+			}
+
+			.child:nth-child(odd) {
+				background-color: #ddd;
+			}
+
+			.child:nth-child(even) {
+				background-color: #eee;
+			}
+
+			table {
+				width: 100%;
+				font-family: 'Times New Roman', Times, serif;
+				border-width: 0px;
+				border-collapse: collapse;
+				display: table;
+				font-size: 23px;
+			}
+
+			td {
+				padding: 15px;
+			}
+
+			table tr:nth-child(odd) {
+				background-color: #ddd;
+			}
+
+			table tr:nth-child(even) {
+				background-color: #eee;
+			}
+			table tr td:nth-child(1) {
+				text-align: right;
+				width:25%;
+				padding-right: 10px;
+				vertical-align: top;
+				font-weight: bold;
+			}
+			.version {
+				width: 20%;
+				display: inline-block;
+				vertical-align: middle;
+				text-align: center;
+			}
+			.version-btn {
+				padding: 10px 20px 10px 20px;
+			}
+			.text-vertical-middle {
+				vertical-align: middle !important;
+			}
+			/* FIX OF UGLY SELECT */
+			select {
+				background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+				background-position: calc(100% - 0.75rem) center !important;
+				-moz-appearance:none !important;
+				-webkit-appearance: none !important; 
+				appearance: none !important;
+				padding-right: 2rem !important;
+				border-radius: 8px;
+				border-color: lightslategray;
+				border-width: 1px;
+				box-shadow: none;
+			}
+			.action-btn {
+				float: right;
+				padding: 15px;
+				font-size: 20px;
+				margin-right: 20px;
+				margin-top: 10px;
+				width: 20%;
+			}
+			textarea {
+				padding: 10px;
+			}
+		</style>
+		<script type="text/javascript" src="data.js"></script>
+		<script>
+			const byId = (query) => {
+				return document.querySelector(query);
+			};
+
+			const main = () => {
+				let state = data;
+
+
+				const setIdOptions = (entities) => {
+					const idSelect = byId("#entityId");
+
+					while(idSelect.childNodes.length > 0) {
+						idSelect.removeChild(idSelect.lastChild);
+					}
+
+					const newId = document.createElement("option");
+					newId.value = "new";
+					newId.text = "New";
+					idSelect.appendChild(newId);
+					entities.forEach( (item) => {
+						const newOption = document.createElement("option");
+						newOption.value = item.id;
+						newOption.text = item.editable.name;
+						idSelect.appendChild(newOption);
+					});
+				};
+
+				setIdOptions(state.entities);
+				byId("#storage").value = JSON.stringify(state, null, 4);
+				byId("#records").innerHTML = "Records: " + state.entities.length;
+				byId("#entityName").value = "";
+				byId("#entityType").value = "image";
+				byId("#comment").value = "";
+				byId("#data").value = "{}";
+
+				const saveHandler = () => {
+
+					const entity = {
+						"id": byId("#entityId").value,
+						"version": 1,
+						"editable": {
+							"type": byId("#entityType").value,
+							"name": byId("#entityName").value,
+							"comment": byId("#comment").value,
+						}
+					};
+
+					const historyRecord = {
+						"id": state.history.length + 1
+					}
+
+					try {
+						entity.editable["data"] = JSON.parse(byId("#data").value);
+					} catch (e) {
+						alert("Failed to parse data as JSON:\n" + e);
+						return;
+					}
+
+					if (entity.id === "new") {
+						entity.id = state["entities"].length + 1;
+						historyRecord["changedFrom"] = {};
+						state.entities.push(entity);
+						byId("#records").innerHTML = "Records: " + state.entities.length;
+						setIdOptions(state.entities);
+						byId("#entityId").value = entity.id;
+					} else {
+						entity.id = parseInt(entity.id)
+						const originalEntity = state.entities.find(item => item.id === entity.id);
+						historyRecord["changedFrom"] = originalEntity.editable;
+						originalEntity.editable = entity.editable;
+						originalEntity.version += 1;
+					}
+
+					historyRecord["entityId"] = entity.id;
+					historyRecord["changedTo"] = entity.editable;
+					
+					state.history.push(historyRecord);
+				};
+				document.querySelector("#save").addEventListener("click", saveHandler);
+				const loadHandler = () => {
+					let newState;
+
+					try {
+						newState = JSON.parse(byId("#storage").value);
+					} catch (e) {
+						alert("Failed to parse loaded data:\n" + e);
+						return;
+					}
+
+					state = newState;
+					setIdOptions(state.entities);
+					byId("#records").innerHTML = "Records: " + state.entities.length;
+				}
+				document.querySelector("#load").addEventListener("click", loadHandler);
+
+				const extractHandler = () => {
+					byId("#storage").value = JSON.stringify(state, null, 4);
+				};
+				document.querySelector("#extract").addEventListener("click", extractHandler);
+
+				const onEntityIdChangeHandler = (event) => {
+					const id = event.target.value;
+					if (id === "new") {
+						byId("#entityName").value = "";
+						byId("#entityType").value = "image";
+						byId("#comment").value = "";
+						byId("#data").value = "{}";
+					}
+					else {
+						const entity = state.entities.find(item => item.id === parseInt(id));
+						byId("#entityName").value = entity.editable.name || "";
+						byId("#entityType").value = entity.editable.type;
+						byId("#comment").value = entity.editable.comment || "";
+						byId("#data").value = JSON.stringify(entity.editable.data, null, 4);
+					}
+				}
+
+				byId("#entityId").addEventListener("change", onEntityIdChangeHandler);
+			};
+
+			window.addEventListener("load", main);
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="child">
+				<textarea id="storage" style="width:calc(100% - 60px); height:calc(100% - 132px); font-size: 20px; margin: 15px; margin-bottom:8px;">{}</textarea>
+				<button class="action-btn" id="load">Load</button>
+				<button class="action-btn" id="extract">Extract</button>
+			</div>
+			<div class="child" >
+				<table>
+					<tbody>
+						<tr>
+							<td class="text-vertical-middle">Id:</td>
+							<td>
+								<select style="font-size: 20px; margin: 10px; margin-left: 0px; padding: 15px; " id="entityId"></select>
+							</td>
+						</tr>
+						<tr>
+							<td class="text-vertical-middle">Type:</td>
+							<td>
+								<select style="font-size: 20px; margin: 10px; margin-left: 0px; padding: 15px; " id="entityType">
+									<option value="image">Image</option>
+									<option value="model">Model</option>
+									<option value="set">Set</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td class="text-vertical-middle">Name:</td>
+							<td>
+								<input style="width:calc(100% - 25px);padding: 10px; font-size: 20px;" id="entityName"></input>
+							</td>
+						</tr>
+						<tr>
+							<td>Comment:</td>
+							<td>
+								<textarea style="width:calc(100% - 30px); height:70px; font-size: 20px;" id="comment"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td>Data:</td>
+							<td>
+								<textarea style="width:calc(100% - 30px); height:202px; font-size: 20px;" id="data">{}</textarea>
+							</td>
+						</tr>
+						<tr>
+							<td class="text-vertical-middle" style="text-align: center; padding-bottom: 5px;" id="records">Records: 0</td>
+							<td>
+								<button class="action-btn" id="save" style="margin-top: 7px; margin-right: 5px;">Save</button>
+								<button class="action-btn" style="margin-top: 7px;">Delete</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
