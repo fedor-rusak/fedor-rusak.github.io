@@ -3,10 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Archive for miniature painting hobby</title>
+		<title>Archive for hobby information</title>
 		<style>
 			body {
 				margin: 0px;
+				background-color: #eeeeee;
 			}
 
 			.section {
@@ -42,7 +43,16 @@
 				height: 100%;
 			}
 
-			@media screen and (max-width: 1010px) {
+			@media screen and (max-width: 610px) {
+				.child {
+					width: calc(100% - 54px);
+				}
+				.child-image {
+					width: calc(100% - 14px);
+				}
+			}
+
+			@media screen and (min-width: 611px) and (max-width: 1010px) {
 				.child {
 					width: calc(50% - 54px);
 				}
@@ -70,15 +80,15 @@
 			}
 
 			.child:nth-child(odd) {
-				background-color: #ddd;
+				background: radial-gradient(65% 50% at center , #d5d5d5 30%, #eeeeee 75%);
 			}
 
 			.child:nth-child(even) {
-				background-color: #eee;
+				background: radial-gradient(65% 50% at center , #dfdfdf 30%, #eeeeee 75%);
 			}
 
 			/* FIX OF UGLY SELECT */
-			select {
+			select, .multiselect {
 				background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
 				background-position: calc(100% - 0.75rem) center !important;
 				-moz-appearance:none !important;
@@ -103,6 +113,46 @@
 			.child img {
 				width: 100%;
 				border-radius: 15px;
+			}
+
+			button, select, .multiselect {
+				font-family: Arial;
+			}
+
+			.multiselect {
+				border-color: lightslategray !important;
+				border-radius: 10px;
+				border: solid 1px;
+				position: relative;
+				width: 170px;
+				user-select: none;
+			}
+
+			#multipleCheckbox {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 55px;
+				display: none;
+				border: 1px solid;
+				border-color: lightslategray !important;
+				border-radius: 10px;
+				padding-top: 7px;
+				background-color: #e5e5e5;
+			}
+
+			.tagOption {
+				display: table-cell;
+				vertical-align: middle;
+				height: 35px;
+				float: left;
+				clear: left;
+			}
+			.tagOption label {
+				vertical-align: -2px;
+			}
+			.tagOption input {
+				margin-left: 12px;
 			}
 		</style>
 		<script type="text/javascript" src="data.js"></script>
@@ -137,18 +187,35 @@
 					const name = entity.editable.name;
 
 					const item = document.createElement("div");
-					item.classList = "child centered";
+					item.classList.add("child", "centered");
 					if (entity.editable.type === "image") {
 						const img = document.createElement("img");
 						img.src = "images/" + entity.editable.data.src;
 						item.appendChild(img);
-						item.classList += " child-image";
+						item.classList.add("child-image");
 					}
 					else {
 						item.innerHTML = name;
 					}
 					container.appendChild(item);
 					item.addEventListener("click", () => {location.href='entity.html?id=' + id;});
+				});
+
+				const state = {
+					tagsOpen: false
+				};
+				byId("#tags").addEventListener("click", () => {
+					const checkboxes = byId("#multipleCheckbox");
+					if (!state.tagsOpen) {
+						checkboxes.style.display = "block";
+						state.tagsOpen = true;
+					} else {
+						checkboxes.style.display = "none";
+						state.tagsOpen = false;
+					}
+				});
+				byId("#multipleCheckbox").addEventListener("click", (e) => {
+					e.stopPropagation();
 				});
 			};
 
@@ -159,11 +226,26 @@
 		<div id="types" style="text-align: center;">
 		</div>
 		<div style="text-align: center; width: calc(100% - 16px); margin: 10px;margin-bottom: 20px;">
-			<select style="font-size: 20px; margin: 10px; padding: 15px; " id="sort">
+			<div class="multiselect" style="font-size: 20px; margin: 10px; padding: 15px; display: inline-block;" id="tags">
+					<div style="text-align: left;">
+						Filter by tags
+					</div>
+					<div id="multipleCheckbox">
+						<div class="tagOption">
+							<input type="checkbox" id="1">
+							<label for="1">Tag1</label>
+						</div>
+						<div class="tagOption">
+							<input type="checkbox" id="2">
+							<label for="2">Tag2</label>
+						</div>
+					</div>
+			</div>
+			<select style="font-size: 20px; margin: 10px; padding: 15px; display: inline-block; vertical-align: top;" id="sort">
 				<option value="idAsc">By Id Ascending</option>
 				<option value="idDesc">By Id Descending</option>
-				<option value="updatedAsc">By Updated Ascending</option>
-				<option value="updatedDesc">By Update Descending</option>
+				<option value="nameAsc">By Name Ascending</option>
+				<option value="nameDesc">By Name Descending</option>
 			</select>
 		</div>
 		<div class="container" id="container">
