@@ -137,21 +137,27 @@
 				border: 1px solid;
 				border-color: lightslategray !important;
 				border-radius: 10px;
-				padding-top: 7px;
+				padding-top: 10px;
 				background-color: #e5e5e5;
+				max-height: 300px;
+				overflow-y: auto;
 			}
 
 			.tagOption {
-				display: table-cell;
-				vertical-align: middle;
 				height: 35px;
 				float: left;
 				clear: left;
 			}
 			.tagOption label {
-				vertical-align: -2px;
+				overflow: hidden;
+				width: 165px;
+				display: inline-block;
+				text-align: left;
 			}
 			.tagOption input {
+				float: left;
+				margin-top: 5px;
+				margin-right: 7px;
 				margin-left: 12px;
 			}
 		</style>
@@ -201,21 +207,34 @@
 					item.addEventListener("click", () => {location.href='entity.html?id=' + id;});
 				});
 
-				const state = {
-					tagsOpen: false
+				const hideTagOptions = () => {
+					byId("#multipleCheckbox").style.display = "none";
 				};
+
 				byId("#tags").addEventListener("click", () => {
 					const checkboxes = byId("#multipleCheckbox");
-					if (!state.tagsOpen) {
-						checkboxes.style.display = "block";
-						state.tagsOpen = true;
+
+					if (checkboxes.style.display === "block") {
+						hideTagOptions();
 					} else {
-						checkboxes.style.display = "none";
-						state.tagsOpen = false;
+						checkboxes.style.display = "block";
 					}
 				});
 				byId("#multipleCheckbox").addEventListener("click", (e) => {
 					e.stopPropagation();
+				});
+				document.addEventListener("click", (e) => {
+					const id = e.target.id;
+
+					if (id !== "multipleCheckbox" && id !== "tags" && id !== "tagsOptionsLabel") {
+						hideTagOptions();
+					}
+				});
+				byId("#sort").addEventListener("focus", () => {
+					hideTagOptions();
+				});
+				byId("#sort").addEventListener("change", (e) => {
+					console.log(e.target.value);
 				});
 			};
 
@@ -227,7 +246,7 @@
 		</div>
 		<div style="text-align: center; width: calc(100% - 16px); margin: 10px;margin-bottom: 20px;">
 			<div class="multiselect" style="font-size: 20px; margin: 10px; padding: 15px; display: inline-block;" id="tags">
-					<div style="text-align: left;">
+					<div style="text-align: left;" id="tagsOptionsLabel">
 						Filter by tags
 					</div>
 					<div id="multipleCheckbox">
