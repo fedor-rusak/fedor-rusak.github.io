@@ -68,7 +68,7 @@ const data = {
                 "name": "Skink starpriest simple photo",
                 "comment": "Quick photo of skink starpriest model with white background (mostly).",
                 "data": {
-                    "src": "skink_starpriest_model.jpg"
+                    "src": "model_skink_starpriest.jpg"
                 }
             }
         },
@@ -141,6 +141,129 @@ const data = {
                 "comment": "Swarm of small reptiles!",
                 "data": {
                     "src": "skinks_box_face.jpg"
+                }
+            }
+        },
+        {
+            "id": 12,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Amsterdam Acrylic Yellow",
+                "comment": "Took to mix paints.",
+                "data": {
+                    "src": "amsterdam_acrylic_nickel_titanium_yellow.jpg",
+                    "tags": [
+                        "paint"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 13,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Amsterdam Zinc White",
+                "comment": "Took to mix paints.",
+                "data": {
+                    "src": "amsterdam_acrylic_zinc_white.jpg",
+                    "tags": [
+                        "paint"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 14,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Golden Fluid Deep Blue",
+                "comment": "To experiment with color mixing.",
+                "data": {
+                    "src": "golden_fluid_acrylics_deep_blue.jpg",
+                    "tags": [
+                        "paint"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 15,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Golden Fluid Primary Magenta",
+                "comment": "To experiment with color mixing.",
+                "data": {
+                    "src": "golden_fluid_acrylics_primary_magenta.jpg",
+                    "tags": [
+                        "paint"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 16,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Golden Fluid Titanium White",
+                "comment": "To experiment with color mixing.",
+                "data": {
+                    "src": "golden_fluid_acrylics_titanium_white.jpg",
+                    "tags": [
+                        "paint"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 17,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Green Stuff grass tufts 2mm",
+                "comment": "Small dry-looking tufts for basing.",
+                "data": {
+                    "src": "green_stuff_grass_tufts_2mm.jpg",
+                    "tags": [
+                        "green stuff",
+                        "tuft"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 18,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Vallejo wild tuft 6mm",
+                "comment": "Large grass tufts.",
+                "data": {
+                    "src": "vallejo_wild_tuft_beige_large_6mm.jpg",
+                    "tags": [
+                        "vallejo",
+                        "tuft"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 19,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Vallejo wild tuft extra large",
+                "comment": "These grass things are huge!",
+                "data": {
+                    "src": "vallejo_wild_tuft_beige_extra_large_12mm.jpg",
+                    "tags": [
+                        "vallejo",
+                        "tuft"
+                    ]
                 }
             }
         }
@@ -247,7 +370,7 @@ const data = {
                 "name": "Skink starpriest simple photo",
                 "comment": "Quick photo of skink starpriest model with white background (mostly).",
                 "data": {
-                    "src": "skink_starpriest_model.jpg"
+                    "src": "model_skink_starpriest.jpg"
                 }
             }
         },
@@ -418,6 +541,137 @@ const data = {
                             11
                         ]
                     }
+                }
+            }
+        },
+        {
+            "id": 19,
+            "changedFrom": {},
+            "entityId": 12,
+            "changedTo": {
+                "type": "image",
+                "name": "Amsterdam Acrylic Yellow",
+                "comment": "Took to mix paints.",
+                "data": {
+                    "src": "amsterdam_acrylic_nickel_titanium_yellow.jpg",
+                    "tags": [
+                        "paint"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 20,
+            "changedFrom": {},
+            "entityId": 13,
+            "changedTo": {
+                "type": "image",
+                "name": "Amsterdam Zinc White",
+                "comment": "Took to mix paints.",
+                "data": {
+                    "src": "amsterdam_acrylic_zinc_white.jpg",
+                    "tags": [
+                        "paint"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 21,
+            "changedFrom": {},
+            "entityId": 14,
+            "changedTo": {
+                "type": "image",
+                "name": "Golden Fluid Deep Blue",
+                "comment": "To experiment with color mixing.",
+                "data": {
+                    "src": "golden_fluid_acrylics_deep_blue.jpg",
+                    "tags": [
+                        "paint"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 22,
+            "changedFrom": {},
+            "entityId": 15,
+            "changedTo": {
+                "type": "image",
+                "name": "Golden Fluid Primary Magenta",
+                "comment": "To experiment with color mixing.",
+                "data": {
+                    "src": "golden_fluid_acrylics_primary_magenta.jpg",
+                    "tags": [
+                        "paint"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 23,
+            "changedFrom": {},
+            "entityId": 16,
+            "changedTo": {
+                "type": "image",
+                "name": "Golden Fluid Titanium White",
+                "comment": "To experiment with color mixing.",
+                "data": {
+                    "src": "golden_fluid_acrylics_titanium_white.jpg",
+                    "tags": [
+                        "paint"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 24,
+            "changedFrom": {},
+            "entityId": 17,
+            "changedTo": {
+                "type": "image",
+                "name": "Green Stuff grass tufts 2mm",
+                "comment": "Small dry-looking tufts for basing.",
+                "data": {
+                    "src": "green_stuff_grass_tufts_2mm.jpg",
+                    "tags": [
+                        "green stuff",
+                        "tuft"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 25,
+            "changedFrom": {},
+            "entityId": 18,
+            "changedTo": {
+                "type": "image",
+                "name": "Vallejo wild tuft 6mm",
+                "comment": "Large grass tufts.",
+                "data": {
+                    "src": "vallejo_wild_tuft_beige_large_6mm.jpg",
+                    "tags": [
+                        "vallejo",
+                        "tuft"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 26,
+            "changedFrom": {},
+            "entityId": 19,
+            "changedTo": {
+                "type": "image",
+                "name": "Vallejo wild tuft extra large",
+                "comment": "These grass things are huge!",
+                "data": {
+                    "src": "vallejo_wild_tuft_beige_extra_large_12mm.jpg",
+                    "tags": [
+                        "vallejo",
+                        "tuft"
+                    ]
                 }
             }
         }
