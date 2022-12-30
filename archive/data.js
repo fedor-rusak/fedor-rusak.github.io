@@ -21,11 +21,21 @@ const data = {
             "id": 2,
             "editable": {
                 "type": "set",
-                "name": "Seraphon team with alpha warrior!",
-                "comment": "Saurus warrior alpha 135\nSaurus warrior with spear 90x3\nSaurus warrior with club 85x7",
-                "data": {}
+                "name": "Skaven team with clawleader!",
+                "comment": "Clawleader 125\nrat ogor 225\nrat ogor with gun 225\npackmaster 70x2\nclanrat with spear 70x2\nclanrat with blade 70x2",
+                "data": {
+                    "relations": {
+                        "images": [
+                            26,
+                            27,
+                            28,
+                            29,
+                            30
+                        ]
+                    }
+                }
             },
-            "version": 1
+            "version": 3
         },
         {
             "id": 3,
@@ -264,6 +274,242 @@ const data = {
                         "vallejo",
                         "tuft"
                     ]
+                }
+            }
+        },
+        {
+            "id": 20,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Vallejo primer white",
+                "comment": "To use for zenithal highlighting.",
+                "data": {
+                    "src": "vallejo_surface_primer_white.jpg",
+                    "tags": [
+                        "vallejo",
+                        "primer"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 21,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Vallejo primer black",
+                "comment": "For use with zenithal highlighting.",
+                "data": {
+                    "src": "vallejo_surface_primer_black.jpg",
+                    "tags": [
+                        "vallejo",
+                        "primer"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 22,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Vallejo primer leather brown",
+                "comment": "Wanted to paint something brown, like stones or bones.",
+                "data": {
+                    "src": "vallejo_surface_primer_leather_brown.jpg",
+                    "tags": [
+                        "vallejo",
+                        "primer"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 23,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Vallejo primer desert tan",
+                "comment": "I guess to use it with terrain.",
+                "data": {
+                    "src": "vallejo_surface_primer_desert_tan.jpg",
+                    "tags": [
+                        "vallejo",
+                        "primer"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 24,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Vallejo primer grey",
+                "comment": "This one for most priming usages.",
+                "data": {
+                    "src": "vallejo_surface_primer_grey.jpg",
+                    "tags": [
+                        "vallejo",
+                        "primer"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 25,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Vallejo primer skeletone bone",
+                "comment": "I guess I wanted to speded up some skeletons painting.",
+                "data": {
+                    "src": "vallejo_surface_primer_skeleton_bone.jpg",
+                    "tags": [
+                        "vallejo",
+                        "primer"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 26,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Bits set packmaster 1",
+                "comment": "One of skaven packmasters bits set.",
+                "data": {
+                    "src": "bits_set_packmaster_1.jpg"
+                }
+            }
+        },
+        {
+            "id": 27,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Bits set packmaster 2",
+                "comment": "Another skaven packmaster bits set.",
+                "data": {
+                    "src": "bits_set_packmaster_2.jpg"
+                }
+            }
+        },
+        {
+            "id": 28,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Bits set rat ogor with gun",
+                "comment": "Bits set to assemble model of skaven rat ogor with warpfire gun.",
+                "data": {
+                    "src": "bits_set_rat_ogor_with_gun.jpg"
+                }
+            }
+        },
+        {
+            "id": 29,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Bits set melee rat ogor",
+                "comment": "Bits set to assemble skaven rat ogor.",
+                "data": {
+                    "src": "bits_set_rat_ogor.jpg"
+                }
+            }
+        },
+        {
+            "id": 30,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Clanrats box face photo",
+                "comment": "Yes-yes master! Set of clanrats and clawleader",
+                "data": {
+                    "src": "clanrats_box_face.jpg"
+                }
+            }
+        },
+        {
+            "id": 31,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Model aether-khemist",
+                "comment": "Kharadron aether-khemist (Underworlds warband).",
+                "data": {
+                    "src": "model_aether_khemist.jpg"
+                }
+            }
+        },
+        {
+            "id": 32,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Model thunderer with rifle",
+                "comment": "Khardron grundstock thunderer with aethershot rifle (Underworlds warband).",
+                "data": {
+                    "src": "model_grundstock_thunderer_with_aethershot_rifle.jpg"
+                }
+            }
+        },
+        {
+            "id": 33,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Model skywarden with pistol & skypike",
+                "comment": "Skywarden with pistol and skypike (Underworlds warband).",
+                "data": {
+                    "src": "model_skywarden_with_pistol_and_skypike.jpg"
+                }
+            }
+        },
+        {
+            "id": 34,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Arkanaut company box face photo",
+                "comment": "Set of 9 dwarfs and captain.",
+                "data": {
+                    "src": "arkanaut_company_box_face.jpg"
+                }
+            }
+        },
+        {
+            "id": 35,
+            "version": 1,
+            "editable": {
+                "type": "image",
+                "name": "Arkanaut company box back photo",
+                "comment": "Skyhook, skypike versions available for privateers.",
+                "data": {
+                    "src": "arkanaut_company_box_back.jpg"
+                }
+            }
+        },
+        {
+            "id": 36,
+            "version": 1,
+            "editable": {
+                "type": "set",
+                "name": "Kharadron team with aether-khemist",
+                "comment": "aether-khemist 155\ncompany captain 90\nthunderer with aethershot rifle 105\nskywarden with pistol & skypike 175\nprivateer with skyhook 105\nprivateer with volley gun 80\nprivateer with skypike 75\nprivateer with pistol & cutter 50x4",
+                "data": {
+                    "relations": {
+                        "images": [
+                            31,
+                            32,
+                            33,
+                            34,
+                            35
+                        ]
+                    }
                 }
             }
         }
@@ -672,6 +918,321 @@ const data = {
                         "vallejo",
                         "tuft"
                     ]
+                }
+            }
+        },
+        {
+            "id": 27,
+            "changedFrom": {},
+            "entityId": 20,
+            "changedTo": {
+                "type": "image",
+                "name": "Vallejo primer white",
+                "comment": "To use for zenithal highlighting.",
+                "data": {
+                    "src": "vallejo_surface_primer_white.jpg",
+                    "tags": [
+                        "vallejo",
+                        "primer"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 28,
+            "changedFrom": {},
+            "entityId": 21,
+            "changedTo": {
+                "type": "image",
+                "name": "Vallejo primer black",
+                "comment": "For use with zenithal highlighting.",
+                "data": {
+                    "src": "vallejo_surface_primer_black.jpg",
+                    "tags": [
+                        "vallejo",
+                        "primer"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 29,
+            "changedFrom": {},
+            "entityId": 22,
+            "changedTo": {
+                "type": "image",
+                "name": "Vallejo primer leather brown",
+                "comment": "Wanted to paint something brown, like stones or bones.",
+                "data": {
+                    "src": "vallejo_surface_primer_leather_brown.jpg",
+                    "tags": [
+                        "vallejo",
+                        "primer"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 30,
+            "changedFrom": {},
+            "entityId": 23,
+            "changedTo": {
+                "type": "image",
+                "name": "Vallejo primer desert tan",
+                "comment": "I guess to use it with terrain.",
+                "data": {
+                    "src": "vallejo_surface_primer_desert_tan.jpg",
+                    "tags": [
+                        "vallejo",
+                        "primer"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 31,
+            "changedFrom": {},
+            "entityId": 24,
+            "changedTo": {
+                "type": "image",
+                "name": "Vallejo primer grey",
+                "comment": "This one for most priming usages.",
+                "data": {
+                    "src": "vallejo_surface_primer_grey.jpg",
+                    "tags": [
+                        "vallejo",
+                        "primer"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 32,
+            "changedFrom": {},
+            "entityId": 25,
+            "changedTo": {
+                "type": "image",
+                "name": "Vallejo primer skeletone bone",
+                "comment": "I guess I wanted to speded up some skeletons painting.",
+                "data": {
+                    "src": "vallejo_surface_primer_skeleton_bone.jpg",
+                    "tags": [
+                        "vallejo",
+                        "primer"
+                    ]
+                }
+            }
+        },
+        {
+            "id": 33,
+            "changedFrom": {},
+            "entityId": 26,
+            "changedTo": {
+                "type": "image",
+                "name": "Bits set packmaster 1",
+                "comment": "One of skaven packmasters bits set.",
+                "data": {
+                    "src": "bits_set_packmaster_1.jpg"
+                }
+            }
+        },
+        {
+            "id": 34,
+            "changedFrom": {},
+            "entityId": 27,
+            "changedTo": {
+                "type": "image",
+                "name": "Bits set packmaster 2",
+                "comment": "Another skaven packmaster bits set.",
+                "data": {
+                    "src": "bits_set_packmaster_2.jpg"
+                }
+            }
+        },
+        {
+            "id": 35,
+            "changedFrom": {},
+            "entityId": 28,
+            "changedTo": {
+                "type": "image",
+                "name": "Bits set rat ogor with gun",
+                "comment": "Bits set to assemble model of skaven rat ogor with warpfire gun.",
+                "data": {
+                    "src": "bits_set_rat_ogor_with_gun.jpg"
+                }
+            }
+        },
+        {
+            "id": 36,
+            "changedFrom": {},
+            "entityId": 29,
+            "changedTo": {
+                "type": "image",
+                "name": "Bits set melee rat ogor",
+                "comment": "Bits set to assemble skaven rat ogor.",
+                "data": {
+                    "src": "bits_set_rat_ogor.jpg"
+                }
+            }
+        },
+        {
+            "id": 37,
+            "changedFrom": {},
+            "entityId": 30,
+            "changedTo": {
+                "type": "image",
+                "name": "Clanrats box face photo",
+                "comment": "Yes-yes master! Set of clanrats and clawleader",
+                "data": {
+                    "src": "clanrats_box_face.jpg"
+                }
+            }
+        },
+        {
+            "id": 38,
+            "changedFrom": {
+                "type": "set",
+                "name": "Seraphon team with alpha warrior!",
+                "comment": "Saurus warrior alpha 135\nSaurus warrior with spear 90x3\nSaurus warrior with club 85x7",
+                "data": {}
+            },
+            "entityId": 2,
+            "changedTo": {
+                "type": "set",
+                "name": "Skaven team with clawleader!",
+                "comment": "Clawleader 125\nrat ogor 225\nrat ogor with gun 225\npackmaster 70x2\nclanrat with spear 70x2\nclanrat with blade 70x2\nSaurus warrior with club 85x7",
+                "data": {
+                    "relations": {
+                        "images": [
+                            26,
+                            27,
+                            28,
+                            29,
+                            30
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "id": 39,
+            "changedFrom": {},
+            "entityId": 31,
+            "changedTo": {
+                "type": "image",
+                "name": "Model aether-khemist",
+                "comment": "Kharadron aether-khemist (Underworlds warband).",
+                "data": {
+                    "src": "model_aether_khemist.jpg"
+                }
+            }
+        },
+        {
+            "id": 40,
+            "changedFrom": {},
+            "entityId": 32,
+            "changedTo": {
+                "type": "image",
+                "name": "Model thunderer with rifle",
+                "comment": "Khardron grundstock thunderer with aethershot rifle (Underworlds warband).",
+                "data": {
+                    "src": "model_grundstock_thunderer_with_aethershot_rifle.jpg"
+                }
+            }
+        },
+        {
+            "id": 41,
+            "changedFrom": {},
+            "entityId": 33,
+            "changedTo": {
+                "type": "image",
+                "name": "Model skywarden with pistol & skypike",
+                "comment": "Skywarden with pistol and skypike (Underworlds warband).",
+                "data": {
+                    "src": "model_skywarden_with_pistol_and_skypike.jpg"
+                }
+            }
+        },
+        {
+            "id": 42,
+            "changedFrom": {},
+            "entityId": 34,
+            "changedTo": {
+                "type": "image",
+                "name": "Arkanaut company box face photo",
+                "comment": "Set of 9 dwarfs and captain.",
+                "data": {
+                    "src": "arkanaut_company_box_face.jpg"
+                }
+            }
+        },
+        {
+            "id": 43,
+            "changedFrom": {},
+            "entityId": 35,
+            "changedTo": {
+                "type": "image",
+                "name": "Arkanaut company box back photo",
+                "comment": "Skyhook, skypike versions available for privateers.",
+                "data": {
+                    "src": "arkanaut_company_box_back.jpg"
+                }
+            }
+        },
+        {
+            "id": 44,
+            "changedFrom": {},
+            "entityId": 36,
+            "changedTo": {
+                "type": "set",
+                "name": "Kharadron team with aether-khemist",
+                "comment": "aether-khemist 155\ncompany captain 90\nthunderer with aethershot rifle 105\nskywarden with pistol & skypike 175\nprivateer with skyhook 105\nprivateer with volley gun 80\nprivateer with skypike 75\nprivateer with pistol & cutter 50x4",
+                "data": {
+                    "relations": {
+                        "images": [
+                            31,
+                            32,
+                            33,
+                            34,
+                            35
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "id": 45,
+            "changedFrom": {
+                "type": "set",
+                "name": "Skaven team with clawleader!",
+                "comment": "Clawleader 125\nrat ogor 225\nrat ogor with gun 225\npackmaster 70x2\nclanrat with spear 70x2\nclanrat with blade 70x2\nSaurus warrior with club 85x7",
+                "data": {
+                    "relations": {
+                        "images": [
+                            26,
+                            27,
+                            28,
+                            29,
+                            30
+                        ]
+                    }
+                }
+            },
+            "entityId": 2,
+            "changedTo": {
+                "type": "set",
+                "name": "Skaven team with clawleader!",
+                "comment": "Clawleader 125\nrat ogor 225\nrat ogor with gun 225\npackmaster 70x2\nclanrat with spear 70x2\nclanrat with blade 70x2",
+                "data": {
+                    "relations": {
+                        "images": [
+                            26,
+                            27,
+                            28,
+                            29,
+                            30
+                        ]
+                    }
                 }
             }
         }
