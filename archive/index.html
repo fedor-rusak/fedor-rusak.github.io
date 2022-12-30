@@ -81,11 +81,11 @@
 				}
 			}
 
-			.child:nth-child(odd) {
+			.background-odd {
 				background: radial-gradient(65% 50% at center , #d5d5d5 30%, #eeeeee 75%);
 			}
 
-			.child:nth-child(even) {
+			.background-even {
 				background: radial-gradient(65% 50% at center , #dfdfdf 30%, #eeeeee 75%);
 			}
 
@@ -115,6 +115,14 @@
 			.child img {
 				width: 100%;
 				border-radius: 15px;
+			}
+
+			.hidden {
+				display: none;
+			}
+
+			.grey {
+				color: grey;
 			}
 
 			button, select, .multiselect {
@@ -171,6 +179,10 @@
 
 			const main = () => {
 				const types = [];
+				const tagData = {
+					index: {},
+					tags: []
+				};
 
 				data.entities.forEach((item) => {
 					const type = item.editable.type;
@@ -178,6 +190,43 @@
 					if (types.indexOf(type) === -1) {
 						types.push(type);
 					}
+
+					const tags = item.editable.data.tags || [];
+
+					tags.forEach((tag) => {
+						if (tagData.index[tag] === undefined) {
+							tagData.index[tag] = [];
+						}
+
+						const index = tagData.index[tag];
+
+						if (index.indexOf(item.id) === -1) {
+							index.push(item.id);
+						}
+
+						if (tagData.tags.indexOf(tag) === -1) {
+							tagData.tags.push(tag);
+						}
+					});
+				});
+
+				const multipleCheckbox = byId("#multipleCheckbox");
+				tagData.tags.forEach((tag) => {
+					const count = tagData.index[tag].length;
+
+					const tagOption = document.createElement("div");
+					tagOption.className = "tagOption";
+					const input = document.createElement("input");
+					input.type = "checkbox";
+					input.id = tag;
+					tagOption.appendChild(input);
+					const label = document.createElement("label");
+					label.htmlFor = tag;
+					label.innerHTML = tag + " <span class=\"grey\">(" + count + ")</span>";
+					tagOption.appendChild(label);
+
+					
+					multipleCheckbox.appendChild(tagOption);
 				});
 
 				const typesDiv = byId("#types");
@@ -190,12 +239,14 @@
 				});
 
 				const container = byId("#container");
-				data.entities.forEach((entity) => {
+				data.entities.forEach((entity, index) => {
 					const id = entity.id;
 					const name = entity.editable.name;
 
 					const item = document.createElement("div");
-					item.classList.add("child", "centered");
+					item.id = entity.id;
+					const backgroundClass = index % 2 === 0 ? "background-even" : "background-odd"; 
+					item.classList.add("child", "centered", backgroundClass);
 					if (entity.editable.type === "image") {
 						const img = document.createElement("img");
 						img.src = "images/" + entity.editable.data.src;
@@ -222,8 +273,69 @@
 						checkboxes.style.display = "block";
 					}
 				});
+
+				const state = {
+					tagsCheckedStatus: {}
+				}
+
+				const rerenderVisibleEntities = () => {
+					const chosenTags = [];
+
+					checked = state.tagsCheckedStatus;
+
+					Object.keys(checked).forEach((tag) => {
+						if (checked[tag] === true) {
+							chosenTags.push(tag);
+						}
+					});
+
+					if (chosenTags.length === 0) {
+						container.childNodes.forEach((node, index) => {
+							const classList = node.classList; 
+							classList.remove("hidden", "background-even", "background-odd");
+
+							const backgroundClass = index % 2 === 0 ? "background-even" : "background-odd";
+							classList.add(backgroundClass);
+						});
+					} else {
+						let chosenIds = tagData.index[chosenTags[0]];
+						chosenTags.forEach((chosenTag) => {
+							const relatedIds = tagData.index[chosenTag];
+							console.log(chosenTag);
+							chosenIds = relatedIds.filter((relatedId) => {
+								return chosenIds.includes(relatedId);
+							});
+						});
+						let filteredCounter = 0;
+
+						container.childNodes.forEach((node) => {
+							const nodeId = parseInt(node.id);
+
+							if (chosenIds.indexOf(nodeId) === -1) {
+								node.classList.add("hidden");
+							} else {
+								const classList = node.classList; 
+								classList.remove("hidden", "background-even", "background-odd");
+
+								const backgroundClass = filteredCounter % 2 === 0 ? "background-even" : "background-odd";
+								classList.add(backgroundClass);
+
+								filteredCounter++;
+							}
+						});
+					}
+				}
+
 				byId("#multipleCheckbox").addEventListener("click", (e) => {
 					e.stopPropagation();
+
+					const tagName = e.target.id;
+
+					if (tagName !== "") {
+						state.tagsCheckedStatus[tagName] = !state.tagsCheckedStatus[tagName];
+
+						rerenderVisibleEntities();
+					}
 				});
 				document.addEventListener("click", (e) => {
 					const id = e.target.id;
@@ -252,14 +364,6 @@
 						Filter by tags
 					</div>
 					<div id="multipleCheckbox">
-						<div class="tagOption">
-							<input type="checkbox" id="1">
-							<label for="1">Tag1</label>
-						</div>
-						<div class="tagOption">
-							<input type="checkbox" id="2">
-							<label for="2">Tag2</label>
-						</div>
 					</div>
 			</div>
 			<select style="font-size: 20px; margin: 10px; padding: 15px; display: inline-block; vertical-align: top;" id="sort">
@@ -269,7 +373,6 @@
 				<option value="nameDesc">By Name Descending</option>
 			</select>
 		</div>
-		<div class="container" id="container">
-		</div>
+		<div class="container" id="container"></div>
 	</body>
 </html>
