@@ -1396,6 +1396,36 @@ const data = {
                     ]
                 }
             }
+        },
+        {
+            "id": 90,
+            "version": 1,
+            "editable": {
+                "type": "set",
+                "name": "Tarantulos team with broodmaster",
+                "comment": "broodmaster 200\ndoomweaver with trident and net 105\ndoomweaver with flail and goad 105\nbroodkin with scythe and claw 60x3\nbroodkin 65x4\nspiderswarm 50x3  ",
+                "data": {}
+            }
+        },
+        {
+            "id": 91,
+            "version": 1,
+            "editable": {
+                "type": "set",
+                "name": "Darkoath team with slaughterborn",
+                "comment": "slaughterborn 180\nproven with greatspear 125\nproven with greatblade 115\ngod speaker 105\nwrathtouched 105\ngloryseeker with paired weapons 70x2\ngloryseeker with spear 75\ngloryseeker with shield 70x2",
+                "data": {}
+            }
+        },
+        {
+            "id": 92,
+            "version": 1,
+            "editable": {
+                "type": "set",
+                "name": "Slaves to darkness team with exalted champion",
+                "comment": "exalted champion 185\naspiring champion 155\nchaos chosen 145x3\nchaos warrior with weapon & shield 105x2",
+                "data": {}
+            }
         }
     ],
     "history": [
@@ -3055,6 +3085,39 @@ const data = {
                         "paint"
                     ]
                 }
+            }
+        },
+        {
+            "id": 99,
+            "changedFrom": {},
+            "entityId": 90,
+            "changedTo": {
+                "type": "set",
+                "name": "Tarantulos team with broodmaster",
+                "comment": "broodmaster 200\ndoomweaver with trident and net 105\ndoomweaver with flail and goad 105\nbroodkin with scythe and claw 60x3\nbroodkin 65x4\nspiderswarm 50x3  ",
+                "data": {}
+            }
+        },
+        {
+            "id": 100,
+            "changedFrom": {},
+            "entityId": 91,
+            "changedTo": {
+                "type": "set",
+                "name": "Darkoath team with slaughterborn",
+                "comment": "slaughterborn 180\nproven with greatspear 125\nproven with greatblade 115\ngod speaker 105\nwrathtouched 105\ngloryseeker with paired weapons 70x2\ngloryseeker with spear 75\ngloryseeker with shield 70x2",
+                "data": {}
+            }
+        },
+        {
+            "id": 101,
+            "changedFrom": {},
+            "entityId": 92,
+            "changedTo": {
+                "type": "set",
+                "name": "Slaves to darkness team with exalted champion",
+                "comment": "exalted champion 185\naspiring champion 155\nchaos chosen 145x3\nchaos warrior with weapon & shield 105x2",
+                "data": {}
             }
         }
     ]
