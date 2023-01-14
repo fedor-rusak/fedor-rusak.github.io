@@ -136,6 +136,13 @@
 			.text-vertical-middle {
 				vertical-align: middle !important;
 			}
+
+			ul {
+				margin: 0;
+			}
+			li {
+				margin-bottom: 5px;
+			}
 		</style>
 		<script type="text/javascript" src="data.js"></script>
 		<script>
@@ -196,10 +203,43 @@
 				slideState.maxSlideIndex = slideState.slides.length - 1;
 			}
 
+			const getTrItem = (name, innerHTML) => {
+				const tr = document.createElement("tr");
+				const tdName = document.createElement("td");
+				tdName.innerHTML = name;
+				tr.appendChild(tdName);
+				const tdContent = document.createElement("td");
+				tdContent.innerHTML = innerHTML;
+				tr.appendChild(tdContent);
+
+				return tr;
+			}
+
 			const showEntity = (version, editable) => {
 				byId("#version").innerHTML = version;
 				byId("#name").innerHTML = editable.name;
 				byId("#comment").innerHTML = editable.comment.replaceAll("\n", "<br>");
+				const description = byId("#description");
+
+				const links = byId("#links");
+				if (links) {
+					description.removeChild(links);
+				}
+
+				if (editable.data && editable.data.links) {
+					let content = "";
+					editable.data.links.forEach(link => {
+						content += "<li><a target=\"blank\" href=\""+link.url+"\">"+link.text+"</a></li>";
+					});
+
+					content = "<ul>"+content+"</ul>";
+
+					const newLinks = getTrItem("Links:", content);
+					newLinks.id = "links";
+
+					description.appendChild(newLinks);
+				}
+
 			}
 
 			const main = () => {
@@ -294,7 +334,7 @@
 			</div>
 			<div class="child" >
 				<table>
-					<tbody>
+					<tbody id="description">
 						<tr>
 							<td class="text-vertical-middle">Version:</td>
 							<td><button class="version-btn" id="previousVersion">  <<  </button><div class="version" id="version">1</div><button class="version-btn" id="nextVersion">  >>  </button></td>

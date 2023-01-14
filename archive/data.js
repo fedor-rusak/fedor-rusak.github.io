@@ -1426,6 +1426,40 @@ const data = {
                 "comment": "exalted champion 185\naspiring champion 155\nchaos chosen 145x3\nchaos warrior with weapon & shield 105x2",
                 "data": {}
             }
+        },
+        {
+            "id": 93,
+            "version": 1,
+            "editable": {
+                "type": "musing",
+                "name": "Color properties worth knowing?",
+                "comment": "If I want to paint minis how should I approach discussion of colors beside saying red, blue, light-greyish or dark-greyish nature of it?",
+                "data": {
+                    "links": [
+                        {
+                            "text": "Color Basics: Hue, Value & Chroma",
+                            "url": "https://sites.harding.edu/gclayton/Color/Topics/001_HueValueChroma.html"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": 94,
+            "version": 1,
+            "editable": {
+                "type": "musing",
+                "name": "How to approach miniature painting",
+                "comment": "Painting miniature to a decent quality means time, resources, paints. But most importanlty you should have at least basic understanding about whole process from base colors to detail highlighting. And there are cool videos to show this process.",
+                "data": {
+                    "links": [
+                        {
+                            "text": "Two approaches for miniature painting",
+                            "url": "https://www.youtube.com/watch?v=ZzGJ1Wqblog"
+                        }
+                    ]
+                }
+            }
         }
     ],
     "history": [
@@ -3118,6 +3152,42 @@ const data = {
                 "name": "Slaves to darkness team with exalted champion",
                 "comment": "exalted champion 185\naspiring champion 155\nchaos chosen 145x3\nchaos warrior with weapon & shield 105x2",
                 "data": {}
+            }
+        },
+        {
+            "id": 102,
+            "changedFrom": {},
+            "entityId": 93,
+            "changedTo": {
+                "type": "musing",
+                "name": "Color properties worth knowing?",
+                "comment": "If I want to paint minis how should I approach discussion of colors beside saying red, blue, light-greyish or dark-greyish nature of it?",
+                "data": {
+                    "links": [
+                        {
+                            "text": "Color Basics: Hue, Value & Chroma",
+                            "url": "https://sites.harding.edu/gclayton/Color/Topics/001_HueValueChroma.html"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": 103,
+            "changedFrom": {},
+            "entityId": 94,
+            "changedTo": {
+                "type": "musing",
+                "name": "How to approach miniature painting",
+                "comment": "Painting miniature to a decent quality means time, resources, paints. But most importanlty you should have at least basic understanding about whole process from base colors to detail highlighting. And there are cool videos to show this process.",
+                "data": {
+                    "links": [
+                        {
+                            "text": "Two approaches for miniature painting",
+                            "url": "https://www.youtube.com/watch?v=ZzGJ1Wqblog"
+                        }
+                    ]
+                }
             }
         }
     ]
