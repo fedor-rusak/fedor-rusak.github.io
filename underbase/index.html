@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Underbase: Check you Warhammer Underworlds cards with style</title>
+		<style>
+			body {
+				margin: 0px;
+				background-color: #eeeeee;
+			}
+
+			.section {
+				font-size: 20px;
+				margin: 20px;
+				padding: 20px;
+				text-transform: uppercase;
+			}
+			.container {
+				display: inline-flex;
+				flex-wrap: wrap;
+				width: calc(100% - 16px);
+				padding: 7px;
+			}
+
+			.child-card {
+				aspect-ratio: 1 / 1;
+				margin:7px;
+				text-align: center;
+				font-size: 30px;
+				padding: 20px;
+				border-width: 1px;
+				border-style: solid;
+			}
+
+			.child-image {
+				padding: 0px;
+				overflow: hidden;
+				border-radius: 15px;
+			}
+
+			.centered {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+			}
+
+			@media screen and (max-width: 610px) {
+				.child-card {
+					width: calc(100% - 56px);
+				}
+				.child-image {
+					width: calc(100% - 14px);
+				}
+			}
+
+			@media screen and (min-width: 611px) and (max-width: 1010px) {
+				.child-card {
+					width: calc(50% - 56px);
+				}
+				.child-image {
+					width: calc(50% - 14px);
+				}
+			}
+
+			@media screen and (min-width: 1011px) and (max-width: 1500px) {
+				.child-card {
+					width: calc(33.3% - 56px);
+				}
+				.child-image {
+					width: calc(33.3% - 14px);
+				}
+			}
+
+			@media screen and (min-width: 1501px) {
+				.child-card {
+					width: calc(25% - 56px);
+				}
+				.child-image {
+					width: calc(25% - 14px);
+				}
+			}
+
+			.background-odd {
+				background: radial-gradient(65% 50% at center , #d5d5d5 30%, #eeeeee 75%);
+			}
+
+			.background-even {
+				background: radial-gradient(65% 50% at center , #dfdfdf 30%, #eeeeee 75%);
+			}
+
+			/* FIX OF UGLY SELECT */
+			select, .multiselect {
+				background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+				background-position: calc(100% - 0.75rem) center !important;
+				-moz-appearance:none !important;
+				-webkit-appearance: none !important; 
+				appearance: none !important;
+				padding-right: 2rem !important;
+				border-radius: 8px;
+				border-color: lightslategray;
+				border-width: 1px;
+				box-shadow: none;
+			}
+
+			.slide {
+				width: 100%;
+				transition: all 0.5s;
+				flex-shrink: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center; 
+			}
+
+			.character {
+				cursor: pointer;
+				user-select: none;
+			}
+
+			.deck {
+				cursor: pointer;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.title {
+				font-size: 25px;
+				margin-bottom: 20px;
+			}
+			.type {
+				font-size: 25px;
+				color: grey;
+			}
+			.description {
+				text-align: left;
+				margin: 20px;
+				font-size: 20px;
+			}
+			.glory {
+				font-size: 20px;
+			}
+			.restrictions {
+				font-size: 20px;
+				color: coral;	
+			}
+
+			.faction {
+				font-size: 25px;
+				color: grey;
+				margin-bottom: 20px;
+			}
+			.weapons {
+				font-size: 20px;
+			}
+
+			.inspire {
+				font-size: 20px;
+				color: goldenrod;
+			}
+
+			.inspired {
+				border-color: goldenrod;
+			}
+
+			.warning {
+				color: maroon;
+			}
+
+			.hidden {
+				display: none;
+			}
+
+			.grey {
+				color: grey;
+			}
+
+			button, select, .multiselect {
+				font-family: Arial;
+			}
+			.thickBorder {
+				border-style: solid;
+				border-width: 2px;
+				border-color: black;
+				border-radius: 5px;
+			}
+
+			#filterSortMenu {
+				text-align: center;
+				width: calc(100% - 16px);
+				margin: 10px;
+				margin-bottom: 20px;
+			}
+
+			.multiselect {
+				border-color: lightslategray !important;
+				border-radius: 10px;
+				border: solid 1px;
+				position: relative;
+				width: 300px;
+				user-select: none;
+				font-size: 20px;
+				margin: 10px;
+				padding: 15px;
+				display: inline-block;
+			}
+
+			#multipleCheckbox {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 55px;
+				display: none;
+				border: 1px solid;
+				border-color: lightslategray !important;
+				border-radius: 10px;
+				padding-top: 10px;
+				background-color: #e5e5e5;
+				max-height: 300px;
+				overflow-y: auto;
+			}
+
+			.tagOption {
+				height: 35px;
+				float: left;
+				clear: left;
+			}
+			.tagOption label {
+				overflow: hidden;
+				width: 280px;
+				display: inline-block;
+				text-align: left;
+			}
+			.tagOption input {
+				float: left;
+				margin-top: 5px;
+				margin-right: 7px;
+				margin-left: 12px;
+			}
+
+			#sort {
+				font-size: 20px;
+				margin: 10px;
+				padding: 15px;
+				display: inline-block;
+				vertical-align: top;
+			}
+		</style>
+		<script type="text/javascript" src="shared.js"></script>
+		<script>
+			const byId = (query) => {
+				return document.querySelector(query);
+			};
+
+			const extractIndexData = (data) => {
+				const typeData = {
+					index: {},
+					types: []
+				};
+				const tagData = {
+					index: {},
+					tags: []
+				};
+
+				data.forEach((item) => {
+					const type = item.type || item.editable.type;
+
+					if (!typeData.types.includes(type)) {
+						typeData.types.push(type);
+					}
+
+					if (typeData.index[type] === undefined) {
+						typeData.index[type] = [];
+					}
+					typeData.index[type].push(item.id);
+
+					const tags = item.faction ? [item.faction] : [];
+
+					tags.forEach((tag) => {
+						if (tagData.index[tag] === undefined) {
+							tagData.index[tag] = [];
+						}
+
+						const index = tagData.index[tag];
+
+						if (!index.includes(item.id)) {
+							index.push(item.id);
+						}
+
+						if (!tagData.tags.includes(tag)) {
+							tagData.tags.push(tag);
+						}
+					});
+				});
+
+				return { tagData, typeData };
+			};
+
+			const populateTags = (target, tagData) => {
+				const tagFragment = new DocumentFragment();
+				tagData.tags.forEach((tag) => {
+					const count = tagData.index[tag].length;
+
+					const tagOption = document.createElement("div");
+					tagOption.className = "tagOption";
+					const input = document.createElement("input");
+					input.type = "checkbox";
+					input.id = tag;
+					tagOption.appendChild(input);
+					const label = document.createElement("label");
+					label.htmlFor = tag;
+					label.innerHTML = tag + " <span class=\"grey\">(" + count + ")</span>";
+					tagOption.appendChild(label);
+
+					
+					tagFragment.appendChild(tagOption);
+				});
+				target.appendChild(tagFragment);
+			}
+
+			const intersect = (array1, array2) => {
+				return array1.filter((item) => {
+					return array2.includes(item);
+				});
+			};
+
+			const rerenderVisibleEntities = (container, state, tagData, typeData) => {
+				const chosenTags = [];
+
+				checked = state.tagsCheckedStatus;
+				const chosenType = state.chosenType;
+
+				Object.keys(checked).forEach((tag) => {
+					if (checked[tag] === true) {
+						chosenTags.push(tag);
+					}
+				});
+
+				if (chosenTags.length === 0 && chosenType === undefined) {
+					container.childNodes.forEach((node, index) => {
+						const classList = node.classList; 
+						classList.remove("hidden", "background-even", "background-odd");
+
+						const backgroundClass = index % 2 === 0 ? "background-even" : "background-odd";
+						classList.add(backgroundClass);
+					});
+				} else {
+					let chosenIds = chosenType === undefined ? tagData.index[chosenTags[0]] : typeData.index[chosenType];
+					chosenTags.forEach((chosenTag) => {
+						const relatedIds = tagData.index[chosenTag];
+						chosenIds = intersect(relatedIds, chosenIds);
+					});
+					let filteredCounter = 0;
+
+					container.childNodes.forEach((node) => {
+						const nodeId = node.id;
+
+						if (!chosenIds.includes(nodeId)) {
+							node.classList.add("hidden");
+						} else {
+							const classList = node.classList; 
+							classList.remove("hidden", "background-even", "background-odd");
+
+							const backgroundClass = filteredCounter % 2 === 0 ? "background-even" : "background-odd";
+							classList.add(backgroundClass);
+
+							filteredCounter++;
+						}
+					});
+				}
+			}
+
+			const hideTagOptions = () => {
+				byId("#multipleCheckbox").style.display = "none";
+			};
+
+			const main = () => {
+				const inputCards = cards.Beastgrave
+					.filter( card => card.faction !== "Morgwaeth's Blade-coven" && card.faction !== "The Wurmspat")
+					.concat(cards["Arena Mortis"]);
+				const inputCharacters = fighters["Beastgrave"];
+				const input = decks.entities.concat(inputCharacters).concat(inputCards);
+
+				const { typeData, tagData } = extractIndexData(input);
+
+				const multipleCheckbox = byId("#multipleCheckbox");
+				populateTags(multipleCheckbox, tagData);
+
+				const typesDiv = byId("#types");
+				const typesFragment = new DocumentFragment();
+				typeData.types.forEach((type) => {
+					const button = document.createElement("button");
+					button.id = type;
+					button.innerHTML = type;
+					button.className = "section";
+					typesFragment.appendChild(button);
+				});
+				typesDiv.appendChild(typesFragment);
+
+				const container = byId("#container");
+				populateWithCards(container, input);
+
+				const state = {
+					tagsCheckedStatus: {},
+					chosenType: undefined
+				}
+
+				byId("#multipleCheckbox").addEventListener("click", (e) => {
+					e.stopPropagation();
+
+					const tagName = e.target.id;
+
+					if (tagName !== "") {
+						state.tagsCheckedStatus[tagName] = !state.tagsCheckedStatus[tagName];
+
+						rerenderVisibleEntities(container, state, tagData, typeData);
+					}
+				});
+				byId("#tags").addEventListener("click", () => {
+					const checkboxes = byId("#multipleCheckbox");
+
+					if (checkboxes.style.display === "block") {
+						hideTagOptions();
+					} else {
+						checkboxes.style.display = "block";
+					}
+				});
+				const hasClass = (node, className) => {
+					return node.classList.contains(className);
+				}
+				const getCardNode = (startNode) => {
+					let result = startNode;
+
+					while (!hasClass(result, "container") && !hasClass(result, "child-card")) {
+						result = result.parentNode;
+					}
+
+					return result;
+				}
+				container.addEventListener("click", (e) => {
+					const target = getCardNode(e.target);
+
+					if (hasClass(target, "character")) {
+						const id = target.id;
+						const character = inputCharacters.find(character => character.id === id);
+
+						const newContent = new DocumentFragment();
+						if (hasClass(target, "inspired")) {
+							target.classList.remove("inspired");
+							addCharacerFields(newContent, character);
+						} else {
+							target.classList.add("inspired");
+							addCharacerFields(
+								newContent,
+								{
+									"name": character.inspired.name,
+									"leader": character.leader,
+									"faction": character.faction,
+									"stats": character.inspired.stats || character.stats,
+									"weapons": character.inspired.weapons || character.weapons,
+									"description": character.inspired.description || character.description,
+								});
+						}
+
+						target.replaceChildren(newContent);
+					}
+					else if (hasClass(target, "deck")) {
+						location.href='deck.html?id=' + target.id;
+					}
+				});
+				typesDiv.addEventListener( "click", (e) => {
+					const id = e.target.id;
+					if (id !== "types") {
+						const chosenType = state.chosenType;
+
+						if (id === chosenType) {
+							byId("#"+id).classList.remove("thickBorder");
+							state.chosenType = undefined;
+						}
+						else {
+							if (chosenType !== undefined) {
+								byId("#"+chosenType).classList.remove("thickBorder");
+							}
+
+							byId("#"+id).classList.add("thickBorder");
+							state.chosenType = id;
+						}
+
+						rerenderVisibleEntities(container, state, tagData, typeData);
+					}
+				});
+				document.addEventListener("click", (e) => {
+					const id = e.target.id;
+
+					if (id !== "multipleCheckbox" && id !== "tags" && id !== "tagsOptionsLabel") {
+						hideTagOptions();
+					}
+				});
+				byId("#sort").addEventListener("focus", () => {
+					hideTagOptions();
+				});
+				byId("#sort").addEventListener("change", (e) => {
+					console.log(e.target.value);
+				});
+			};
+
+			window.addEventListener("load", main);
+		</script>
+	</head>
+	<body>
+		<div id="types" style="text-align: center;">
+		</div>
+		<div id ="filterSortMenu">
+			<div class="multiselect" id="tags">
+					<div style="text-align: left;" id="tagsOptionsLabel">
+						Filter by tags
+					</div>
+					<div id="multipleCheckbox">
+					</div>
+			</div>
+			<select id="sort">
+				<option value="idAsc">By Id Ascending</option>
+				<option value="idDesc">By Id Descending</option>
+				<option value="nameAsc">By Name Ascending</option>
+				<option value="nameDesc">By Name Descending</option>
+			</select>
+		</div>
+		<div class="container" id="container"></div>
+	</body>
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Underbase: Underworlds deck custom viewer</title>
+		<style>
+			body {
+				margin: 0px;
+				background-color: #ddd;
+			}
+
+			.section {
+				font-size: 20px;
+				margin: 20px;
+				padding: 20px;
+			}
+			.container {
+				display: inline-flex;
+				flex-wrap: wrap;
+				width: calc(100% - 16px);
+				padding: 7px;
+			}
+
+			.child {
+				min-width: 300px;
+				aspect-ratio: 1 / 1;
+				margin:7px;
+				width: calc(50% - 14px);
+			}
+			@media screen and (max-width: 1010px) {
+				.child {
+					width: 100%;
+				}
+			}
+
+			.carousel > * {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			.carousel {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+			}
+
+			.slider {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-direction: row;
+				overflow: hidden; /* <===  */
+				border-radius: 15px;
+			}
+
+			.slide {
+				width: 100%;
+				transition: all 0.5s;
+				flex-shrink: 0;
+				display: inline-flex;
+				flex-wrap: wrap;
+				overflow-y: scroll;
+				scrollbar-color: #444 #ddd;
+				scrollbar-width: thin;
+			}
+
+			.slide img {
+				width: 100%;
+				border-radius: 15px;
+			}
+
+			.btn {
+				position: absolute;
+				width: 40px;
+				height: 40px;
+				padding: 10px;
+				padding-top: 7px;
+				border: none;
+				border-radius: 50%;
+				z-index: 10px;
+				cursor: pointer;
+				background-color: #fff;
+				font-size: 18px;
+			}
+			.btn:active {
+				transform: scale(1.1);
+			}
+			.btn-prev {
+				top: 48%;
+				left: 2%;
+			}
+
+			.btn-next {
+				top: 48%;
+				right: 2%;
+			}
+
+			table {
+				width: 100%;
+				font-family: 'Times New Roman', Times, serif;
+				border-width: 0px;
+				border-collapse: collapse;
+				display: table;
+				font-size: 23px;
+			}
+
+			td {
+				padding: 15px;
+			}
+
+			table tr:nth-child(odd) {
+				background-color: #eee;
+			}
+
+			table tr:nth-child(even) {
+				background-color: #ddd;
+			}
+			table tr td:nth-child(1) {
+				text-align: right;
+				width:30%;
+				padding-right: 5px;
+				vertical-align: top;
+				font-weight: bold;
+			}
+			.version {
+				width: 20%;
+				display: inline-block;
+				vertical-align: middle;
+				text-align: center;
+			}
+			.version-btn {
+				padding: 10px 20px 10px 20px;
+			}
+			.text-vertical-middle {
+				vertical-align: middle !important;
+			}
+
+			ul {
+				margin: 0;
+			}
+			li {
+				margin-bottom: 5px;
+			}
+
+						.character {
+				cursor: pointer;
+				user-select: none;
+			}
+
+			.title {
+				font-size: 25px;
+				margin-bottom: 20px;
+			}
+			.type {
+				font-size: 25px;
+				color: grey;
+			}
+			.description {
+				text-align: left;
+				margin: 20px;
+				font-size: 20px;
+			}
+			.glory {
+				font-size: 20px;
+			}
+			.restrictions {
+				font-size: 20px;
+				color: coral;	
+			}
+
+			.faction {
+				font-size: 25px;
+				color: grey;
+				margin-bottom: 20px;
+			}
+			.weapons {
+				font-size: 20px;
+			}
+
+			.inspire {
+				font-size: 20px;
+				color: goldenrod;
+			}
+
+			.inspired {
+				border-color: goldenrod;
+			}
+
+			.warning {
+				color: maroon;
+			}
+
+			.hidden {
+				display: none;
+			}
+
+			.grey {
+				color: grey;
+			}
+
+			.child-card {
+				aspect-ratio: 1 / 1;
+				margin:7px;
+				text-align: center;
+				font-size: 30px;
+				padding: 20px;
+				border-width: 1px;
+				border-style: solid;
+			}
+			@media screen and (max-width: 1210px) {
+				.child-card {
+					width: calc(100% - 56px);
+				}
+			}
+
+			@media screen and (min-width: 1211px) and (max-width: 2010px) {
+				.child-card {
+					width: calc(50% - 56px);
+				}
+			}
+
+			@media screen and (min-width: 2011px) and (max-width: 3000px) {
+				.child-card {
+					width: calc(33.3% - 56px);
+				}
+			}
+
+			@media screen and (min-width: 3001px) {
+				.child-card {
+					width: calc(25% - 56px);
+				}
+			}
+
+			.background-odd {
+				background: radial-gradient(65% 50% at center , #d5d5d5 30%, #eeeeee 75%);
+			}
+
+			.background-even {
+				background: radial-gradient(65% 50% at center , #dfdfdf 30%, #eeeeee 75%);
+			}
+		</style>
+		<script type="text/javascript" src="shared.js"></script>
+		<script>
+			const byId = (query) => {
+				return document.querySelector(query);
+			};
+
+			const slideState = {
+				currentSlideIndex: 0,
+				maxSlideIndex: 0
+			};
+
+			const moveSlide = (slides, current) => {
+				slides.forEach((slide, indx) => {
+				slide.style.transform = `translateX(${-100 *slideState.currentSlideIndex}%)`;
+				});
+			}
+
+			const nextSlide = () => {
+				if (slideState.maxSlideIndex === -1) return;
+
+				if (slideState.currentSlideIndex === slideState.maxSlideIndex) {
+					slideState.currentSlideIndex = 0;
+				} else {
+					slideState.currentSlideIndex++;
+				}
+
+				moveSlide(slideState.slides, slideState.currentSlideIndex);
+			};
+
+			const previousSlide = () => {
+				if (slideState.maxSlideIndex === -1) return;
+
+				if (slideState.currentSlideIndex === 0) {
+					slideState.currentSlideIndex = slideState.maxSlideIndex;
+				} else {
+					slideState.currentSlideIndex--;
+				}
+
+				moveSlide(slideState.slides, slideState.currentSlideIndex);
+			};
+
+			const clearSlideState = () => {
+				slideState.currentSlideIndex = 0;
+				slideState.maxSlideIndex = -1;
+				slideState.slides = undefined;
+
+				const slider = byId("#slider");
+				while(slider.childNodes.length > 0) {
+					slider.removeChild(slider.lastChild);
+				}
+			}
+
+			const setupSlidesState = () => {
+				slideState.slides = document.querySelectorAll(".slide");
+
+				slideState.currentSlideIndex = 0;
+				slideState.maxSlideIndex = slideState.slides.length - 1;
+			}
+
+			const getTrItem = (name, innerHTML) => {
+				const tr = document.createElement("tr");
+				const tdName = document.createElement("td");
+				tdName.innerHTML = name;
+				tr.appendChild(tdName);
+				const tdContent = document.createElement("td");
+				tdContent.innerHTML = innerHTML;
+				tr.appendChild(tdContent);
+
+				return tr;
+			}
+
+			const showEntity = (version, editable) => {
+				byId("#version").innerHTML = version;
+				byId("#name").innerHTML = editable.name;
+				byId("#comment").innerHTML = editable.comment.replaceAll("\n", "<br>");
+				const description = byId("#description");
+
+				const links = byId("#links");
+				if (links) {
+					description.removeChild(links);
+				}
+
+				if (editable.data && editable.data.links) {
+					let content = "";
+					editable.data.links.forEach(link => {
+						content += "<li><a target=\"blank\" href=\""+link.url+"\">"+link.text+"</a></li>";
+					});
+
+					content = "<ul>"+content+"</ul>";
+
+					const newLinks = getTrItem("Links:", content);
+					newLinks.id = "links";
+
+					description.appendChild(newLinks);
+				}
+
+			}
+
+			const main = () => {
+				const id = window.location.search.substring(4);
+
+				const entity = decks.entities.find( item => item.id === id);
+
+				if (entity === undefined) {
+					alert(`Failed to get find entity with id: ${id}`);
+					throw new Error("no correct entityId in page URL");
+				}
+
+				const state = {
+					"version": entity.version,
+					"history": decks.history.filter( item => item.entityId === entity.id),
+					"characters": []
+				};
+
+
+				const addCardsPackToSlider = (cards) => {
+					const div = document.createElement("div");
+					div.className = "slide";
+					populateWithCards(div, cards);
+					byId("#slider").appendChild(div);
+				}
+
+				const mapToCards = (ids, cards) => {
+					return ids.map(id => cards.find(item => item.id === id));
+				}
+				const populateSlides = (entity) => {
+					addCardsPackToSlider(mapToCards(entity.characters, fighters.Beastgrave));
+					addCardsPackToSlider(mapToCards(entity.objectives, cards.Beastgrave));
+					addCardsPackToSlider(mapToCards(entity.gambits, cards.Beastgrave));
+					addCardsPackToSlider(mapToCards(entity.upgrades, cards.Beastgrave));
+					setupSlidesState();
+				};
+
+				const showVersionOfEntity = (version) => {
+					const toShow = state.history[version - 1].changedTo;
+					state.characters = mapToCards(toShow.characters, fighters.Beastgrave);
+					showEntity(version, toShow);
+					clearSlideState();
+					populateSlides(toShow);
+				}
+
+				showVersionOfEntity(state.version);
+
+				byId("#previousVersion").addEventListener("click", () => {
+					if (state.version > 1) {
+						state.version -= 1;
+						showVersionOfEntity(state.version);
+					}
+				});
+				byId("#nextVersion").addEventListener("click", () => {
+					if (state.version < state.history.length) {
+						state.version += 1;
+						showVersionOfEntity(state.version);
+					}
+				});
+
+				document.querySelector("#next")
+					.addEventListener("click", nextSlide);
+				document.querySelector("#previous")
+					.addEventListener("click", previousSlide);
+
+				const hasClass = (node, className) => {
+					return node.classList.contains(className);
+				}
+				const getCardNode = (startNode) => {
+					let result = startNode;
+
+					while (!hasClass(result, "slider") && !hasClass(result, "child-card")) {
+						result = result.parentNode;
+					}
+
+					return result;
+				}
+				byId("#slider").addEventListener("click", (e) => {
+					const target = getCardNode(e.target);
+
+					if (hasClass(target, "character")) {
+						const id = target.id;
+						const character = state.characters.find(character => character.id === id);
+
+						const newContent = new DocumentFragment();
+						if (hasClass(target, "inspired")) {
+							target.classList.remove("inspired");
+							addCharacerFields(newContent, character);
+						} else {
+							target.classList.add("inspired");
+							addCharacerFields(
+								newContent,
+								{
+									"name": character.inspired.name,
+									"leader": character.leader,
+									"faction": character.faction,
+									"stats": character.inspired.stats || character.stats,
+									"weapons": character.inspired.weapons || character.weapons,
+									"description": character.inspired.description || character.description,
+								});
+						}
+
+						target.replaceChildren(newContent);
+					}
+				});
+			};
+
+			window.addEventListener("load", main);
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="child carousel">
+				<div class="slider" id="slider">
+				</div>
+
+				<!-- Control buttons -->
+				<button class="btn btn-next" id="next"> > </button>
+				<button class="btn btn-prev" id="previous"> < </button>
+			</div>
+			<div class="child" >
+				<table>
+					<tbody id="description">
+						<tr>
+							<td class="text-vertical-middle">Version:</td>
+							<td><button class="version-btn" id="previousVersion">  <<  </button><div class="version" id="version">1</div><button class="version-btn" id="nextVersion">  >>  </button></td>
+						</tr>
+						<tr>
+							<td>Name:</td>
+							<td id="name">model name</td>
+						</tr>
+						<tr>
+							<td>Comment:</td>
+							<td id="comment">Here you can write whatever you want regarding current state of model or maybe steps to paint it ot improve with modifications.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
