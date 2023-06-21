@@ -1,0 +1,426 @@
+const army = {
+    "gameSystem": "aof",
+    "armyId": "-MrGWaleoZR7pxIn",
+    "armyIds":
+    [
+        "-MrGWaleoZR7pxIn"
+    ],
+    "armyFaction": null,
+    "armyName": "Eternal Wardens",
+    "modified": "2023-06-12T15:05:41.461Z",
+    "saveVersion": 3,
+    "listPoints": 1000,
+    "list":
+    {
+        "id": "S5jIb6ho",
+        "key": "4xMHLazAmY0u_STUNuX5K",
+        "name": "Eternal Wardens",
+        "units":
+        [
+            {
+                "id": "IDLyyFy",
+                "armyId": "-MrGWaleoZR7pxIn",
+                "customName": "Knight-Judicator",
+                "selectionId": "VmOfA",
+                "selectedUpgrades":
+                [
+                    {
+                        "instanceId": "2DDbN2dL1",
+                        "upgradeId": "KmLjS",
+                        "optionId": "W2ovx"
+                    }
+                ],
+                "combined": false,
+                "joinToUnit": "r3I_a",
+                "xp": 0,
+                "traits":
+                [],
+                "notes": null
+            },
+            {
+                "id": "L83Dn49",
+                "armyId": "-MrGWaleoZR7pxIn",
+                "customName": "Vigilors",
+                "selectionId": "r3I_a",
+                "selectedUpgrades":
+                [],
+                "combined": false,
+                "joinToUnit": null,
+                "xp": 0,
+                "traits":
+                [],
+                "notes": null
+            },
+            {
+                "id": "IDLyyFy",
+                "armyId": "-MrGWaleoZR7pxIn",
+                "customName": "Knight-Venator",
+                "selectionId": "IU4He",
+                "selectedUpgrades":
+                [
+                    {
+                        "instanceId": "-pWK5RVuU",
+                        "upgradeId": "KmLjS",
+                        "optionId": "W2ovx"
+                    },
+                    {
+                        "instanceId": "U_N1KC-q1",
+                        "upgradeId": "TSOKz",
+                        "optionId": "xqfpq"
+                    }
+                ],
+                "combined": false,
+                "joinToUnit": "LO5-c",
+                "xp": 0,
+                "traits":
+                [],
+                "notes": null
+            },
+            {
+                "id": "lfX0CH6",
+                "armyId": "-MrGWaleoZR7pxIn",
+                "customName": "Prosecutors",
+                "selectionId": "LO5-c",
+                "selectedUpgrades":
+                [
+                    {
+                        "instanceId": "ekWTS162F",
+                        "upgradeId": "pddYpm_",
+                        "optionId": "nVUfm1i"
+                    }
+                ],
+                "combined": false,
+                "joinToUnit": null,
+                "xp": 0,
+                "traits":
+                [],
+                "notes": null
+            },
+            {
+                "id": "LtJxvQq",
+                "armyId": "-MrGWaleoZR7pxIn",
+                "selectionId": "mfmhP",
+                "selectedUpgrades":
+                [],
+                "combined": false,
+                "joinToUnit": null,
+                "xp": 0,
+                "traits":
+                [],
+                "notes": null
+            },
+            {
+                "id": "1nVvrJ8",
+                "armyId": "-MrGWaleoZR7pxIn",
+                "customName": "Vindictors",
+                "selectionId": "N-Iga",
+                "selectedUpgrades":
+                [
+                    {
+                        "instanceId": "78RL1jZe7",
+                        "upgradeId": "nIMmVsU",
+                        "optionId": "pDfBN"
+                    }
+                ],
+                "combined": false,
+                "joinToUnit": null,
+                "xp": 0,
+                "traits":
+                [],
+                "notes": null
+            },
+            {
+                "id": "Nl1wnIW",
+                "armyId": "-MrGWaleoZR7pxIn",
+                "customName": "Evocators on Dracolines",
+                "selectionId": "GpDN7",
+                "selectedUpgrades":
+                [],
+                "combined": false,
+                "joinToUnit": null,
+                "xp": 0,
+                "traits":
+                [],
+                "notes": null
+            }
+        ],
+        "points": 1000,
+        "pointsLimit": 1000,
+        "creationTime": "1685836866446",
+        "campaignMode": false,
+        "competitive": true,
+        "gameSystem": "aof",
+        "unitPreview": null,
+        "selectedUnitId": "IU4He",
+        "modified": "2023-06-12T15:05:41.461Z",
+        "undoUnitRemove":
+        [
+            {
+                "id": "IDLyyFy",
+                "cost": 80,
+                "name": "Warden Knight",
+                "size": 1,
+                "defense": 4,
+                "quality": 4,
+                "upgrades":
+                [
+                    "B1",
+                    "C1",
+                    "9EFD4"
+                ],
+                "equipment":
+                [
+                    {
+                        "id": "ooF4q",
+                        "name": "Hand Weapon",
+                        "label": "Hand Weapon",
+                        "attacks": 4,
+                        "specialRules":
+                        [
+                            {
+                                "key": "ap",
+                                "name": "AP",
+                                "rating": "1",
+                                "modify": false
+                            }
+                        ],
+                        "count": 1,
+                        "originalCount": 1,
+                        "type": "ArmyBookWeapon"
+                    }
+                ],
+                "specialRules":
+                [
+                    {
+                        "key": "fearless",
+                        "name": "Fearless",
+                        "modify": false,
+                        "rating": ""
+                    },
+                    {
+                        "key": "furious",
+                        "name": "Furious",
+                        "modify": false,
+                        "rating": ""
+                    },
+                    {
+                        "key": "hero",
+                        "name": "Hero",
+                        "modify": false,
+                        "rating": ""
+                    },
+                    {
+                        "key": "tough",
+                        "name": "Tough",
+                        "modify": false,
+                        "rating": "6"
+                    }
+                ],
+                "disabledUpgradeSections":
+                [],
+                "armyId": "-MrGWaleoZR7pxIn",
+                "selectedUpgrades":
+                [
+                    {
+                        "instanceId": "1aF9dCwzC",
+                        "upgrade":
+                        {
+                            "id": "YoyCUUI",
+                            "uid": "TSOKz",
+                            "label": "Upgrade with one",
+                            "options": null,
+                            "isHeroUpgrade": false,
+                            "parentPackageUid": "9EFD4",
+                            "type": "upgrade",
+                            "select": 1,
+                            "isCommandGroup": false
+                        },
+                        "option":
+                        {
+                            "uid": "xqfpq",
+                            "cost": 35,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Wings",
+                                    "type": "ArmyBookItem",
+                                    "label": "Wings (Ambush, Flying)",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "ambush",
+                                            "name": "Ambush",
+                                            "type": "ArmyBookRule",
+                                            "label": "Ambush",
+                                            "modify": false,
+                                            "rating": "",
+                                            "count": 1,
+                                            "dependencies":
+                                            []
+                                        },
+                                        {
+                                            "key": "flying",
+                                            "name": "Flying",
+                                            "type": "ArmyBookRule",
+                                            "label": "Flying",
+                                            "modify": false,
+                                            "rating": "",
+                                            "count": 1,
+                                            "dependencies":
+                                            []
+                                        }
+                                    ],
+                                    "count": 1,
+                                    "dependencies":
+                                    []
+                                }
+                            ],
+                            "label": "Wings (Ambush, Flying)",
+                            "isModel": false,
+                            "id": "xqfpq",
+                            "parentSectionId": "TSOKz"
+                        }
+                    },
+                    {
+                        "instanceId": "LMd3sl0ri",
+                        "upgrade":
+                        {
+                            "id": "8sEJqPp",
+                            "uid": "KmLjS",
+                            "label": "Upgrade with one",
+                            "options": null,
+                            "parentPackageUid": "9EFD4",
+                            "type": "upgrade",
+                            "select": 1,
+                            "isCommandGroup": false
+                        },
+                        "option":
+                        {
+                            "uid": "W2ovx",
+                            "cost": 35,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Bow",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Bow (24\", A4, AP(1))",
+                                    "range": 24,
+                                    "attacks": 4,
+                                    "condition": "",
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1,
+                                    "dependencies":
+                                    []
+                                }
+                            ],
+                            "label": "Bow (24\", A4, AP(1))",
+                            "isModel": false,
+                            "id": "W2ovx",
+                            "parentSectionId": "KmLjS"
+                        }
+                    }
+                ],
+                "sortId": 1,
+                "selectionId": "vfH1a",
+                "combined": false,
+                "joinToUnit": "LO5-c",
+                "xp": 0,
+                "traits":
+                [],
+                "notes": null,
+                "loadout":
+                [
+                    {
+                        "id": "ooF4q",
+                        "name": "Hand Weapon",
+                        "label": "Hand Weapon",
+                        "attacks": 4,
+                        "specialRules":
+                        [
+                            {
+                                "key": "ap",
+                                "name": "AP",
+                                "rating": "1",
+                                "modify": false
+                            }
+                        ],
+                        "count": 1,
+                        "originalCount": 1,
+                        "type": "ArmyBookWeapon"
+                    },
+                    {
+                        "name": "Wings",
+                        "type": "ArmyBookItem",
+                        "label": "Wings (Ambush, Flying)",
+                        "content":
+                        [
+                            {
+                                "key": "ambush",
+                                "name": "Ambush",
+                                "type": "ArmyBookRule",
+                                "label": "Ambush",
+                                "modify": false,
+                                "rating": "",
+                                "count": 1,
+                                "dependencies":
+                                []
+                            },
+                            {
+                                "key": "flying",
+                                "name": "Flying",
+                                "type": "ArmyBookRule",
+                                "label": "Flying",
+                                "modify": false,
+                                "rating": "",
+                                "count": 1,
+                                "dependencies":
+                                []
+                            }
+                        ],
+                        "count": 1,
+                        "dependencies":
+                        [],
+                        "isModel": false
+                    },
+                    {
+                        "name": "Bow",
+                        "type": "ArmyBookWeapon",
+                        "label": "Bow (24\", A4, AP(1))",
+                        "range": 24,
+                        "attacks": 4,
+                        "condition": "",
+                        "specialRules":
+                        [
+                            {
+                                "key": "ap",
+                                "name": "AP",
+                                "type": "ArmyBookRule",
+                                "label": "AP(1)",
+                                "modify": false,
+                                "rating": "1"
+                            }
+                        ],
+                        "count": 1,
+                        "dependencies":
+                        [],
+                        "isModel": false
+                    }
+                ],
+                "customName": "Knight-Venator"
+            }
+        ]
+    },
+    "favourite": true
+}

@@ -1,0 +1,3995 @@
+const armybookHavoc = {
+    "uid": "PGxKcq4R571OtwqD",
+    "enabledGameSystems":
+    [
+        4,
+        5,
+        6
+    ],
+    "name": "Havoc Warriors",
+    "hint": "",
+    "background": "The Havoc Warriors are fanatical followers of the Havoc Gods, and their numbers consist of everything from skilled warriors adorned in heavy armour, to berserkers with only their faith and fury to protect them, supported by hordes of mutants and daemons. Their strange and varied warbands strike fear into the hearts of their foes.\n\nMany different people have been driven to embrace the worship of Havoc, often seeking salvation from death, whether by enemies, disease, or any number of other causes. Scattered and driven into hiding after their Gods were sealed, the Havoc Warriors have returned in the wake of the Great Rift.",
+    "backgroundFull": "Human tribes were slow to settle the Northland. Their numbers were always few, and they relied more on hunting than farming. Gradually, the Human Empire began to expand northward, even into the previously remote tribal lands. Some northern tribes were conquered, but many others joined willingly as allies, seeking to benefit from peace, trade, and infrastructure.\n\nThe Northlands were seen as frontier territory by the Human Empire. Some roads were built, and a few soldiers were sent north, but in the end, little changed for Northerners as the soldiers were too few to prevent raids from neighbours, and few traders bothered to come north along the roads. Instead, outcasts and criminals would often flee north in order to hide from the law, making the Northlands more dangerous than they had ever been.\n\nThe arrival of the Havoc Gods in Tyria caused a great deal of instability, as many began to worship these new Gods. The Empire recalled many of their troops to defend their Capital and nearby regions, hoping to put down any rebellions there, abandoning the northern tribes, and leaving them to deal with the Daemons on their own. \n\nBy the time that the Havoc Wars had begun in full, most of the northern tribes had either united under Havoc or were wiped out by those who did. Some just hoped to be spared, others sought revenge against the Empire, some hoped that Havoc might offer them better lives. The warriors of these tribes crushed the northern Dwarves before turning south. The followers of Havoc, or Havoc Warriors, drove deep into the Empire, pillaging as they went.\n\nWhen the Havoc Gods were sealed away, the Daemons and their mortal followers were soon routed, and the surviving Havoc Warriors fled north. Still weakened by war, the Empire and its allies were not able to fully occupy the Northlands. Instead, they built a series of forts along its border in order to defend their lands. Though scattered and weakened, the Havoc Warriors remained, fighting amongst themselves for what little food and wealth they could scavenge, as well as anyone foolish enough to venture into their land without military protection. \n\nThe opening of the Great Rift was greeted with celebration in the Northlands as the Havoc Warriors regained their magic and their gods. Now, the tribes are looking south with new energy, plundering their weakened neighbours, and waiting for the chance to strike into the heart of Tyria once more.\n\nHow will you bring glory to your god?",
+    "armyWideRule":
+    {},
+    "units":
+    [
+        {
+            "id": "OJyY0_j",
+            "cost": 55,
+            "name": "Havoc Master",
+            "size": 1,
+            "defense": 3,
+            "quality": 3,
+            "upgrades":
+            [
+                "A1"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "Utvif",
+                    "name": "Hand Weapon",
+                    "label": "Hand Weapon",
+                    "attacks": 3,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "1",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "hero",
+                    "name": "Hero",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "3"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "RTeqzVi",
+            "cost": 25,
+            "name": "Barbarian Champion",
+            "size": 1,
+            "defense": 5,
+            "quality": 5,
+            "upgrades":
+            [
+                "B1"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "oWJBu",
+                    "name": "Hand Weapon",
+                    "label": "Hand Weapon",
+                    "attacks": 3,
+                    "specialRules":
+                    [],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "furious",
+                    "name": "Furious",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "hero",
+                    "name": "Hero",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "3"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "CvN76df",
+            "cost": 145,
+            "name": "Harbinger of Havoc",
+            "size": 1,
+            "defense": 3,
+            "quality": 3,
+            "upgrades":
+            [
+                "C1"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "E0xtT",
+                    "name": "Daemon Sword",
+                    "label": "Daemon Sword",
+                    "attacks": 3,
+                    "specialRules":
+                    [
+                        {
+                            "key": "rending",
+                            "name": "Rending",
+                            "rating": "",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                },
+                {
+                    "id": "zxVX7",
+                    "label": "Stomp",
+                    "attacks": 2,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "1",
+                            "modify": false
+                        }
+                    ],
+                    "name": "Stomp",
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "daemon",
+                    "name": "Daemon",
+                    "rating": "",
+                    "additional": false
+                },
+                {
+                    "key": "fear",
+                    "name": "Fear",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "hero",
+                    "name": "Hero",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "6"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "CZy5UIP",
+            "cost": 95,
+            "name": "Barbarians",
+            "size": 10,
+            "defense": 5,
+            "quality": 5,
+            "upgrades":
+            [
+                "D1",
+                "E1"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "zJ0s6",
+                    "name": "Hand Weapons",
+                    "label": "Hand Weapons",
+                    "attacks": 1,
+                    "specialRules":
+                    [],
+                    "count": 10,
+                    "originalCount": 10,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "furious",
+                    "name": "Furious",
+                    "modify": false,
+                    "rating": ""
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "EuRBdTX",
+            "cost": 90,
+            "name": "Warriors",
+            "size": 5,
+            "defense": 3,
+            "quality": 3,
+            "upgrades":
+            [
+                "D1",
+                "F1"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "nVaIV",
+                    "name": "Hand Weapons",
+                    "label": "Hand Weapons",
+                    "attacks": 1,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "1",
+                            "modify": false
+                        }
+                    ],
+                    "count": 5,
+                    "originalCount": 5,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "twl0KCa",
+            "cost": 90,
+            "name": "Mutants",
+            "size": 5,
+            "defense": 4,
+            "quality": 4,
+            "upgrades":
+            [],
+            "equipment":
+            [
+                {
+                    "id": "EvVwz",
+                    "name": "Mutated Limbs",
+                    "label": "Mutated Limbs",
+                    "attacks": 2,
+                    "specialRules":
+                    [],
+                    "count": 5,
+                    "originalCount": 5,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "fearless",
+                    "name": "Fearless",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "mutations",
+                    "name": "Mutations",
+                    "modify": false,
+                    "rating": ""
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "R9ujGWS",
+            "cost": 110,
+            "name": "Havoc Ogres",
+            "size": 3,
+            "defense": 4,
+            "quality": 4,
+            "upgrades":
+            [
+                "D1",
+                "G1"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "eDsfG",
+                    "name": "Hand Weapons",
+                    "label": "Hand Weapons",
+                    "attacks": 3,
+                    "specialRules":
+                    [],
+                    "count": 3,
+                    "originalCount": 3,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "3"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "_ciVJh1",
+            "cost": 175,
+            "name": "Drake-Centaurs",
+            "size": 3,
+            "defense": 3,
+            "quality": 4,
+            "upgrades":
+            [
+                "H1"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "Gmkfg",
+                    "name": "Great Weapons",
+                    "label": "Great Weapons",
+                    "attacks": 2,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "4",
+                            "modify": false
+                        }
+                    ],
+                    "count": 3,
+                    "originalCount": 3,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "impact",
+                    "name": "Impact",
+                    "modify": false,
+                    "rating": "3"
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "3"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "aTxCHqz",
+            "cost": 195,
+            "name": "Havoc Trolls",
+            "size": 3,
+            "defense": 4,
+            "quality": 4,
+            "upgrades":
+            [],
+            "equipment":
+            [
+                {
+                    "id": "SBEDq",
+                    "name": "Dual Hand Weapons",
+                    "label": "Dual Hand Weapons",
+                    "attacks": 6,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "1",
+                            "modify": false
+                        }
+                    ],
+                    "count": 3,
+                    "originalCount": 3,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "regeneration",
+                    "name": "Regeneration",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "3"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "tIquQyR",
+            "cost": 80,
+            "name": "Havoc Furies",
+            "size": 5,
+            "defense": 5,
+            "quality": 5,
+            "upgrades":
+            [
+                "n-7pC"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "GQGwe",
+                    "name": "Armblades",
+                    "count": 5,
+                    "label": "Armblades",
+                    "attacks": 2,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "1",
+                            "modify": false
+                        }
+                    ],
+                    "originalCount": 5,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "daemon",
+                    "name": "Daemon",
+                    "rating": "",
+                    "additional": false
+                },
+                {
+                    "key": "flying",
+                    "name": "Flying",
+                    "modify": false,
+                    "rating": ""
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "9VzVVdy",
+            "cost": 80,
+            "name": "Havoc Hounds",
+            "size": 5,
+            "defense": 5,
+            "quality": 4,
+            "upgrades":
+            [
+                "I1"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "I8jDq",
+                    "name": "Claws",
+                    "label": "Claws",
+                    "attacks": 1,
+                    "specialRules":
+                    [
+                        {
+                            "key": "rending",
+                            "name": "Rending",
+                            "rating": "",
+                            "modify": false
+                        }
+                    ],
+                    "count": 5,
+                    "originalCount": 5,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "fast",
+                    "name": "Fast",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "strider",
+                    "name": "Strider",
+                    "modify": false,
+                    "rating": ""
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "8LD0dh8",
+            "cost": 75,
+            "name": "Barbarian Horsemen",
+            "size": 5,
+            "defense": 5,
+            "quality": 5,
+            "upgrades":
+            [
+                "J1"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "fd17h",
+                    "name": "Hand Weapons",
+                    "label": "Hand Weapons",
+                    "attacks": 1,
+                    "specialRules":
+                    [],
+                    "count": 5,
+                    "originalCount": 5,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "fast",
+                    "name": "Fast",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "furious",
+                    "name": "Furious",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "impact",
+                    "name": "Impact",
+                    "modify": false,
+                    "rating": "1"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "GJGNWvj",
+            "cost": 130,
+            "name": "Havoc Knights",
+            "size": 5,
+            "defense": 3,
+            "quality": 3,
+            "upgrades":
+            [
+                "D1",
+                "K1"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "Q0t0G",
+                    "name": "Hand Weapons",
+                    "label": "Hand Weapons",
+                    "attacks": 1,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "1",
+                            "modify": false
+                        }
+                    ],
+                    "count": 5,
+                    "originalCount": 5,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "fast",
+                    "name": "Fast",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "impact",
+                    "name": "Impact",
+                    "modify": false,
+                    "rating": "1"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "3SD9sRo",
+            "cost": 230,
+            "name": "Daemonic Guard Knights",
+            "size": 3,
+            "defense": 3,
+            "quality": 3,
+            "upgrades":
+            [
+                "L1"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "ni_Wq",
+                    "name": "Hexed Weapons",
+                    "label": "Hexed Weapons",
+                    "attacks": 1,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "1",
+                            "modify": false
+                        },
+                        {
+                            "key": "rending",
+                            "name": "Rending",
+                            "rating": "",
+                            "modify": false
+                        }
+                    ],
+                    "count": 3,
+                    "originalCount": 3,
+                    "type": "ArmyBookWeapon"
+                },
+                {
+                    "id": "ZtAPj",
+                    "name": "Hooves",
+                    "label": "Hooves",
+                    "attacks": 2,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "1",
+                            "modify": false
+                        }
+                    ],
+                    "count": 3,
+                    "originalCount": 3,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "fast",
+                    "name": "Fast",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "impact",
+                    "name": "Impact",
+                    "modify": false,
+                    "rating": "3"
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "3"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "rk-3OZ-",
+            "cost": 115,
+            "name": "Daemon Spawn",
+            "size": 1,
+            "defense": 4,
+            "quality": 4,
+            "upgrades":
+            [],
+            "equipment":
+            [
+                {
+                    "id": "He-Cu",
+                    "name": "Dual Mutated Claws",
+                    "label": "Dual Mutated Claws",
+                    "attacks": 6,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "1",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "fear",
+                    "name": "Fear",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "mutations",
+                    "name": "Mutations",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "strider",
+                    "name": "Strider",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "6"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "kBx2if3",
+            "cost": 165,
+            "name": "Drake-Giant",
+            "size": 1,
+            "defense": 3,
+            "quality": 3,
+            "upgrades":
+            [],
+            "equipment":
+            [
+                {
+                    "id": "_zD9G",
+                    "name": "Great Weapon",
+                    "label": "Great Weapon",
+                    "attacks": 6,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "3",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "fear",
+                    "name": "Fear",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "impact",
+                    "name": "Impact",
+                    "modify": false,
+                    "rating": "6"
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "6"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "QvcEwz1",
+            "cost": 250,
+            "name": "Havoc Shrine",
+            "size": 1,
+            "defense": 3,
+            "quality": 4,
+            "upgrades":
+            [],
+            "equipment":
+            [
+                {
+                    "id": "yoTb-",
+                    "name": "Giant Fists",
+                    "label": "Giant Fists",
+                    "attacks": 8,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "2",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                },
+                {
+                    "id": "66oRC",
+                    "name": "Stomp",
+                    "label": "Stomp",
+                    "attacks": 4,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "1",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "dark-blessing",
+                    "name": "Dark Blessing",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "fear",
+                    "name": "Fear",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "12"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "rjgk8RE",
+            "cost": 230,
+            "name": "Slaughter Beast",
+            "size": 1,
+            "defense": 3,
+            "quality": 3,
+            "upgrades":
+            [],
+            "equipment":
+            [
+                {
+                    "id": "TdA32",
+                    "name": "Razor Claws",
+                    "label": "Razor Claws",
+                    "attacks": 8,
+                    "specialRules":
+                    [
+                        {
+                            "key": "rending",
+                            "name": "Rending",
+                            "rating": "",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                },
+                {
+                    "id": "_Yg86",
+                    "name": "Stomp",
+                    "label": "Stomp",
+                    "attacks": 4,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "1",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "fear",
+                    "name": "Fear",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "furious",
+                    "name": "Furious",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "12"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "fi0flbH",
+            "cost": 260,
+            "name": "Chimera",
+            "size": 1,
+            "defense": 3,
+            "quality": 4,
+            "upgrades":
+            [],
+            "equipment":
+            [
+                {
+                    "id": "0zcIY",
+                    "name": "Stomp",
+                    "label": "Stomp",
+                    "attacks": 4,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "1",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                },
+                {
+                    "id": "LAtWb",
+                    "name": "Triple Jaws",
+                    "label": "Triple Jaws",
+                    "attacks": 6,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "2",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "breath-attack",
+                    "name": "Breath Attack",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "fear",
+                    "name": "Fear",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "flying",
+                    "name": "Flying",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "12"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "kEg7-0r",
+            "cost": 300,
+            "name": "Vortex Beast",
+            "size": 1,
+            "defense": 3,
+            "quality": 4,
+            "upgrades":
+            [],
+            "equipment":
+            [
+                {
+                    "id": "gFNJK",
+                    "name": "Mutation Vortex",
+                    "label": "Mutation Vortex",
+                    "range": 18,
+                    "attacks": 3,
+                    "specialRules":
+                    [
+                        {
+                            "key": "blast",
+                            "name": "Blast",
+                            "rating": "3",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                },
+                {
+                    "id": "95jbF",
+                    "name": "Stomp",
+                    "label": "Stomp",
+                    "attacks": 4,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "1",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                },
+                {
+                    "id": "AaZc9",
+                    "name": "Tentacles",
+                    "label": "Tentacles",
+                    "attacks": 6,
+                    "specialRules":
+                    [],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "mutations",
+                    "name": "Mutations",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "fear",
+                    "name": "Fear",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "regeneration",
+                    "name": "Regeneration",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "12"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "Z4lt72z",
+            "cost": 155,
+            "name": "Havoc Chariot",
+            "size": 1,
+            "defense": 3,
+            "quality": 3,
+            "upgrades":
+            [],
+            "equipment":
+            [
+                {
+                    "id": "vGRIf",
+                    "name": "Crew Attacks",
+                    "label": "Crew Attacks",
+                    "attacks": 4,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "2",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                },
+                {
+                    "id": "OVFuY",
+                    "name": "Hooves",
+                    "label": "Hooves",
+                    "attacks": 2,
+                    "specialRules":
+                    [],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "fast",
+                    "name": "Fast",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "impact",
+                    "name": "Impact",
+                    "modify": false,
+                    "rating": "6"
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "6"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "bOrMaBb",
+            "cost": 190,
+            "name": "Beast Chariot",
+            "size": 1,
+            "defense": 3,
+            "quality": 3,
+            "upgrades":
+            [],
+            "equipment":
+            [
+                {
+                    "id": "-Yfgo",
+                    "name": "Claws",
+                    "label": "Claws",
+                    "attacks": 4,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "1",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                },
+                {
+                    "id": "iIrf3",
+                    "name": "Crew Attacks",
+                    "label": "Crew Attacks",
+                    "attacks": 4,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "2",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "fast",
+                    "name": "Fast",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "fear",
+                    "name": "Fear",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "impact",
+                    "name": "Impact",
+                    "modify": false,
+                    "rating": "6"
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "6"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "a1SnwkJ",
+            "cost": 135,
+            "name": "Havoc Cannon",
+            "size": 1,
+            "defense": 4,
+            "quality": 4,
+            "upgrades":
+            [
+                "M1"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "FjkvU",
+                    "name": "Crew",
+                    "label": "Crew",
+                    "attacks": 3,
+                    "specialRules":
+                    [],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                },
+                {
+                    "id": "r_ptZ",
+                    "name": "Hell Fire",
+                    "label": "Hell Fire",
+                    "range": 36,
+                    "attacks": 2,
+                    "specialRules":
+                    [
+                        {
+                            "key": "blast",
+                            "name": "Blast",
+                            "rating": "3",
+                            "modify": false
+                        },
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "1",
+                            "modify": false
+                        },
+                        {
+                            "key": "indirect",
+                            "name": "Indirect",
+                            "rating": "",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "artillery",
+                    "name": "Artillery",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "immobile",
+                    "name": "Immobile",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "3"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        }
+    ],
+    "upgradePackages":
+    [
+        {
+            "uid": "A1",
+            "hint": "Havoc Master",
+            "sections":
+            [
+                {
+                    "id": "JrGDVuP",
+                    "uid": "qPsrtux",
+                    "type": "replace",
+                    "label": "Replace Hand Weapon",
+                    "options":
+                    [
+                        {
+                            "uid": "TqD8aK5",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Lance",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Lance (A3, AP(1), Impact(1))",
+                                    "attacks": 3,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        },
+                                        {
+                                            "key": "impact",
+                                            "name": "Impact",
+                                            "type": "ArmyBookRule",
+                                            "label": "Impact(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Lance (A3, AP(1), Impact(1))",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "qPsrtux",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Master",
+                                    "newCostPrecise": "4.000",
+                                    "newCostRounded": 0
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "TqD8aK5"
+                        },
+                        {
+                            "uid": "DFV89N_",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Halberd",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Halberd (A3, AP(1), Rending)",
+                                    "attacks": 3,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        },
+                                        {
+                                            "key": "rending",
+                                            "name": "Rending",
+                                            "type": "ArmyBookRule",
+                                            "label": "Rending",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Halberd (A3, AP(1), Rending)",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "qPsrtux",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Master",
+                                    "newCostPrecise": "1.890",
+                                    "newCostRounded": 0
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "DFV89N_"
+                        },
+                        {
+                            "uid": "p_mJ2mK",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Great Weapon",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Great Weapon (A3, AP(3))",
+                                    "attacks": 3,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(3)",
+                                            "modify": false,
+                                            "rating": "3"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Great Weapon (A3, AP(3))",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "qPsrtux",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Master",
+                                    "newCostPrecise": "8.400",
+                                    "newCostRounded": 5
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "p_mJ2mK"
+                        },
+                        {
+                            "uid": "Kh98k",
+                            "cost": 15,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Dual Hand Weapons",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Dual Hand Weapons (A6, AP(1))",
+                                    "range": 0,
+                                    "attacks": 6,
+                                    "condition": "",
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Dual Hand Weapons (A6, AP(1))",
+                            "proposedCost": 15,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "qPsrtux",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Master",
+                                    "newCostPrecise": "16.800",
+                                    "newCostRounded": 15
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "Kh98k"
+                        }
+                    ],
+                    "parentPackageUid": "A1",
+                    "replaceWhat":
+                    [
+                        "Hand Weapon"
+                    ]
+                },
+                {
+                    "id": "3ZP88Jh",
+                    "uid": "19qVgHF",
+                    "type": "upgrade",
+                    "label": "Upgrade with one",
+                    "options":
+                    [
+                        {
+                            "uid": "1LinPu5",
+                            "cost": 20,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Army Standard Bearer",
+                                    "type": "ArmyBookItem",
+                                    "label": "Army Standard Bearer (Fear)",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "fear",
+                                            "name": "Fear",
+                                            "type": "ArmyBookRule",
+                                            "label": "Fear",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Army Standard Bearer (Fear)",
+                            "proposedCost": 20,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "19qVgHF",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Master",
+                                    "newCostPrecise": "20.000",
+                                    "newCostRounded": 20
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "1LinPu5"
+                        },
+                        {
+                            "uid": "Fw_IHVT",
+                            "cost": 25,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Sorcerer",
+                                    "type": "ArmyBookItem",
+                                    "label": "Sorcerer (Wizard(1))",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "wizard",
+                                            "name": "Wizard",
+                                            "type": "ArmyBookRule",
+                                            "label": "Wizard(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Sorcerer (Wizard(1))",
+                            "proposedCost": 25,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "19qVgHF",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Master",
+                                    "newCostPrecise": "25.000",
+                                    "newCostRounded": 25
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "Fw_IHVT"
+                        },
+                        {
+                            "uid": "TsOYqDq",
+                            "cost": 30,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Herald",
+                                    "type": "ArmyBookItem",
+                                    "label": "Herald (Doom Caller)",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "doom-caller",
+                                            "name": "Doom Caller",
+                                            "type": "ArmyBookRule",
+                                            "label": "Doom Caller",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Herald (Doom Caller)",
+                            "proposedCost": 30,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "19qVgHF",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Master",
+                                    "newCostPrecise": "30.000",
+                                    "newCostRounded": 30
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "TsOYqDq"
+                        },
+                        {
+                            "uid": "PxyGmxj",
+                            "cost": 65,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Conqueror",
+                                    "type": "ArmyBookItem",
+                                    "label": "Conqueror (Dark March)",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "dark march",
+                                            "name": "Dark March",
+                                            "type": "ArmyBookRule",
+                                            "label": "Dark March",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Conqueror (Dark March)",
+                            "proposedCost": 65,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "19qVgHF",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Master",
+                                    "newCostPrecise": "65.000",
+                                    "newCostRounded": 65
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "PxyGmxj"
+                        }
+                    ],
+                    "isHeroUpgrade": true,
+                    "parentPackageUid": "A1",
+                    "select": 1
+                },
+                {
+                    "id": "4PURqtd",
+                    "uid": "YVgJPFp",
+                    "type": "upgrade",
+                    "label": "Mount on",
+                    "options":
+                    [
+                        {
+                            "uid": "cVMHC7i",
+                            "cost": 15,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Horse",
+                                    "type": "ArmyBookItem",
+                                    "label": "Horse (Fast, Impact(1))",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "fast",
+                                            "name": "Fast",
+                                            "type": "ArmyBookRule",
+                                            "label": "Fast",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "key": "impact",
+                                            "name": "Impact",
+                                            "type": "ArmyBookRule",
+                                            "label": "Impact(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Horse (Fast, Impact(1))",
+                            "proposedCost": 15,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "YVgJPFp",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Master",
+                                    "newCostPrecise": "16.000",
+                                    "newCostRounded": 15
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "cVMHC7i"
+                        },
+                        {
+                            "uid": "7gHEUZM",
+                            "cost": 100,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Daemon Mount",
+                                    "type": "ArmyBookItem",
+                                    "label": "Daemon Mount (Claws (A2, AP(1)), Fast, Fear, Impact(3), Tough(+3))",
+                                    "content":
+                                    [
+                                        {
+                                            "name": "Claws",
+                                            "type": "ArmyBookWeapon",
+                                            "label": "Claws (A2, AP(1))",
+                                            "range": 0,
+                                            "attacks": 2,
+                                            "condition": "",
+                                            "specialRules":
+                                            [
+                                                {
+                                                    "key": "ap",
+                                                    "name": "AP",
+                                                    "type": "ArmyBookRule",
+                                                    "label": "AP(1)",
+                                                    "modify": false,
+                                                    "rating": "1"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "fast",
+                                            "name": "Fast",
+                                            "type": "ArmyBookRule",
+                                            "label": "Fast",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "key": "fear",
+                                            "name": "Fear",
+                                            "type": "ArmyBookRule",
+                                            "label": "Fear",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "key": "impact",
+                                            "name": "Impact",
+                                            "type": "ArmyBookRule",
+                                            "label": "Impact(3)",
+                                            "modify": false,
+                                            "rating": "3"
+                                        },
+                                        {
+                                            "key": "tough",
+                                            "name": "Tough",
+                                            "type": "ArmyBookRule",
+                                            "label": "Tough(+3)",
+                                            "modify": true,
+                                            "rating": "3"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Daemon Mount (Claws (A2, AP(1)), Fast, Fear, Impact(3), Tough(+3))",
+                            "proposedCost": 100,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "YVgJPFp",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Master",
+                                    "newCostPrecise": "103.200",
+                                    "newCostRounded": 100
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "7gHEUZM"
+                        },
+                        {
+                            "uid": "iOGKJV4",
+                            "cost": 155,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Manticore",
+                                    "type": "ArmyBookItem",
+                                    "label": "Manticore (Claws (A6, Rending), Fear, Flying, Tough(+6))",
+                                    "content":
+                                    [
+                                        {
+                                            "name": "Claws",
+                                            "type": "ArmyBookWeapon",
+                                            "label": "Claws (A6, Rending)",
+                                            "range": 0,
+                                            "attacks": 6,
+                                            "condition": "",
+                                            "specialRules":
+                                            [
+                                                {
+                                                    "key": "rending",
+                                                    "name": "Rending",
+                                                    "type": "ArmyBookRule",
+                                                    "label": "Rending",
+                                                    "modify": false,
+                                                    "rating": ""
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "fear",
+                                            "name": "Fear",
+                                            "type": "ArmyBookRule",
+                                            "label": "Fear",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "key": "flying",
+                                            "name": "Flying",
+                                            "type": "ArmyBookRule",
+                                            "label": "Flying",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "key": "tough",
+                                            "name": "Tough",
+                                            "type": "ArmyBookRule",
+                                            "label": "Tough(+6)",
+                                            "modify": true,
+                                            "rating": "6"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Manticore (Claws (A6, Rending), Fear, Flying, Tough(+6))",
+                            "proposedCost": 155,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "YVgJPFp",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Master",
+                                    "newCostPrecise": "158.900",
+                                    "newCostRounded": 155
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "iOGKJV4"
+                        },
+                        {
+                            "uid": "TAW-0",
+                            "cost": 305,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Havoc Dragon",
+                                    "type": "ArmyBookItem",
+                                    "label": "Havoc Dragon (Breath Attack, Claws (A6, AP(1)), Fear, Flying, Stomp (A4, AP(1)), Tough(+12))",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "tough",
+                                            "name": "Tough",
+                                            "type": "ArmyBookRule",
+                                            "label": "Tough(+12)",
+                                            "modify": true,
+                                            "rating": "12"
+                                        },
+                                        {
+                                            "key": "breath attack",
+                                            "name": "Breath Attack",
+                                            "type": "ArmyBookRule",
+                                            "label": "Breath Attack",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "key": "fear",
+                                            "name": "Fear",
+                                            "type": "ArmyBookRule",
+                                            "label": "Fear",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "key": "flying",
+                                            "name": "Flying",
+                                            "type": "ArmyBookRule",
+                                            "label": "Flying",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "name": "Stomp",
+                                            "type": "ArmyBookWeapon",
+                                            "label": "Stomp (A4, AP(1))",
+                                            "range": 0,
+                                            "attacks": 4,
+                                            "condition": "",
+                                            "specialRules":
+                                            [
+                                                {
+                                                    "key": "ap",
+                                                    "name": "AP",
+                                                    "type": "ArmyBookRule",
+                                                    "label": "AP(1)",
+                                                    "modify": false,
+                                                    "rating": "1"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Claws",
+                                            "type": "ArmyBookWeapon",
+                                            "label": "Claws (A6, AP(1))",
+                                            "range": 0,
+                                            "attacks": 6,
+                                            "condition": "",
+                                            "specialRules":
+                                            [
+                                                {
+                                                    "key": "ap",
+                                                    "name": "AP",
+                                                    "type": "ArmyBookRule",
+                                                    "label": "AP(1)",
+                                                    "modify": false,
+                                                    "rating": "1"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Havoc Dragon (Breath Attack, Claws (A6, AP(1)), Fear, Flying, Stomp (A4, AP(1)), Tough(+12))",
+                            "proposedCost": 305,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "YVgJPFp",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Master",
+                                    "newCostPrecise": "305.000",
+                                    "newCostRounded": 305
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "TAW-0"
+                        }
+                    ],
+                    "parentPackageUid": "A1",
+                    "select": 1
+                },
+                {
+                    "id": "TfsKJsj",
+                    "uid": "-Hw57ol",
+                    "type": "upgrade",
+                    "label": "Upgrade with",
+                    "options":
+                    [
+                        {
+                            "uid": "wi3x0",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "key": "chosen warrior",
+                                    "name": "Chosen Warrior",
+                                    "type": "ArmyBookRule",
+                                    "label": "Chosen Warrior",
+                                    "modify": false,
+                                    "rating": "",
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Chosen Warrior",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "-Hw57ol",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Master",
+                                    "newCostPrecise": "5.000",
+                                    "newCostRounded": 5
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "wi3x0"
+                        }
+                    ],
+                    "parentPackageUid": "A1"
+                }
+            ]
+        },
+        {
+            "uid": "B1",
+            "hint": "Barbarian Champion",
+            "sections":
+            [
+                {
+                    "id": "qSR_w2x",
+                    "uid": "XA68TNV",
+                    "type": "replace",
+                    "label": "Replace Hand Weapon",
+                    "options":
+                    [
+                        {
+                            "uid": "G9ZmlCx",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Lance",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Lance (A3, Impact(1))",
+                                    "attacks": 3,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "impact",
+                                            "name": "Impact",
+                                            "type": "ArmyBookRule",
+                                            "label": "Impact(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Lance (A3, Impact(1))",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "B1",
+                            "parentSectionUid": "XA68TNV",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Barbarian Champion",
+                                    "newCostPrecise": "4.000",
+                                    "newCostRounded": 5
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "G9ZmlCx"
+                        },
+                        {
+                            "uid": "d2ymphv",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Halberd",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Halberd (A3, Rending)",
+                                    "attacks": 3,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "rending",
+                                            "name": "Rending",
+                                            "type": "ArmyBookRule",
+                                            "label": "Rending",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Halberd (A3, Rending)",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "B1",
+                            "parentSectionUid": "XA68TNV",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Barbarian Champion",
+                                    "newCostPrecise": "4.209",
+                                    "newCostRounded": 5
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "d2ymphv"
+                        },
+                        {
+                            "uid": "CSJn0_u",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Great Weapon",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Great Weapon (A3, AP(2))",
+                                    "attacks": 3,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(2)",
+                                            "modify": false,
+                                            "rating": "2"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Great Weapon (A3, AP(2))",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "B1",
+                            "parentSectionUid": "XA68TNV",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Barbarian Champion",
+                                    "newCostPrecise": "5.856",
+                                    "newCostRounded": 5
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "CSJn0_u"
+                        },
+                        {
+                            "uid": "9IOId",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Dual Hand Weapons",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Dual Hand Weapons (A6)",
+                                    "range": 0,
+                                    "attacks": 6,
+                                    "condition": "",
+                                    "specialRules":
+                                    [],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Dual Hand Weapons (A6)",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "B1",
+                            "parentSectionUid": "XA68TNV",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Barbarian Champion",
+                                    "newCostPrecise": "6.000",
+                                    "newCostRounded": 5
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "9IOId"
+                        }
+                    ],
+                    "parentPackageUid": "B1",
+                    "replaceWhat":
+                    [
+                        "Hand Weapon"
+                    ]
+                },
+                {
+                    "id": "cxak4vW",
+                    "uid": "xlVu8PO",
+                    "type": "upgrade",
+                    "label": "Upgrade with one",
+                    "options":
+                    [
+                        {
+                            "uid": "bljFkqX",
+                            "cost": 25,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Sorcerer",
+                                    "type": "ArmyBookItem",
+                                    "label": "Sorcerer (Wizard(1))",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "wizard",
+                                            "name": "Wizard",
+                                            "type": "ArmyBookRule",
+                                            "label": "Wizard(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Sorcerer (Wizard(1))",
+                            "proposedCost": 25,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "B1",
+                            "parentSectionUid": "xlVu8PO",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Barbarian Champion",
+                                    "newCostPrecise": "25.000",
+                                    "newCostRounded": 25
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "bljFkqX"
+                        },
+                        {
+                            "uid": "g6drS",
+                            "cost": 55,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Marauder",
+                                    "type": "ArmyBookItem",
+                                    "label": "Marauder (Battle Ready)",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "battle ready",
+                                            "name": "Battle Ready",
+                                            "type": "ArmyBookRule",
+                                            "label": "Battle Ready",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Marauder (Battle Ready)",
+                            "proposedCost": 55,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "B1",
+                            "parentSectionUid": "xlVu8PO",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Barbarian Champion",
+                                    "newCostPrecise": "55.000",
+                                    "newCostRounded": 55
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "g6drS"
+                        }
+                    ],
+                    "isHeroUpgrade": true,
+                    "parentPackageUid": "B1",
+                    "select": 1
+                },
+                {
+                    "id": "EX9ayFT",
+                    "uid": "UC7mK79",
+                    "type": "upgrade",
+                    "label": "Mount on",
+                    "options":
+                    [
+                        {
+                            "uid": "SDT9lXj",
+                            "cost": 10,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Horse",
+                                    "type": "ArmyBookItem",
+                                    "label": "Horse (Fast, Impact(1))",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "fast",
+                                            "name": "Fast",
+                                            "type": "ArmyBookRule",
+                                            "label": "Fast",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "key": "impact",
+                                            "name": "Impact",
+                                            "type": "ArmyBookRule",
+                                            "label": "Impact(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Horse (Fast, Impact(1))",
+                            "proposedCost": 10,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "B1",
+                            "parentSectionUid": "UC7mK79",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Barbarian Champion",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "SDT9lXj"
+                        }
+                    ],
+                    "parentPackageUid": "B1",
+                    "select": 1
+                }
+            ]
+        },
+        {
+            "uid": "C1",
+            "hint": "Harbinger",
+            "sections":
+            [
+                {
+                    "id": "ftyJkhW",
+                    "uid": "Hsh6F",
+                    "label": "Upgrade with one",
+                    "options":
+                    [
+                        {
+                            "uid": "s2Upd",
+                            "cost": 10,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Daemon Chain",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Daemon Chain (12\", A3)",
+                                    "range": 12,
+                                    "attacks": 3,
+                                    "condition": "",
+                                    "specialRules":
+                                    [],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Daemon Chain (12\", A3)",
+                            "proposedCost": 10,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "C1",
+                            "parentSectionUid": "Hsh6F",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Harbinger of Havoc",
+                                    "newCostPrecise": "12.000",
+                                    "newCostRounded": 10
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "s2Upd"
+                        },
+                        {
+                            "uid": "1y6E-",
+                            "cost": 15,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Daemon Sword",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Daemon Sword (A3, Rending)",
+                                    "range": 0,
+                                    "attacks": 3,
+                                    "condition": "",
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "rending",
+                                            "name": "Rending",
+                                            "type": "ArmyBookRule",
+                                            "label": "Rending",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Daemon Sword (A3, Rending)",
+                            "proposedCost": 15,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "C1",
+                            "parentSectionUid": "Hsh6F",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Harbinger of Havoc",
+                                    "newCostPrecise": "15.450",
+                                    "newCostRounded": 15
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "1y6E-"
+                        }
+                    ],
+                    "parentPackageUid": "C1",
+                    "type": "upgrade",
+                    "select": 1
+                },
+                {
+                    "id": "-Sa5TeM",
+                    "uid": "zGnYp",
+                    "label": "Replace any Daemon Sword",
+                    "options":
+                    [
+                        {
+                            "uid": "B54hC",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Daemon Hammer",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Daemon Hammer (A2, Blast(3))",
+                                    "range": 0,
+                                    "attacks": 2,
+                                    "condition": "",
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "blast",
+                                            "name": "Blast",
+                                            "type": "ArmyBookRule",
+                                            "label": "Blast(3)",
+                                            "modify": false,
+                                            "rating": "3"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Daemon Hammer (A2, Blast(3))",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "C1",
+                            "parentSectionUid": "zGnYp",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Harbinger of Havoc",
+                                    "newCostPrecise": "4.550",
+                                    "newCostRounded": 0
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "B54hC"
+                        },
+                        {
+                            "uid": "PNXcvDx",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Daemon Gauntlet",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Daemon Gauntlet (A3, AP(3))",
+                                    "range": 0,
+                                    "attacks": 3,
+                                    "condition": "",
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(3)",
+                                            "modify": false,
+                                            "rating": "3"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Daemon Gauntlet (A3, AP(3))",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "C1",
+                            "parentSectionUid": "zGnYp",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Harbinger of Havoc",
+                                    "newCostPrecise": "9.750",
+                                    "newCostRounded": 5
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "PNXcvDx"
+                        },
+                        {
+                            "uid": "XLwzd",
+                            "cost": 20,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Daemon Spear",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Daemon Spear (A2, AP(2), Deadly(3))",
+                                    "range": 0,
+                                    "attacks": 2,
+                                    "condition": "",
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(2)",
+                                            "modify": false,
+                                            "rating": "2"
+                                        },
+                                        {
+                                            "key": "deadly",
+                                            "name": "Deadly",
+                                            "type": "ArmyBookRule",
+                                            "label": "Deadly(3)",
+                                            "modify": false,
+                                            "rating": "3"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Daemon Spear (A2, AP(2), Deadly(3))",
+                            "proposedCost": 20,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "C1",
+                            "parentSectionUid": "zGnYp",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Harbinger of Havoc",
+                                    "newCostPrecise": "20.550",
+                                    "newCostRounded": 20
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "XLwzd"
+                        }
+                    ],
+                    "parentPackageUid": "C1",
+                    "type": "replace",
+                    "affects": "any",
+                    "replaceWhat":
+                    [
+                        "Daemon Sword"
+                    ]
+                },
+                {
+                    "id": "XUwfCFv",
+                    "uid": "F0meGiD",
+                    "type": "upgrade",
+                    "label": "Upgrade with any",
+                    "options":
+                    [
+                        {
+                            "uid": "igk49az",
+                            "cost": 20,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Wings",
+                                    "type": "ArmyBookItem",
+                                    "label": "Wings (Flying)",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "flying",
+                                            "name": "Flying",
+                                            "type": "ArmyBookRule",
+                                            "label": "Flying",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Wings (Flying)",
+                            "proposedCost": 20,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "C1",
+                            "parentSectionUid": "F0meGiD",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Harbinger of Havoc",
+                                    "newCostPrecise": "24.000",
+                                    "newCostRounded": 20
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "igk49az"
+                        },
+                        {
+                            "uid": "PdHmRY1",
+                            "cost": 25,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Sorcerer",
+                                    "type": "ArmyBookItem",
+                                    "label": "Sorcerer (Wizard(1))",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "wizard",
+                                            "name": "Wizard",
+                                            "type": "ArmyBookRule",
+                                            "label": "Wizard(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Sorcerer (Wizard(1))",
+                            "proposedCost": 25,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "C1",
+                            "parentSectionUid": "F0meGiD",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Harbinger of Havoc",
+                                    "newCostPrecise": "25.000",
+                                    "newCostRounded": 25
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "PdHmRY1"
+                        }
+                    ],
+                    "parentPackageUid": "C1",
+                    "select": "any"
+                }
+            ]
+        },
+        {
+            "uid": "D1",
+            "hint": "Command Group",
+            "sections":
+            [
+                {
+                    "id": "iH8Z_AS",
+                    "uid": "73zh5cY",
+                    "type": "upgrade",
+                    "label": "Upgrade with",
+                    "options":
+                    [
+                        {
+                            "uid": "90dWcTi",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "key": "sergeant",
+                                    "name": "Sergeant",
+                                    "type": "ArmyBookRule",
+                                    "label": "Sergeant",
+                                    "modify": false,
+                                    "rating": "",
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Sergeant",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "D1",
+                            "parentSectionUid": "73zh5cY",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Barbarians",
+                                    "newCostPrecise": "5.000",
+                                    "newCostRounded": 5
+                                },
+                                {
+                                    "isValid": true,
+                                    "unitName": "Warriors",
+                                    "newCostPrecise": "5.000",
+                                    "newCostRounded": 5
+                                },
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Ogres",
+                                    "newCostPrecise": "5.000",
+                                    "newCostRounded": 5
+                                },
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Knights",
+                                    "newCostPrecise": "5.000",
+                                    "newCostRounded": 5
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "90dWcTi"
+                        },
+                        {
+                            "uid": "_T_SSCh",
+                            "cost": 10,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "key": "musician",
+                                    "name": "Musician",
+                                    "type": "ArmyBookRule",
+                                    "label": "Musician",
+                                    "modify": false,
+                                    "rating": "",
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Musician",
+                            "proposedCost": 10,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "D1",
+                            "parentSectionUid": "73zh5cY",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Barbarians",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                },
+                                {
+                                    "isValid": true,
+                                    "unitName": "Warriors",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                },
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Ogres",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                },
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Knights",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "_T_SSCh"
+                        },
+                        {
+                            "uid": "gyA2sDO",
+                            "cost": 10,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "key": "battle-standard",
+                                    "name": "Battle Standard",
+                                    "type": "ArmyBookRule",
+                                    "label": "Battle Standard",
+                                    "modify": false,
+                                    "rating": "",
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Battle Standard",
+                            "proposedCost": 10,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "D1",
+                            "parentSectionUid": "73zh5cY",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Barbarians",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                },
+                                {
+                                    "isValid": true,
+                                    "unitName": "Warriors",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                },
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Ogres",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                },
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Knights",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "gyA2sDO"
+                        }
+                    ],
+                    "parentPackageUid": "D1"
+                }
+            ]
+        },
+        {
+            "uid": "E1",
+            "hint": "Barbarians",
+            "sections":
+            [
+                {
+                    "id": "-d6Hrm0",
+                    "uid": "BPYTscQ",
+                    "type": "replace",
+                    "label": "Replace all Hand Weapons",
+                    "options":
+                    [
+                        {
+                            "uid": "Rjhvq6D",
+                            "cost": 10,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Flails",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Flails (A1, AP(1))",
+                                    "attacks": 1,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Flails (A1, AP(1))",
+                            "proposedCost": 10,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "E1",
+                            "parentSectionUid": "BPYTscQ",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Barbarians",
+                                    "newCostPrecise": "13.280",
+                                    "newCostRounded": 10
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "Rjhvq6D"
+                        }
+                    ],
+                    "parentPackageUid": "E1",
+                    "affects": "all",
+                    "replaceWhat":
+                    [
+                        "Hand Weapons"
+                    ]
+                }
+            ]
+        },
+        {
+            "uid": "F1",
+            "hint": "Warriors",
+            "sections":
+            [
+                {
+                    "id": "Zwg8fkf",
+                    "uid": "02QBHyf",
+                    "type": "replace",
+                    "label": "Replace all Hand Weapons",
+                    "options":
+                    [
+                        {
+                            "uid": "47obGZt",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Halberds",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Halberds (A1, AP(1), Rending)",
+                                    "attacks": 1,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        },
+                                        {
+                                            "key": "rending",
+                                            "name": "Rending",
+                                            "type": "ArmyBookRule",
+                                            "label": "Rending",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Halberds (A1, AP(1), Rending)",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "F1",
+                            "parentSectionUid": "02QBHyf",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Warriors",
+                                    "newCostPrecise": "3.150",
+                                    "newCostRounded": 0
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "47obGZt"
+                        },
+                        {
+                            "uid": "NdaV_Ee",
+                            "cost": 10,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Great Weapons",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Great Weapons (A1, AP(3))",
+                                    "attacks": 1,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(3)",
+                                            "modify": false,
+                                            "rating": "3"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Great Weapons (A1, AP(3))",
+                            "proposedCost": 10,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "F1",
+                            "parentSectionUid": "02QBHyf",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Warriors",
+                                    "newCostPrecise": "14.000",
+                                    "newCostRounded": 10
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "NdaV_Ee"
+                        },
+                        {
+                            "uid": "sj1XsR1",
+                            "cost": 25,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Dual Hand Weapons",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Dual Hand Weapons (A2, AP(1))",
+                                    "attacks": 2,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Dual Hand Weapons (A2, AP(1))",
+                            "proposedCost": 25,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "F1",
+                            "parentSectionUid": "02QBHyf",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Warriors",
+                                    "newCostPrecise": "28.000",
+                                    "newCostRounded": 25
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "sj1XsR1"
+                        }
+                    ],
+                    "parentPackageUid": "F1",
+                    "affects": "all",
+                    "replaceWhat":
+                    [
+                        "Hand Weapons"
+                    ]
+                },
+                {
+                    "id": "ltj54nO",
+                    "uid": "9w7Zgee",
+                    "type": "upgrade",
+                    "label": "Upgrade all models with",
+                    "model": true,
+                    "options":
+                    [
+                        {
+                            "uid": "9o3Qq",
+                            "cost": 25,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "key": "chosen warrior",
+                                    "name": "Chosen Warrior",
+                                    "type": "ArmyBookRule",
+                                    "label": "Chosen Warrior",
+                                    "modify": false,
+                                    "rating": "",
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Chosen Warrior",
+                            "proposedCost": 25,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "F1",
+                            "parentSectionUid": "9w7Zgee",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Warriors",
+                                    "newCostPrecise": "25.000",
+                                    "newCostRounded": 25
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "9o3Qq"
+                        }
+                    ],
+                    "parentPackageUid": "F1",
+                    "affects": "all"
+                }
+            ]
+        },
+        {
+            "uid": "G1",
+            "hint": "Havoc Ogres",
+            "sections":
+            [
+                {
+                    "id": "0-AS94s",
+                    "uid": "dXSq7kE",
+                    "type": "replace",
+                    "label": "Replace all Hand Weapons",
+                    "options":
+                    [
+                        {
+                            "uid": "g6bvEY1",
+                            "cost": 20,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Great Weapons",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Great Weapons (A3, AP(2))",
+                                    "attacks": 3,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(2)",
+                                            "modify": false,
+                                            "rating": "2"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Great Weapons (A3, AP(2))",
+                            "proposedCost": 20,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "G1",
+                            "parentSectionUid": "dXSq7kE",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Ogres",
+                                    "newCostPrecise": "21.600",
+                                    "newCostRounded": 20
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "g6bvEY1"
+                        }
+                    ],
+                    "parentPackageUid": "G1",
+                    "affects": "all",
+                    "replaceWhat":
+                    [
+                        "Hand Weapons"
+                    ]
+                }
+            ]
+        },
+        {
+            "uid": "H1",
+            "hint": "Drake-Centaurs",
+            "sections":
+            [
+                {
+                    "id": "-TnZq4u",
+                    "uid": "4bPr2xl",
+                    "type": "replace",
+                    "label": "Replace all Great Weapons",
+                    "options":
+                    [
+                        {
+                            "uid": "FEX-c",
+                            "cost": 25,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Dual Hand Weapons",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Dual Hand Weapons (A4, AP(2))",
+                                    "range": 0,
+                                    "attacks": 4,
+                                    "condition": "",
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(2)",
+                                            "modify": false,
+                                            "rating": "2"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Dual Hand Weapons (A4, AP(2))",
+                            "proposedCost": 25,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "H1",
+                            "parentSectionUid": "4bPr2xl",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Drake-Centaurs",
+                                    "newCostPrecise": "23.400",
+                                    "newCostRounded": 25
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "FEX-c"
+                        }
+                    ],
+                    "parentPackageUid": "H1",
+                    "affects": "all",
+                    "replaceWhat":
+                    [
+                        "Great Weapons"
+                    ]
+                }
+            ]
+        },
+        {
+            "uid": "I1",
+            "hint": "Havoc Hounds",
+            "sections":
+            [
+                {
+                    "id": "Dyy27qx",
+                    "uid": "RV8hzBv",
+                    "type": "upgrade",
+                    "label": "Upgrade all models with any",
+                    "model": true,
+                    "options":
+                    [
+                        {
+                            "uid": "FSTpWcs",
+                            "cost": 10,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Vicious",
+                                    "type": "ArmyBookItem",
+                                    "label": "Vicious (Poison in melee)",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "poison",
+                                            "name": "Poison",
+                                            "type": "ArmyBookRule",
+                                            "label": "Poison in melee",
+                                            "modify": false,
+                                            "rating": "",
+                                            "condition": "in melee"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Vicious (Poison in melee)",
+                            "proposedCost": 10,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "I1",
+                            "parentSectionUid": "RV8hzBv",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Hounds",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "FSTpWcs"
+                        },
+                        {
+                            "uid": "x1n6xIw",
+                            "cost": 15,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Bounding Advance",
+                                    "type": "ArmyBookItem",
+                                    "label": "Bounding Advance (Scout)",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "scout",
+                                            "name": "Scout",
+                                            "type": "ArmyBookRule",
+                                            "label": "Scout",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Bounding Advance (Scout)",
+                            "proposedCost": 15,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "I1",
+                            "parentSectionUid": "RV8hzBv",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Hounds",
+                                    "newCostPrecise": "15.000",
+                                    "newCostRounded": 15
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "x1n6xIw"
+                        }
+                    ],
+                    "parentPackageUid": "I1",
+                    "affects": "all",
+                    "select": "any"
+                }
+            ]
+        },
+        {
+            "uid": "J1",
+            "hint": "Barbarian Horsemen",
+            "sections":
+            [
+                {
+                    "id": "i1gMCJE",
+                    "uid": "MX73VVV",
+                    "type": "replace",
+                    "label": "Replace all Hand Weapons",
+                    "options":
+                    [
+                        {
+                            "uid": "E93HmvE",
+                            "cost": 10,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Flails",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Flails (A1, AP(1))",
+                                    "attacks": 1,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Flails (A1, AP(1))",
+                            "proposedCost": 10,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "J1",
+                            "parentSectionUid": "MX73VVV",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Barbarian Horsemen",
+                                    "newCostPrecise": "6.640",
+                                    "newCostRounded": 10
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "E93HmvE"
+                        }
+                    ],
+                    "parentPackageUid": "J1",
+                    "affects": "all",
+                    "replaceWhat":
+                    [
+                        "Hand Weapons"
+                    ]
+                },
+                {
+                    "id": "h1fbPIK",
+                    "uid": "ABClf49",
+                    "type": "upgrade",
+                    "label": "Upgrade all models with",
+                    "model": true,
+                    "options":
+                    [
+                        {
+                            "uid": "9tCCn1h",
+                            "cost": 10,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Javelins",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Javelins (12”, A1)",
+                                    "range": 12,
+                                    "attacks": 1,
+                                    "specialRules":
+                                    [],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Javelins (12”, A1)",
+                            "proposedCost": 10,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "J1",
+                            "parentSectionUid": "ABClf49",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Barbarian Horsemen",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "9tCCn1h"
+                        }
+                    ],
+                    "parentPackageUid": "J1",
+                    "affects": "all"
+                }
+            ]
+        },
+        {
+            "uid": "K1",
+            "hint": "Havoc Knights",
+            "sections":
+            [
+                {
+                    "id": "rqCjJsK",
+                    "uid": "5CxcNHu",
+                    "type": "replace",
+                    "label": "Replace all Hand Weapons",
+                    "options":
+                    [
+                        {
+                            "uid": "zYkUhcd",
+                            "cost": 20,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Lances",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Lances (A1, AP(1), Impact(1))",
+                                    "attacks": 1,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        },
+                                        {
+                                            "key": "impact",
+                                            "name": "Impact",
+                                            "type": "ArmyBookRule",
+                                            "label": "Impact(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Lances (A1, AP(1), Impact(1))",
+                            "proposedCost": 20,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "K1",
+                            "parentSectionUid": "5CxcNHu",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Knights",
+                                    "newCostPrecise": "20.000",
+                                    "newCostRounded": 20
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "zYkUhcd"
+                        }
+                    ],
+                    "parentPackageUid": "K1",
+                    "affects": "all",
+                    "replaceWhat":
+                    [
+                        "Hand Weapons"
+                    ]
+                }
+            ]
+        },
+        {
+            "uid": "L1",
+            "hint": "Daemonic Guard Knights",
+            "sections":
+            [
+                {
+                    "id": "ioxJs-I",
+                    "uid": "9l9eAVf",
+                    "type": "replace",
+                    "label": "Replace all Hexed Weapons",
+                    "options":
+                    [
+                        {
+                            "uid": "Yn9WINy",
+                            "cost": 10,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Lances",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Lances (A1, AP(1), Impact(1))",
+                                    "attacks": 1,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        },
+                                        {
+                                            "key": "impact",
+                                            "name": "Impact",
+                                            "type": "ArmyBookRule",
+                                            "label": "Impact(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Lances (A1, AP(1), Impact(1))",
+                            "proposedCost": 10,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "L1",
+                            "parentSectionUid": "9l9eAVf",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Daemonic Guard Knights",
+                                    "newCostPrecise": "10.110",
+                                    "newCostRounded": 10
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "Yn9WINy"
+                        }
+                    ],
+                    "parentPackageUid": "L1",
+                    "affects": "all",
+                    "replaceWhat":
+                    [
+                        "Hexed Weapons"
+                    ]
+                }
+            ]
+        },
+        {
+            "uid": "M1",
+            "hint": "Havoc Cannon",
+            "sections":
+            [
+                {
+                    "id": "GkKw3PG",
+                    "uid": "RXosMVN",
+                    "type": "replace",
+                    "label": "Replace Hell Fire",
+                    "options":
+                    [
+                        {
+                            "uid": "vbvianl",
+                            "cost": 30,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Doom Fire",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Doom Fire (36”, A2, Deadly(3), AP(2), Indirect)",
+                                    "range": 36,
+                                    "attacks": 2,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "deadly",
+                                            "name": "Deadly",
+                                            "type": "ArmyBookRule",
+                                            "label": "Deadly(3)",
+                                            "modify": false,
+                                            "rating": "3"
+                                        },
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(2)",
+                                            "modify": false,
+                                            "rating": "2"
+                                        },
+                                        {
+                                            "key": "indirect",
+                                            "name": "Indirect",
+                                            "type": "ArmyBookRule",
+                                            "label": "Indirect",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Doom Fire (36”, A2, Deadly(3), AP(2), Indirect)",
+                            "proposedCost": 30,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "M1",
+                            "parentSectionUid": "RXosMVN",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Cannon",
+                                    "newCostPrecise": "28.800",
+                                    "newCostRounded": 30
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "vbvianl"
+                        }
+                    ],
+                    "parentPackageUid": "M1",
+                    "replaceWhat":
+                    [
+                        "Hell Fire"
+                    ]
+                }
+            ]
+        },
+        {
+            "uid": "n-7pC",
+            "hint": "Furies",
+            "sections":
+            [
+                {
+                    "id": "AJyFxTs",
+                    "uid": "tDjVk",
+                    "label": "Replace all Armblades",
+                    "options":
+                    [
+                        {
+                            "uid": "UhUr3",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Claws",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Claws (A2, Rending)",
+                                    "range": 0,
+                                    "attacks": 2,
+                                    "condition": "",
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "rending",
+                                            "name": "Rending",
+                                            "type": "ArmyBookRule",
+                                            "label": "Rending",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Claws (A2, Rending)",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "n-7pC",
+                            "parentSectionUid": "tDjVk",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Havoc Furies",
+                                    "newCostPrecise": "3.500",
+                                    "newCostRounded": 0
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "UhUr3"
+                        }
+                    ],
+                    "parentPackageUid": "n-7pC",
+                    "type": "replace",
+                    "affects": "all",
+                    "replaceWhat":
+                    [
+                        "Armblades"
+                    ]
+                }
+            ]
+        }
+    ],
+    "specialRules":
+    [
+        {
+            "id": 405,
+            "name": "Dark March",
+            "aliasedRuleId": null,
+            "description": "Once per activation, before attacking, pick one other friendly unit within 12” of this model, which may move by up to 6\".",
+            "hasRating": false
+        },
+        {
+            "id": 403,
+            "name": "Chosen Warrior",
+            "aliasedRuleId": null,
+            "description": "This model gets +1 to hit rolls in melee and shooting.",
+            "hasRating": false
+        },
+        {
+            "id": 404,
+            "name": "Dark Blessing",
+            "aliasedRuleId": null,
+            "description": "Once per activation, pick 2 friendly units within 6”, which get +1 to hit rolls next time they fight in melee.",
+            "hasRating": false
+        },
+        {
+            "id": 294,
+            "name": "Daemon",
+            "aliasedRuleId": null,
+            "description": "This model may be deployed as if it had the Ambush or the Scout rule (pick one).",
+            "hasRating": false
+        },
+        {
+            "id": 402,
+            "name": "Battle Ready",
+            "aliasedRuleId": null,
+            "description": "The hero and its unit get the Scout special rule.",
+            "hasRating": false
+        },
+        {
+            "id": 210,
+            "name": "Mutations",
+            "aliasedRuleId": null,
+            "description": "When in melee, roll one die and apply one bonus to models with this rule:\n* 1-3: Attacks get Rending\n* 4-6: Attacks get AP(+1)",
+            "hasRating": false
+        },
+        {
+            "id": 406,
+            "name": "Doom Caller",
+            "aliasedRuleId": null,
+            "description": "Once per activation, before attacking, pick one enemy unit within 12”, which gets -2 to its next morale test roll.",
+            "hasRating": false
+        }
+    ],
+    "customRules":
+    [],
+    "spells":
+    [
+        {
+            "id": "RilmM",
+            "name": "Horrify",
+            "effect": "Target 2 enemy units within 12” get -1 to hit next time they shoot.",
+            "threshold": 4
+        },
+        {
+            "id": "C_gua",
+            "name": "Barbed Spikes",
+            "effect": "Target enemy unit within 6” takes 3 hits with AP(2).",
+            "threshold": 4
+        },
+        {
+            "id": "MfjtR",
+            "name": "Dark Chains",
+            "effect": "Target 2 enemy units within 6” get -2\" next time they Advance, or -4\" next time they Charge/Rush.",
+            "threshold": 5
+        },
+        {
+            "id": "lJcol",
+            "name": "Impale",
+            "effect": "Target enemy model within 12” takes 2 hits with AP(4).",
+            "threshold": 5
+        },
+        {
+            "id": "Uq_iO",
+            "name": "Havoc Charge",
+            "effect": "Target friendly unit within 12” gets Impact(1) next time it charges.",
+            "threshold": 6
+        },
+        {
+            "id": "2Xt9p",
+            "name": "Thorn Field",
+            "effect": "Target 2 enemy units within 6” take 8 hits each.",
+            "threshold": 6
+        }
+    ],
+    "modifiedAt": "2023-06-12T08:07:58.963Z",
+    "official": true,
+    "versionString": "v2.50",
+    "coverImagePath": null,
+    "coverImageCredit": "Brandon Gillam",
+    "bannerImagePath": null,
+    "isLive": true,
+    "factionName": "Havoc Warriors",
+    "factionRelation": null,
+    "popularity": 0,
+    "downvotes": 0,
+    "username": "onepagerules",
+    "voted": null,
+    "isPartner": false,
+    "armyForgeUrl": "https://army-forge.onepagerules.com/listConfiguration?armyId=PGxKcq4R571OtwqD&faction=Havoc Warriors",
+    "gameSystemId": 4,
+    "gameSystemSlug": "age-of-fantasy",
+    "fullname": "Age of Fantasy",
+    "aberration": "AOF",
+    "universe": "Age of Fantasy",
+    "shortname": "Age of Fantasy",
+    "flavouredUid": "PGxKcq4R571OtwqD~4"
+}

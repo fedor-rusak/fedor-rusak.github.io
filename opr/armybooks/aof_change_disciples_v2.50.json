@@ -1,0 +1,3727 @@
+const armybookChange = {
+    "uid": "CNOmkR5Q2C7Dc4Nm",
+    "enabledGameSystems":
+    [
+        4,
+        5,
+        6
+    ],
+    "name": "Change Disciples",
+    "hint": "",
+    "background": "The Havoc Disciples are those who have embraced a particular Havoc God. Each god bestows unique boons and powers onto their followers. As a result, their warbands are specialized, shaped to reflect the whims of their god. \n\nForsaken by the Empire, the northern tribes were approached by different gods who offered a chance at survival in exchange for worship. Each god empowered their respective followers, reforging them according to their will. After their defeat in the Havoc Wars, the Disciples were severed from their former patrons, but with the Rift’s opening, they are eager to renew their pacts after many years spent in bitter exile. ",
+    "backgroundFull": "The arrival of the Havoc Gods in Tyria caused a great deal of instability, as some began to worship these new Gods. The Empire recalled many of their troops to defend their Capital and nearby regions, hoping to put down any rebellions there, whilst the northern tribes were abandoned and left to deal with any dangers on their own. \n\nThe Havoc Gods’ eyes soon turned to this forsaken province, seeking potential converts and champions. Each Havoc God sought to sway promising individuals and powerful tribes to their influence, granting their favourites various boons in exchange for worship. \n\nThe God of War offered strength, allowing its Disciples to triumph over their foes. Change granted knowledge and powerful magic. Plague offered renewed vitality to those taken by disease. While Lust offered redemption and power to those cast out by the Empire. \n\nThese gifts offered renewed hope and life amongst the desperate tribes whom the Empire had abandoned. Those who accepted the pact were granted powerful boons by their patrons, who reforged them in their image. These Havoc Disciples repaid their gifts with a fanatical loyalty, willing to devote their lives to the god who had chosen them. Each tribe defined themselves according to their worship, establishing themselves through their devotion and worship of their particular patron. By the time the Havoc Wars had begun in full, the remaining northern tribes had utterly changed, each one fully embracing one or more of the Havoc Gods.\n\nWhen the Havoc Gods were captured, their most fanatical followers were suddenly severed from their life’s purpose. Some fought to their deaths, eager to give their lives to avenge their god. Others fled north, scattered and weakened, but persisting. They maintained a long vigil,  inflicting what revenge they could while awaiting the return of their particular patron. Without direction or hope however, many fell into despair. Petty conflicts began to break out between bands dedicated to different gods, as they sought to lay blame for defeat upon each other.\n\nThen, the Great Rift opened and liberated their Gods into Tyria. Havoc Disciples find themselves with renewed hope, eager to prove their loyalty to their old patrons. Yet, the bitterness of defeat and rivalries remain, as many remember their years in hiding, and they are no longer the unified force that once rampaged through the land.\n\nHow will your devotion guide you?",
+    "armyWideRule":
+    {},
+    "units":
+    [
+        {
+            "id": "jAXbIg9",
+            "cost": 65,
+            "name": "Change Master",
+            "size": 1,
+            "sync":
+            {
+                "patch":
+                [
+                    {
+                        "op": "add",
+                        "path": "/specialRules/-",
+                        "value":
+                        {
+                            "key": "stealth",
+                            "name": "Stealth",
+                            "rating": "",
+                            "additional": true
+                        }
+                    }
+                ],
+                "unitId": "OJyY0_j",
+                "syncAutomatic": true,
+                "parentArmyBookId": "PGxKcq4R571OtwqD"
+            },
+            "clone":
+            {
+                "unitId": "OJyY0_j",
+                "parentArmyBookId": "PGxKcq4R571OtwqD"
+            },
+            "defense": 3,
+            "quality": 3,
+            "upgrades":
+            [
+                "A1"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "Utvif",
+                    "name": "Hand Weapon",
+                    "label": "Hand Weapon",
+                    "attacks": 3,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "1",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "hero",
+                    "name": "Hero",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "stealth",
+                    "name": "Stealth",
+                    "rating": "",
+                    "additional": true
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "3"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "ga7ZAdf",
+            "cost": 30,
+            "name": "Change Barbarian Champion",
+            "size": 1,
+            "sync":
+            {
+                "patch":
+                [
+                    {
+                        "op": "add",
+                        "path": "/specialRules/-",
+                        "value":
+                        {
+                            "key": "stealth",
+                            "name": "Stealth",
+                            "rating": "",
+                            "additional": true
+                        }
+                    }
+                ],
+                "unitId": "RTeqzVi",
+                "syncAutomatic": true,
+                "parentArmyBookId": "PGxKcq4R571OtwqD"
+            },
+            "clone":
+            {
+                "unitId": "RTeqzVi",
+                "parentArmyBookId": "PGxKcq4R571OtwqD"
+            },
+            "defense": 5,
+            "quality": 5,
+            "upgrades":
+            [
+                "B1"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "oWJBu",
+                    "name": "Hand Weapon",
+                    "label": "Hand Weapon",
+                    "attacks": 3,
+                    "specialRules":
+                    [],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "furious",
+                    "name": "Furious",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "hero",
+                    "name": "Hero",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "stealth",
+                    "name": "Stealth",
+                    "rating": "",
+                    "additional": true
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "3"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "KFftC9n",
+            "key": "spatial-eel-warrior",
+            "cost": 35,
+            "name": "Change Birdman Champion",
+            "size": 1,
+            "defense": 5,
+            "quality": 4,
+            "upgrades":
+            [
+                "YJ4xE"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "DYMEz",
+                    "label": "Hand Weapon",
+                    "attacks": 3,
+                    "specialRules":
+                    [],
+                    "name": "Hand Weapon",
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "hero",
+                    "name": "Hero",
+                    "rating": "",
+                    "additional": false
+                },
+                {
+                    "key": "stealth",
+                    "name": "Stealth",
+                    "rating": "",
+                    "additional": false
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "rating": "3",
+                    "additional": false
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "j0GL55x",
+            "cost": 115,
+            "name": "Change Barbarians",
+            "size": 10,
+            "sync":
+            {
+                "patch":
+                [
+                    {
+                        "op": "add",
+                        "path": "/specialRules/-",
+                        "value":
+                        {
+                            "key": "stealth",
+                            "name": "Stealth",
+                            "rating": "",
+                            "additional": true
+                        }
+                    }
+                ],
+                "unitId": "CZy5UIP",
+                "syncAutomatic": true,
+                "parentArmyBookId": "PGxKcq4R571OtwqD"
+            },
+            "clone":
+            {
+                "unitId": "CZy5UIP",
+                "parentArmyBookId": "PGxKcq4R571OtwqD"
+            },
+            "defense": 5,
+            "quality": 5,
+            "upgrades":
+            [
+                "D1",
+                "E1"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "zJ0s6",
+                    "name": "Hand Weapons",
+                    "label": "Hand Weapons",
+                    "attacks": 1,
+                    "specialRules":
+                    [],
+                    "count": 10,
+                    "originalCount": 10,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "furious",
+                    "name": "Furious",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "stealth",
+                    "name": "Stealth",
+                    "rating": "",
+                    "additional": true
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "pWef86x",
+            "key": "widespread-eel-veteran",
+            "cost": 120,
+            "name": "Change Acolytes",
+            "size": 10,
+            "defense": 5,
+            "quality": 5,
+            "upgrades":
+            [
+                "zgjcU"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "Qwj1o",
+                    "label": "Hand Weapons",
+                    "attacks": 1,
+                    "specialRules":
+                    [],
+                    "name": "Hand Weapons",
+                    "count": 10,
+                    "originalCount": 10,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "scout",
+                    "name": "Scout",
+                    "rating": "",
+                    "additional": false
+                },
+                {
+                    "key": "stealth",
+                    "name": "Stealth",
+                    "rating": "",
+                    "additional": false
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "W5UR4wP",
+            "key": "satisfied-eel-champion",
+            "cost": 60,
+            "name": "Change Birdmen",
+            "size": 5,
+            "defense": 5,
+            "quality": 4,
+            "upgrades":
+            [
+                "D1",
+                "WvlDI"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "YEaGY",
+                    "label": "Hand Weapons",
+                    "attacks": 1,
+                    "specialRules":
+                    [],
+                    "name": "Hand Weapons",
+                    "count": 5,
+                    "originalCount": 5,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "stealth",
+                    "name": "Stealth",
+                    "rating": "",
+                    "additional": false
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "WR4vnjD",
+            "cost": 110,
+            "name": "Change Warriors",
+            "size": 5,
+            "sync":
+            {
+                "patch":
+                [
+                    {
+                        "op": "add",
+                        "path": "/specialRules/-",
+                        "value":
+                        {
+                            "key": "stealth",
+                            "name": "Stealth",
+                            "rating": "",
+                            "additional": true
+                        }
+                    }
+                ],
+                "unitId": "EuRBdTX",
+                "syncAutomatic": true,
+                "parentArmyBookId": "PGxKcq4R571OtwqD"
+            },
+            "clone":
+            {
+                "unitId": "EuRBdTX",
+                "parentArmyBookId": "PGxKcq4R571OtwqD"
+            },
+            "defense": 3,
+            "quality": 3,
+            "upgrades":
+            [
+                "D1",
+                "F1"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "nVaIV",
+                    "name": "Hand Weapons",
+                    "label": "Hand Weapons",
+                    "attacks": 1,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "1",
+                            "modify": false
+                        }
+                    ],
+                    "count": 5,
+                    "originalCount": 5,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "stealth",
+                    "name": "Stealth",
+                    "rating": "",
+                    "additional": true
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "OXoWAR7",
+            "cost": 110,
+            "name": "Change Mutants",
+            "size": 5,
+            "sync":
+            {
+                "patch":
+                [
+                    {
+                        "op": "add",
+                        "path": "/specialRules/-",
+                        "value":
+                        {
+                            "key": "stealth",
+                            "name": "Stealth",
+                            "rating": "",
+                            "additional": true
+                        }
+                    }
+                ],
+                "unitId": "twl0KCa",
+                "syncAutomatic": true,
+                "parentArmyBookId": "PGxKcq4R571OtwqD"
+            },
+            "clone":
+            {
+                "unitId": "twl0KCa",
+                "parentArmyBookId": "PGxKcq4R571OtwqD"
+            },
+            "defense": 4,
+            "quality": 4,
+            "upgrades":
+            [],
+            "equipment":
+            [
+                {
+                    "id": "EvVwz",
+                    "name": "Mutated Limbs",
+                    "label": "Mutated Limbs",
+                    "attacks": 2,
+                    "specialRules":
+                    [],
+                    "count": 5,
+                    "originalCount": 5,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "fearless",
+                    "name": "Fearless",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "mutations",
+                    "name": "Mutations",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "stealth",
+                    "name": "Stealth",
+                    "rating": "",
+                    "additional": true
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "NeLRqEf",
+            "key": "real-eel-champion",
+            "cost": 75,
+            "name": "Change Acolyte Chanters",
+            "size": 5,
+            "defense": 5,
+            "quality": 5,
+            "upgrades":
+            [
+                "6o0RU"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "-Gn5w",
+                    "name": "Hand Weapons",
+                    "label": "Hand Weapons",
+                    "attacks": 1,
+                    "specialRules":
+                    [],
+                    "count": 5,
+                    "originalCount": 5,
+                    "type": "ArmyBookWeapon"
+                },
+                {
+                    "id": "7asjp",
+                    "label": "Dark Bolts",
+                    "range": 18,
+                    "attacks": 1,
+                    "specialRules":
+                    [],
+                    "name": "Dark Bolts",
+                    "count": 5,
+                    "originalCount": 5,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "scout",
+                    "name": "Scout",
+                    "rating": "",
+                    "additional": false
+                },
+                {
+                    "key": "stealth",
+                    "name": "Stealth",
+                    "rating": "",
+                    "additional": false
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "IHsF8QX",
+            "cost": 90,
+            "name": "Change Hounds",
+            "size": 5,
+            "sync":
+            {
+                "patch":
+                [
+                    {
+                        "op": "add",
+                        "path": "/specialRules/-",
+                        "value":
+                        {
+                            "key": "stealth",
+                            "name": "Stealth",
+                            "rating": "",
+                            "additional": true
+                        }
+                    }
+                ],
+                "unitId": "9VzVVdy",
+                "syncAutomatic": true,
+                "parentArmyBookId": "PGxKcq4R571OtwqD"
+            },
+            "clone":
+            {
+                "unitId": "9VzVVdy",
+                "parentArmyBookId": "PGxKcq4R571OtwqD"
+            },
+            "defense": 5,
+            "quality": 4,
+            "upgrades":
+            [
+                "I1"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "I8jDq",
+                    "name": "Claws",
+                    "label": "Claws",
+                    "attacks": 1,
+                    "specialRules":
+                    [
+                        {
+                            "key": "rending",
+                            "name": "Rending",
+                            "rating": "",
+                            "modify": false
+                        }
+                    ],
+                    "count": 5,
+                    "originalCount": 5,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "fast",
+                    "name": "Fast",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "stealth",
+                    "name": "Stealth",
+                    "rating": "",
+                    "additional": true
+                },
+                {
+                    "key": "strider",
+                    "name": "Strider",
+                    "modify": false,
+                    "rating": ""
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "L18Bfkl",
+            "cost": 85,
+            "name": "Change Barbarian Horsemen",
+            "size": 5,
+            "sync":
+            {
+                "patch":
+                [
+                    {
+                        "op": "add",
+                        "path": "/specialRules/-",
+                        "value":
+                        {
+                            "key": "stealth",
+                            "name": "Stealth",
+                            "rating": "",
+                            "additional": true
+                        }
+                    }
+                ],
+                "unitId": "8LD0dh8",
+                "syncAutomatic": true,
+                "parentArmyBookId": "PGxKcq4R571OtwqD"
+            },
+            "clone":
+            {
+                "unitId": "8LD0dh8",
+                "parentArmyBookId": "PGxKcq4R571OtwqD"
+            },
+            "defense": 5,
+            "quality": 5,
+            "upgrades":
+            [
+                "J1"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "fd17h",
+                    "name": "Hand Weapons",
+                    "label": "Hand Weapons",
+                    "attacks": 1,
+                    "specialRules":
+                    [],
+                    "count": 5,
+                    "originalCount": 5,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "fast",
+                    "name": "Fast",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "furious",
+                    "name": "Furious",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "impact",
+                    "name": "Impact",
+                    "modify": false,
+                    "rating": "1"
+                },
+                {
+                    "key": "stealth",
+                    "name": "Stealth",
+                    "rating": "",
+                    "additional": true
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "Pc5nYGW",
+            "cost": 150,
+            "name": "Change Knights",
+            "size": 5,
+            "sync":
+            {
+                "patch":
+                [
+                    {
+                        "op": "add",
+                        "path": "/specialRules/-",
+                        "value":
+                        {
+                            "key": "stealth",
+                            "name": "Stealth",
+                            "rating": "",
+                            "additional": true
+                        }
+                    }
+                ],
+                "unitId": "GJGNWvj",
+                "syncAutomatic": true,
+                "parentArmyBookId": "PGxKcq4R571OtwqD"
+            },
+            "clone":
+            {
+                "unitId": "GJGNWvj",
+                "parentArmyBookId": "PGxKcq4R571OtwqD"
+            },
+            "defense": 3,
+            "quality": 3,
+            "upgrades":
+            [
+                "D1",
+                "K1"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "Q0t0G",
+                    "name": "Hand Weapons",
+                    "label": "Hand Weapons",
+                    "attacks": 1,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "1",
+                            "modify": false
+                        }
+                    ],
+                    "count": 5,
+                    "originalCount": 5,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "fast",
+                    "name": "Fast",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "impact",
+                    "name": "Impact",
+                    "modify": false,
+                    "rating": "1"
+                },
+                {
+                    "key": "stealth",
+                    "name": "Stealth",
+                    "rating": "",
+                    "additional": true
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "S6EpWLL",
+            "key": "western-eel-veteran",
+            "cost": 165,
+            "name": "Change Birdmen Disc Riders",
+            "size": 3,
+            "defense": 5,
+            "quality": 4,
+            "upgrades":
+            [
+                "5pZx4"
+            ],
+            "equipment":
+            [
+                {
+                    "id": "bo0ip",
+                    "label": "Lances",
+                    "attacks": 3,
+                    "specialRules":
+                    [
+                        {
+                            "key": "impact",
+                            "name": "Impact",
+                            "rating": "1",
+                            "modify": false
+                        }
+                    ],
+                    "name": "Lances",
+                    "count": 3,
+                    "originalCount": 3,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "fast",
+                    "name": "Fast",
+                    "rating": "",
+                    "additional": false
+                },
+                {
+                    "key": "stealth",
+                    "name": "Stealth",
+                    "rating": "",
+                    "additional": false
+                },
+                {
+                    "key": "strider",
+                    "name": "Strider",
+                    "rating": "",
+                    "additional": false
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "rating": "3",
+                    "additional": false
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "qr3sMNA",
+            "cost": 295,
+            "name": "Change Shrine",
+            "size": 1,
+            "clone":
+            {
+                "unitId": "QvcEwz1",
+                "parentArmyBookId": "PGxKcq4R571OtwqD"
+            },
+            "defense": 3,
+            "quality": 4,
+            "upgrades":
+            [],
+            "equipment":
+            [
+                {
+                    "id": "yoTb-",
+                    "name": "Giant Fists",
+                    "label": "Giant Fists",
+                    "attacks": 8,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "2",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                },
+                {
+                    "id": "66oRC",
+                    "name": "Stomp",
+                    "label": "Stomp",
+                    "attacks": 4,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "1",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "dark-blessing",
+                    "name": "Dark Blessing",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "fear",
+                    "name": "Fear",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "stealth",
+                    "name": "Stealth",
+                    "rating": "",
+                    "additional": false
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "12"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "WaBEaEm",
+            "cost": 180,
+            "name": "Change Chariot",
+            "size": 1,
+            "clone":
+            {
+                "unitId": "Z4lt72z",
+                "parentArmyBookId": "PGxKcq4R571OtwqD"
+            },
+            "defense": 3,
+            "quality": 3,
+            "upgrades":
+            [],
+            "equipment":
+            [
+                {
+                    "id": "vGRIf",
+                    "name": "Crew Attacks",
+                    "label": "Crew Attacks",
+                    "attacks": 4,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "2",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                },
+                {
+                    "id": "OVFuY",
+                    "name": "Hooves",
+                    "label": "Hooves",
+                    "attacks": 2,
+                    "specialRules":
+                    [],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "fast",
+                    "name": "Fast",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "impact",
+                    "name": "Impact",
+                    "modify": false,
+                    "rating": "6"
+                },
+                {
+                    "key": "stealth",
+                    "name": "Stealth",
+                    "rating": "",
+                    "additional": false
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "6"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        },
+        {
+            "id": "7uldv7H",
+            "cost": 215,
+            "name": "Change Beast Chariot",
+            "size": 1,
+            "clone":
+            {
+                "unitId": "bOrMaBb",
+                "parentArmyBookId": "PGxKcq4R571OtwqD"
+            },
+            "defense": 3,
+            "quality": 3,
+            "upgrades":
+            [],
+            "equipment":
+            [
+                {
+                    "id": "-Yfgo",
+                    "name": "Claws",
+                    "label": "Claws",
+                    "attacks": 4,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "1",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                },
+                {
+                    "id": "iIrf3",
+                    "name": "Crew Attacks",
+                    "label": "Crew Attacks",
+                    "attacks": 4,
+                    "specialRules":
+                    [
+                        {
+                            "key": "ap",
+                            "name": "AP",
+                            "rating": "2",
+                            "modify": false
+                        }
+                    ],
+                    "count": 1,
+                    "originalCount": 1,
+                    "type": "ArmyBookWeapon"
+                }
+            ],
+            "specialRules":
+            [
+                {
+                    "key": "fast",
+                    "name": "Fast",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "fear",
+                    "name": "Fear",
+                    "modify": false,
+                    "rating": ""
+                },
+                {
+                    "key": "impact",
+                    "name": "Impact",
+                    "modify": false,
+                    "rating": "6"
+                },
+                {
+                    "key": "stealth",
+                    "name": "Stealth",
+                    "rating": "",
+                    "additional": false
+                },
+                {
+                    "key": "tough",
+                    "name": "Tough",
+                    "modify": false,
+                    "rating": "6"
+                }
+            ],
+            "disabledUpgradeSections":
+            []
+        }
+    ],
+    "upgradePackages":
+    [
+        {
+            "uid": "A1",
+            "hint": "Havoc Master",
+            "sections":
+            [
+                {
+                    "id": "yPieFac",
+                    "uid": "qPsrtux",
+                    "type": "replace",
+                    "label": "Replace Hand Weapon",
+                    "options":
+                    [
+                        {
+                            "uid": "TqD8aK5",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Lance",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Lance (A3, AP(1), Impact(1))",
+                                    "attacks": 3,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        },
+                                        {
+                                            "key": "impact",
+                                            "name": "Impact",
+                                            "type": "ArmyBookRule",
+                                            "label": "Impact(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Lance (A3, AP(1), Impact(1))",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "qPsrtux",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Master",
+                                    "newCostPrecise": "4.000",
+                                    "newCostRounded": 5
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "TqD8aK5"
+                        },
+                        {
+                            "uid": "DFV89N_",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Halberd",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Halberd (A3, AP(1), Rending)",
+                                    "attacks": 3,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        },
+                                        {
+                                            "key": "rending",
+                                            "name": "Rending",
+                                            "type": "ArmyBookRule",
+                                            "label": "Rending",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Halberd (A3, AP(1), Rending)",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "qPsrtux",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Master",
+                                    "newCostPrecise": "1.890",
+                                    "newCostRounded": 0
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "DFV89N_"
+                        },
+                        {
+                            "uid": "p_mJ2mK",
+                            "cost": 10,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Great Weapon",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Great Weapon (A3, AP(3))",
+                                    "attacks": 3,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(3)",
+                                            "modify": false,
+                                            "rating": "3"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Great Weapon (A3, AP(3))",
+                            "proposedCost": 10,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "qPsrtux",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Master",
+                                    "newCostPrecise": "8.400",
+                                    "newCostRounded": 10
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "p_mJ2mK"
+                        },
+                        {
+                            "uid": "Kh98k",
+                            "cost": 15,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Dual Hand Weapons",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Dual Hand Weapons (A6, AP(1))",
+                                    "range": 0,
+                                    "attacks": 6,
+                                    "condition": "",
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Dual Hand Weapons (A6, AP(1))",
+                            "proposedCost": 15,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "qPsrtux",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Master",
+                                    "newCostPrecise": "16.800",
+                                    "newCostRounded": 15
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "Kh98k"
+                        }
+                    ],
+                    "parentPackageUid": "A1",
+                    "replaceWhat":
+                    [
+                        "Hand Weapon"
+                    ]
+                },
+                {
+                    "id": "5I2zgFH",
+                    "uid": "KfthDhn",
+                    "type": "upgrade",
+                    "label": "Upgrade with one",
+                    "options":
+                    [
+                        {
+                            "uid": "1LinPu5",
+                            "cost": 20,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Army Standard Bearer",
+                                    "type": "ArmyBookItem",
+                                    "label": "Army Standard Bearer (Fear)",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "fear",
+                                            "name": "Fear",
+                                            "type": "ArmyBookRule",
+                                            "label": "Fear",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Army Standard Bearer (Fear)",
+                            "proposedCost": 20,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "KfthDhn",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Master",
+                                    "newCostPrecise": "20.000",
+                                    "newCostRounded": 20
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "1LinPu5"
+                        },
+                        {
+                            "uid": "Fw_IHVT",
+                            "cost": 25,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Sorcerer",
+                                    "type": "ArmyBookItem",
+                                    "label": "Sorcerer (Wizard(1))",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "wizard",
+                                            "name": "Wizard",
+                                            "type": "ArmyBookRule",
+                                            "label": "Wizard(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Sorcerer (Wizard(1))",
+                            "proposedCost": 25,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "KfthDhn",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Master",
+                                    "newCostPrecise": "25.000",
+                                    "newCostRounded": 25
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "Fw_IHVT"
+                        },
+                        {
+                            "uid": "TsOYqDq",
+                            "cost": 30,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Herald",
+                                    "type": "ArmyBookItem",
+                                    "label": "Herald (Doom Caller)",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "doom-caller",
+                                            "name": "Doom Caller",
+                                            "type": "ArmyBookRule",
+                                            "label": "Doom Caller",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Herald (Doom Caller)",
+                            "proposedCost": 30,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "KfthDhn",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Master",
+                                    "newCostPrecise": "30.000",
+                                    "newCostRounded": 30
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "TsOYqDq"
+                        },
+                        {
+                            "uid": "Y_nRg",
+                            "cost": 35,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Change Lord",
+                                    "type": "ArmyBookItem",
+                                    "label": "Change Lord (Blessing of Change)",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "blessing of change",
+                                            "name": "Blessing of Change",
+                                            "type": "ArmyBookRule",
+                                            "label": "Blessing of Change",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Change Lord (Blessing of Change)",
+                            "proposedCost": 35,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "KfthDhn",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Master",
+                                    "newCostPrecise": "35.000",
+                                    "newCostRounded": 35
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "Y_nRg"
+                        },
+                        {
+                            "uid": "FLXwwJD",
+                            "cost": 65,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Conqueror",
+                                    "type": "ArmyBookItem",
+                                    "label": "Conqueror (Dark March)",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "dark march",
+                                            "name": "Dark March",
+                                            "type": "ArmyBookRule",
+                                            "label": "Dark March",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Conqueror (Dark March)",
+                            "proposedCost": 65,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "KfthDhn",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Master",
+                                    "newCostPrecise": "65.000",
+                                    "newCostRounded": 65
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "FLXwwJD"
+                        }
+                    ],
+                    "isHeroUpgrade": true,
+                    "parentPackageUid": "A1",
+                    "select": 1
+                },
+                {
+                    "id": "YpKJrW9",
+                    "uid": "mPdgXee",
+                    "type": "upgrade",
+                    "label": "Mount on",
+                    "options":
+                    [
+                        {
+                            "uid": "cVMHC7i",
+                            "cost": 15,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Horse",
+                                    "type": "ArmyBookItem",
+                                    "label": "Horse (Fast, Impact(1))",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "fast",
+                                            "name": "Fast",
+                                            "type": "ArmyBookRule",
+                                            "label": "Fast",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "key": "impact",
+                                            "name": "Impact",
+                                            "type": "ArmyBookRule",
+                                            "label": "Impact(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Horse (Fast, Impact(1))",
+                            "proposedCost": 15,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "mPdgXee",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Master",
+                                    "newCostPrecise": "16.000",
+                                    "newCostRounded": 15
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "cVMHC7i"
+                        },
+                        {
+                            "uid": "sn9vT",
+                            "cost": 85,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Disc of Change",
+                                    "type": "ArmyBookItem",
+                                    "label": "Disc of Change (Fast, Strider, Tough(+3))",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "fast",
+                                            "name": "Fast",
+                                            "type": "ArmyBookRule",
+                                            "label": "Fast",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "key": "strider",
+                                            "name": "Strider",
+                                            "type": "ArmyBookRule",
+                                            "label": "Strider",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "key": "tough",
+                                            "name": "Tough",
+                                            "type": "ArmyBookRule",
+                                            "label": "Tough(+3)",
+                                            "modify": true,
+                                            "rating": "3"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Disc of Change (Fast, Strider, Tough(+3))",
+                            "proposedCost": 85,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "mPdgXee",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Master",
+                                    "newCostPrecise": "83.880",
+                                    "newCostRounded": 85
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "sn9vT"
+                        },
+                        {
+                            "uid": "M9jTfFH",
+                            "cost": 115,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Daemon Mount",
+                                    "type": "ArmyBookItem",
+                                    "label": "Daemon Mount (Claws (A2, AP(1)), Fast, Fear, Impact(3), Tough(+3))",
+                                    "content":
+                                    [
+                                        {
+                                            "name": "Claws",
+                                            "type": "ArmyBookWeapon",
+                                            "label": "Claws (A2, AP(1))",
+                                            "range": 0,
+                                            "attacks": 2,
+                                            "condition": "",
+                                            "specialRules":
+                                            [
+                                                {
+                                                    "key": "ap",
+                                                    "name": "AP",
+                                                    "type": "ArmyBookRule",
+                                                    "label": "AP(1)",
+                                                    "modify": false,
+                                                    "rating": "1"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "fast",
+                                            "name": "Fast",
+                                            "type": "ArmyBookRule",
+                                            "label": "Fast",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "key": "fear",
+                                            "name": "Fear",
+                                            "type": "ArmyBookRule",
+                                            "label": "Fear",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "key": "impact",
+                                            "name": "Impact",
+                                            "type": "ArmyBookRule",
+                                            "label": "Impact(3)",
+                                            "modify": false,
+                                            "rating": "3"
+                                        },
+                                        {
+                                            "key": "tough",
+                                            "name": "Tough",
+                                            "type": "ArmyBookRule",
+                                            "label": "Tough(+3)",
+                                            "modify": true,
+                                            "rating": "3"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Daemon Mount (Claws (A2, AP(1)), Fast, Fear, Impact(3), Tough(+3))",
+                            "proposedCost": 115,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "mPdgXee",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Master",
+                                    "newCostPrecise": "115.080",
+                                    "newCostRounded": 115
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "M9jTfFH"
+                        },
+                        {
+                            "uid": "6pW8TRc",
+                            "cost": 180,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Manticore",
+                                    "type": "ArmyBookItem",
+                                    "label": "Manticore (Claws (A6, Rending), Fear, Flying, Tough(+6))",
+                                    "content":
+                                    [
+                                        {
+                                            "name": "Claws",
+                                            "type": "ArmyBookWeapon",
+                                            "label": "Claws (A6, Rending)",
+                                            "range": 0,
+                                            "attacks": 6,
+                                            "condition": "",
+                                            "specialRules":
+                                            [
+                                                {
+                                                    "key": "rending",
+                                                    "name": "Rending",
+                                                    "type": "ArmyBookRule",
+                                                    "label": "Rending",
+                                                    "modify": false,
+                                                    "rating": ""
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "key": "fear",
+                                            "name": "Fear",
+                                            "type": "ArmyBookRule",
+                                            "label": "Fear",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "key": "flying",
+                                            "name": "Flying",
+                                            "type": "ArmyBookRule",
+                                            "label": "Flying",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "key": "tough",
+                                            "name": "Tough",
+                                            "type": "ArmyBookRule",
+                                            "label": "Tough(+6)",
+                                            "modify": true,
+                                            "rating": "6"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Manticore (Claws (A6, Rending), Fear, Flying, Tough(+6))",
+                            "proposedCost": 180,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "mPdgXee",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Master",
+                                    "newCostPrecise": "182.660",
+                                    "newCostRounded": 180
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "6pW8TRc"
+                        },
+                        {
+                            "uid": "TAW-0",
+                            "cost": 350,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Havoc Dragon",
+                                    "type": "ArmyBookItem",
+                                    "label": "Havoc Dragon (Breath Attack, Claws (A6, AP(1)), Fear, Flying, Stomp (A4, AP(1)), Tough(+12))",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "tough",
+                                            "name": "Tough",
+                                            "type": "ArmyBookRule",
+                                            "label": "Tough(+12)",
+                                            "modify": true,
+                                            "rating": "12"
+                                        },
+                                        {
+                                            "key": "breath attack",
+                                            "name": "Breath Attack",
+                                            "type": "ArmyBookRule",
+                                            "label": "Breath Attack",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "key": "fear",
+                                            "name": "Fear",
+                                            "type": "ArmyBookRule",
+                                            "label": "Fear",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "key": "flying",
+                                            "name": "Flying",
+                                            "type": "ArmyBookRule",
+                                            "label": "Flying",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "name": "Stomp",
+                                            "type": "ArmyBookWeapon",
+                                            "label": "Stomp (A4, AP(1))",
+                                            "range": 0,
+                                            "attacks": 4,
+                                            "condition": "",
+                                            "specialRules":
+                                            [
+                                                {
+                                                    "key": "ap",
+                                                    "name": "AP",
+                                                    "type": "ArmyBookRule",
+                                                    "label": "AP(1)",
+                                                    "modify": false,
+                                                    "rating": "1"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Claws",
+                                            "type": "ArmyBookWeapon",
+                                            "label": "Claws (A6, AP(1))",
+                                            "range": 0,
+                                            "attacks": 6,
+                                            "condition": "",
+                                            "specialRules":
+                                            [
+                                                {
+                                                    "key": "ap",
+                                                    "name": "AP",
+                                                    "type": "ArmyBookRule",
+                                                    "label": "AP(1)",
+                                                    "modify": false,
+                                                    "rating": "1"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Havoc Dragon (Breath Attack, Claws (A6, AP(1)), Fear, Flying, Stomp (A4, AP(1)), Tough(+12))",
+                            "proposedCost": 350,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "mPdgXee",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Master",
+                                    "newCostPrecise": "352.520",
+                                    "newCostRounded": 350
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "TAW-0"
+                        }
+                    ],
+                    "parentPackageUid": "A1",
+                    "select": 1
+                },
+                {
+                    "id": "ZC-dYVD",
+                    "uid": "1b5vwUC",
+                    "type": "upgrade",
+                    "label": "Upgrade with",
+                    "options":
+                    [
+                        {
+                            "uid": "EXCZE",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "key": "chosen warrior",
+                                    "name": "Chosen Warrior",
+                                    "type": "ArmyBookRule",
+                                    "label": "Chosen Warrior",
+                                    "modify": false,
+                                    "rating": "",
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Chosen Warrior",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "A1",
+                            "parentSectionUid": "1b5vwUC",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Master",
+                                    "newCostPrecise": "5.000",
+                                    "newCostRounded": 5
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "EXCZE"
+                        }
+                    ],
+                    "parentPackageUid": "A1"
+                }
+            ]
+        },
+        {
+            "uid": "B1",
+            "hint": "Barbarian Champion",
+            "sections":
+            [
+                {
+                    "id": "hzgM6E_",
+                    "uid": "XA68TNV",
+                    "type": "replace",
+                    "label": "Replace Hand Weapon",
+                    "options":
+                    [
+                        {
+                            "uid": "G9ZmlCx",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Lance",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Lance (A3, Impact(1))",
+                                    "attacks": 3,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "impact",
+                                            "name": "Impact",
+                                            "type": "ArmyBookRule",
+                                            "label": "Impact(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Lance (A3, Impact(1))",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "B1",
+                            "parentSectionUid": "XA68TNV",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Barbarian Champion",
+                                    "newCostPrecise": "4.000",
+                                    "newCostRounded": 5
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "G9ZmlCx"
+                        },
+                        {
+                            "uid": "d2ymphv",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Halberd",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Halberd (A3, Rending)",
+                                    "attacks": 3,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "rending",
+                                            "name": "Rending",
+                                            "type": "ArmyBookRule",
+                                            "label": "Rending",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Halberd (A3, Rending)",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "B1",
+                            "parentSectionUid": "XA68TNV",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Barbarian Champion",
+                                    "newCostPrecise": "4.209",
+                                    "newCostRounded": 5
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "d2ymphv"
+                        },
+                        {
+                            "uid": "CSJn0_u",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Great Weapon",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Great Weapon (A3, AP(2))",
+                                    "attacks": 3,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(2)",
+                                            "modify": false,
+                                            "rating": "2"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Great Weapon (A3, AP(2))",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "B1",
+                            "parentSectionUid": "XA68TNV",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Barbarian Champion",
+                                    "newCostPrecise": "5.856",
+                                    "newCostRounded": 5
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "CSJn0_u"
+                        },
+                        {
+                            "uid": "9IOId",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Dual Hand Weapons",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Dual Hand Weapons (A6)",
+                                    "range": 0,
+                                    "attacks": 6,
+                                    "condition": "",
+                                    "specialRules":
+                                    [],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Dual Hand Weapons (A6)",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "B1",
+                            "parentSectionUid": "XA68TNV",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Barbarian Champion",
+                                    "newCostPrecise": "6.000",
+                                    "newCostRounded": 5
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "9IOId"
+                        }
+                    ],
+                    "parentPackageUid": "B1",
+                    "replaceWhat":
+                    [
+                        "Hand Weapon"
+                    ]
+                },
+                {
+                    "id": "gaue71D",
+                    "uid": "oBAD437",
+                    "type": "upgrade",
+                    "label": "Upgrade with one",
+                    "options":
+                    [
+                        {
+                            "uid": "bljFkqX",
+                            "cost": 25,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Sorcerer",
+                                    "type": "ArmyBookItem",
+                                    "label": "Sorcerer (Wizard(1))",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "wizard",
+                                            "name": "Wizard",
+                                            "type": "ArmyBookRule",
+                                            "label": "Wizard(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Sorcerer (Wizard(1))",
+                            "proposedCost": 25,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "B1",
+                            "parentSectionUid": "oBAD437",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Barbarian Champion",
+                                    "newCostPrecise": "25.000",
+                                    "newCostRounded": 25
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "bljFkqX"
+                        },
+                        {
+                            "uid": "g6drS",
+                            "cost": 55,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Marauder",
+                                    "type": "ArmyBookItem",
+                                    "label": "Marauder (Battle Ready)",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "battle ready",
+                                            "name": "Battle Ready",
+                                            "type": "ArmyBookRule",
+                                            "label": "Battle Ready",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Marauder (Battle Ready)",
+                            "proposedCost": 55,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "B1",
+                            "parentSectionUid": "oBAD437",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Barbarian Champion",
+                                    "newCostPrecise": "55.000",
+                                    "newCostRounded": 55
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "g6drS"
+                        }
+                    ],
+                    "isHeroUpgrade": true,
+                    "parentPackageUid": "B1",
+                    "select": 1
+                },
+                {
+                    "id": "TpCdj4E",
+                    "uid": "mquSmg8",
+                    "type": "upgrade",
+                    "label": "Mount on",
+                    "options":
+                    [
+                        {
+                            "uid": "SDT9lXj",
+                            "cost": 10,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Horse",
+                                    "type": "ArmyBookItem",
+                                    "label": "Horse (Fast, Impact(1))",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "fast",
+                                            "name": "Fast",
+                                            "type": "ArmyBookRule",
+                                            "label": "Fast",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "key": "impact",
+                                            "name": "Impact",
+                                            "type": "ArmyBookRule",
+                                            "label": "Impact(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Horse (Fast, Impact(1))",
+                            "proposedCost": 10,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "B1",
+                            "parentSectionUid": "mquSmg8",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Barbarian Champion",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "SDT9lXj"
+                        }
+                    ],
+                    "parentPackageUid": "B1",
+                    "select": 1
+                }
+            ]
+        },
+        {
+            "uid": "D1",
+            "hint": "Command Group",
+            "sections":
+            [
+                {
+                    "id": "ZVHdOz5",
+                    "uid": "73zh5cY",
+                    "type": "upgrade",
+                    "label": "Upgrade with",
+                    "options":
+                    [
+                        {
+                            "uid": "90dWcTi",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "key": "sergeant",
+                                    "name": "Sergeant",
+                                    "type": "ArmyBookRule",
+                                    "label": "Sergeant",
+                                    "modify": false,
+                                    "rating": "",
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Sergeant",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "D1",
+                            "parentSectionUid": "73zh5cY",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Barbarians",
+                                    "newCostPrecise": "5.000",
+                                    "newCostRounded": 5
+                                },
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Birdmen",
+                                    "newCostPrecise": "5.000",
+                                    "newCostRounded": 5
+                                },
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Warriors",
+                                    "newCostPrecise": "5.000",
+                                    "newCostRounded": 5
+                                },
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Knights",
+                                    "newCostPrecise": "5.000",
+                                    "newCostRounded": 5
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "90dWcTi"
+                        },
+                        {
+                            "uid": "_T_SSCh",
+                            "cost": 10,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "key": "musician",
+                                    "name": "Musician",
+                                    "type": "ArmyBookRule",
+                                    "label": "Musician",
+                                    "modify": false,
+                                    "rating": "",
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Musician",
+                            "proposedCost": 10,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "D1",
+                            "parentSectionUid": "73zh5cY",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Barbarians",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                },
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Birdmen",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                },
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Warriors",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                },
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Knights",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "_T_SSCh"
+                        },
+                        {
+                            "uid": "gyA2sDO",
+                            "cost": 10,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "key": "battle-standard",
+                                    "name": "Battle Standard",
+                                    "type": "ArmyBookRule",
+                                    "label": "Battle Standard",
+                                    "modify": false,
+                                    "rating": "",
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Battle Standard",
+                            "proposedCost": 10,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "D1",
+                            "parentSectionUid": "73zh5cY",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Barbarians",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                },
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Birdmen",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                },
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Warriors",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                },
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Knights",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "gyA2sDO"
+                        }
+                    ],
+                    "parentPackageUid": "D1"
+                }
+            ]
+        },
+        {
+            "uid": "E1",
+            "hint": "Barbarians",
+            "sections":
+            [
+                {
+                    "id": "DK-oStD",
+                    "uid": "BPYTscQ",
+                    "type": "replace",
+                    "label": "Replace all Hand Weapons",
+                    "options":
+                    [
+                        {
+                            "uid": "Rjhvq6D",
+                            "cost": 10,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Flails",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Flails (A1, AP(1))",
+                                    "attacks": 1,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Flails (A1, AP(1))",
+                            "proposedCost": 10,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "E1",
+                            "parentSectionUid": "BPYTscQ",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Barbarians",
+                                    "newCostPrecise": "13.280",
+                                    "newCostRounded": 10
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "Rjhvq6D"
+                        }
+                    ],
+                    "parentPackageUid": "E1",
+                    "affects": "all",
+                    "replaceWhat":
+                    [
+                        "Hand Weapons"
+                    ]
+                }
+            ]
+        },
+        {
+            "uid": "F1",
+            "hint": "Warriors",
+            "sections":
+            [
+                {
+                    "id": "zvG_ee5",
+                    "uid": "02QBHyf",
+                    "type": "replace",
+                    "label": "Replace all Hand Weapons",
+                    "options":
+                    [
+                        {
+                            "uid": "47obGZt",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Halberds",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Halberds (A1, AP(1), Rending)",
+                                    "attacks": 1,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        },
+                                        {
+                                            "key": "rending",
+                                            "name": "Rending",
+                                            "type": "ArmyBookRule",
+                                            "label": "Rending",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Halberds (A1, AP(1), Rending)",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "F1",
+                            "parentSectionUid": "02QBHyf",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Warriors",
+                                    "newCostPrecise": "3.150",
+                                    "newCostRounded": 0
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "47obGZt"
+                        },
+                        {
+                            "uid": "NdaV_Ee",
+                            "cost": 10,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Great Weapons",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Great Weapons (A1, AP(3))",
+                                    "attacks": 1,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(3)",
+                                            "modify": false,
+                                            "rating": "3"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Great Weapons (A1, AP(3))",
+                            "proposedCost": 10,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "F1",
+                            "parentSectionUid": "02QBHyf",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Warriors",
+                                    "newCostPrecise": "14.000",
+                                    "newCostRounded": 10
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "NdaV_Ee"
+                        },
+                        {
+                            "uid": "sj1XsR1",
+                            "cost": 25,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Dual Hand Weapons",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Dual Hand Weapons (A2, AP(1))",
+                                    "attacks": 2,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Dual Hand Weapons (A2, AP(1))",
+                            "proposedCost": 25,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "F1",
+                            "parentSectionUid": "02QBHyf",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Warriors",
+                                    "newCostPrecise": "28.000",
+                                    "newCostRounded": 25
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "sj1XsR1"
+                        }
+                    ],
+                    "parentPackageUid": "F1",
+                    "affects": "all",
+                    "replaceWhat":
+                    [
+                        "Hand Weapons"
+                    ]
+                },
+                {
+                    "id": "d1RQ9FC",
+                    "uid": "4cwheOh",
+                    "type": "upgrade",
+                    "label": "Upgrade all models with",
+                    "model": true,
+                    "options":
+                    [
+                        {
+                            "uid": "p3MMn",
+                            "cost": 25,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "key": "chosen warrior",
+                                    "name": "Chosen Warrior",
+                                    "type": "ArmyBookRule",
+                                    "label": "Chosen Warrior",
+                                    "modify": false,
+                                    "rating": "",
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Chosen Warrior",
+                            "proposedCost": 25,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "F1",
+                            "parentSectionUid": "4cwheOh",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Warriors",
+                                    "newCostPrecise": "25.000",
+                                    "newCostRounded": 25
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "p3MMn"
+                        }
+                    ],
+                    "parentPackageUid": "F1",
+                    "affects": "all"
+                }
+            ]
+        },
+        {
+            "uid": "I1",
+            "hint": "Havoc Hounds",
+            "sections":
+            [
+                {
+                    "id": "Vqik63i",
+                    "uid": "RV8hzBv",
+                    "type": "upgrade",
+                    "label": "Upgrade all models with any",
+                    "model": true,
+                    "options":
+                    [
+                        {
+                            "uid": "FSTpWcs",
+                            "cost": 10,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Vicious",
+                                    "type": "ArmyBookItem",
+                                    "label": "Vicious (Poison in melee)",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "poison",
+                                            "name": "Poison",
+                                            "type": "ArmyBookRule",
+                                            "label": "Poison in melee",
+                                            "modify": false,
+                                            "rating": "",
+                                            "condition": "in melee"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Vicious (Poison in melee)",
+                            "proposedCost": 10,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "I1",
+                            "parentSectionUid": "RV8hzBv",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Hounds",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "FSTpWcs"
+                        },
+                        {
+                            "uid": "x1n6xIw",
+                            "cost": 15,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Bounding Advance",
+                                    "type": "ArmyBookItem",
+                                    "label": "Bounding Advance (Scout)",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "scout",
+                                            "name": "Scout",
+                                            "type": "ArmyBookRule",
+                                            "label": "Scout",
+                                            "modify": false,
+                                            "rating": ""
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Bounding Advance (Scout)",
+                            "proposedCost": 15,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "I1",
+                            "parentSectionUid": "RV8hzBv",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Hounds",
+                                    "newCostPrecise": "15.000",
+                                    "newCostRounded": 15
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "x1n6xIw"
+                        }
+                    ],
+                    "parentPackageUid": "I1",
+                    "affects": "all",
+                    "select": "any"
+                }
+            ]
+        },
+        {
+            "uid": "J1",
+            "hint": "Barbarian Horsemen",
+            "sections":
+            [
+                {
+                    "id": "4XX7ZFW",
+                    "uid": "MX73VVV",
+                    "type": "replace",
+                    "label": "Replace all Hand Weapons",
+                    "options":
+                    [
+                        {
+                            "uid": "E93HmvE",
+                            "cost": 10,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Flails",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Flails (A1, AP(1))",
+                                    "attacks": 1,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Flails (A1, AP(1))",
+                            "proposedCost": 10,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "J1",
+                            "parentSectionUid": "MX73VVV",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Barbarian Horsemen",
+                                    "newCostPrecise": "6.640",
+                                    "newCostRounded": 10
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "E93HmvE"
+                        }
+                    ],
+                    "parentPackageUid": "J1",
+                    "affects": "all",
+                    "replaceWhat":
+                    [
+                        "Hand Weapons"
+                    ]
+                },
+                {
+                    "id": "l2HPQxr",
+                    "uid": "6RMPFzf",
+                    "type": "upgrade",
+                    "label": "Upgrade all models with",
+                    "model": true,
+                    "options":
+                    [
+                        {
+                            "uid": "9tCCn1h",
+                            "cost": 10,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Javelins",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Javelins (12”, A1)",
+                                    "range": 12,
+                                    "attacks": 1,
+                                    "specialRules":
+                                    [],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Javelins (12”, A1)",
+                            "proposedCost": 10,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "J1",
+                            "parentSectionUid": "6RMPFzf",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Barbarian Horsemen",
+                                    "newCostPrecise": "10.000",
+                                    "newCostRounded": 10
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "9tCCn1h"
+                        }
+                    ],
+                    "parentPackageUid": "J1",
+                    "affects": "all"
+                }
+            ]
+        },
+        {
+            "uid": "K1",
+            "hint": "Havoc Knights",
+            "sections":
+            [
+                {
+                    "id": "V6074kL",
+                    "uid": "5CxcNHu",
+                    "type": "replace",
+                    "label": "Replace all Hand Weapons",
+                    "options":
+                    [
+                        {
+                            "uid": "zYkUhcd",
+                            "cost": 20,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Lances",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Lances (A1, AP(1), Impact(1))",
+                                    "attacks": 1,
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        },
+                                        {
+                                            "key": "impact",
+                                            "name": "Impact",
+                                            "type": "ArmyBookRule",
+                                            "label": "Impact(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Lances (A1, AP(1), Impact(1))",
+                            "proposedCost": 20,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "K1",
+                            "parentSectionUid": "5CxcNHu",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Knights",
+                                    "newCostPrecise": "20.000",
+                                    "newCostRounded": 20
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "zYkUhcd"
+                        }
+                    ],
+                    "parentPackageUid": "K1",
+                    "affects": "all",
+                    "replaceWhat":
+                    [
+                        "Hand Weapons"
+                    ]
+                }
+            ]
+        },
+        {
+            "uid": "YJ4xE",
+            "hint": "Birdman Champion",
+            "sections":
+            [
+                {
+                    "id": "grQroq-",
+                    "uid": "Xtv30",
+                    "label": "Replace Hand Weapon",
+                    "options":
+                    [
+                        {
+                            "uid": "R-MUm",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Lance",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Lance (A3, Impact(1))",
+                                    "range": 0,
+                                    "attacks": 3,
+                                    "condition": "",
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "impact",
+                                            "name": "Impact",
+                                            "type": "ArmyBookRule",
+                                            "label": "Impact(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Lance (A3, Impact(1))",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "YJ4xE",
+                            "parentSectionUid": "Xtv30",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Birdman Champion",
+                                    "newCostPrecise": "4.000",
+                                    "newCostRounded": 5
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "R-MUm"
+                        },
+                        {
+                            "uid": "7xCdy",
+                            "cost": 10,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Dual Hand Weapons",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Dual Hand Weapons (A6)",
+                                    "range": 0,
+                                    "attacks": 6,
+                                    "condition": "",
+                                    "specialRules":
+                                    [],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Dual Hand Weapons (A6)",
+                            "proposedCost": 10,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "YJ4xE",
+                            "parentSectionUid": "Xtv30",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Birdman Champion",
+                                    "newCostPrecise": "9.000",
+                                    "newCostRounded": 10
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "7xCdy"
+                        }
+                    ],
+                    "parentPackageUid": "YJ4xE",
+                    "type": "replace",
+                    "replaceWhat":
+                    [
+                        "Hand Weapon"
+                    ]
+                },
+                {
+                    "id": "za4-s06",
+                    "uid": "0mNuw",
+                    "label": "Upgrade with",
+                    "options":
+                    [
+                        {
+                            "uid": "VJ3QM",
+                            "cost": 25,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Warlock",
+                                    "type": "ArmyBookItem",
+                                    "label": "Warlock (Wizard(1))",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "wizard",
+                                            "name": "Wizard",
+                                            "type": "ArmyBookRule",
+                                            "label": "Wizard(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Warlock (Wizard(1))",
+                            "proposedCost": 25,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "YJ4xE",
+                            "parentSectionUid": "0mNuw",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Birdman Champion",
+                                    "newCostPrecise": "25.000",
+                                    "newCostRounded": 25
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "VJ3QM"
+                        }
+                    ],
+                    "isHeroUpgrade": false,
+                    "parentPackageUid": "YJ4xE",
+                    "type": "upgrade"
+                },
+                {
+                    "id": "WUKP8qh",
+                    "uid": "nT26a",
+                    "label": "Mount on",
+                    "options":
+                    [
+                        {
+                            "uid": "oBgn4",
+                            "cost": 55,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Disc of Change",
+                                    "type": "ArmyBookItem",
+                                    "label": "Disc of Change (Fast, Strider, Tough(+3))",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "fast",
+                                            "name": "Fast",
+                                            "type": "ArmyBookRule",
+                                            "label": "Fast",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "key": "strider",
+                                            "name": "Strider",
+                                            "type": "ArmyBookRule",
+                                            "label": "Strider",
+                                            "modify": false,
+                                            "rating": ""
+                                        },
+                                        {
+                                            "key": "tough",
+                                            "name": "Tough",
+                                            "type": "ArmyBookRule",
+                                            "label": "Tough(+3)",
+                                            "modify": true,
+                                            "rating": "3"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Disc of Change (Fast, Strider, Tough(+3))",
+                            "proposedCost": 55,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "YJ4xE",
+                            "parentSectionUid": "nT26a",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Birdman Champion",
+                                    "newCostPrecise": "54.930",
+                                    "newCostRounded": 55
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "oBgn4"
+                        }
+                    ],
+                    "parentPackageUid": "YJ4xE",
+                    "type": "upgrade",
+                    "select": 1
+                }
+            ]
+        },
+        {
+            "uid": "zgjcU",
+            "hint": "Acolytes",
+            "sections":
+            [
+                {
+                    "id": "bpZgWlq",
+                    "uid": "pICJT",
+                    "label": "Replace all Hand Weapons",
+                    "options":
+                    [
+                        {
+                            "uid": "I64_W",
+                            "cost": 20,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Dual Hand Weapons",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Dual Hand Weapons (A2)",
+                                    "range": 0,
+                                    "attacks": 2,
+                                    "condition": "",
+                                    "specialRules":
+                                    [],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Dual Hand Weapons (A2)",
+                            "proposedCost": 20,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "zgjcU",
+                            "parentSectionUid": "pICJT",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Acolytes",
+                                    "newCostPrecise": "20.000",
+                                    "newCostRounded": 20
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "I64_W"
+                        }
+                    ],
+                    "parentPackageUid": "zgjcU",
+                    "type": "replace",
+                    "affects": "all",
+                    "replaceWhat":
+                    [
+                        "Hand Weapons"
+                    ]
+                },
+                {
+                    "id": "RHQUQXY",
+                    "uid": "YFKWa",
+                    "label": "Replace up to three Hand Weapons",
+                    "options":
+                    [
+                        {
+                            "uid": "jMddn",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Great Weapon",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Great Weapon (A1, AP(2))",
+                                    "range": 0,
+                                    "attacks": 1,
+                                    "condition": "",
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(2)",
+                                            "modify": false,
+                                            "rating": "2"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Great Weapon (A1, AP(2))",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "zgjcU",
+                            "parentSectionUid": "YFKWa",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Acolytes",
+                                    "newCostPrecise": "1.600",
+                                    "newCostRounded": 5
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "jMddn"
+                        }
+                    ],
+                    "parentPackageUid": "zgjcU",
+                    "type": "replace",
+                    "select": 3,
+                    "replaceWhat":
+                    [
+                        "Hand Weapons"
+                    ]
+                },
+                {
+                    "id": "kbEAEHD",
+                    "uid": "qBFdz",
+                    "label": "Upgrade one model with",
+                    "options":
+                    [
+                        {
+                            "uid": "52YBx",
+                            "cost": 25,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Change Adept",
+                                    "type": "ArmyBookItem",
+                                    "label": "Change Adept (Wizard(1))",
+                                    "content":
+                                    [
+                                        {
+                                            "key": "wizard",
+                                            "name": "Wizard",
+                                            "type": "ArmyBookRule",
+                                            "label": "Wizard(1)",
+                                            "modify": false,
+                                            "rating": "1"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Change Adept (Wizard(1))",
+                            "proposedCost": 25,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "zgjcU",
+                            "parentSectionUid": "qBFdz",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Acolytes",
+                                    "newCostPrecise": "25.000",
+                                    "newCostRounded": 25
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "52YBx"
+                        }
+                    ],
+                    "parentPackageUid": "zgjcU",
+                    "type": "upgrade",
+                    "model": true,
+                    "affects": 1
+                }
+            ]
+        },
+        {
+            "uid": "WvlDI",
+            "hint": "Change Birdmen",
+            "sections":
+            [
+                {
+                    "id": "hwXqZPd",
+                    "uid": "nUQoO",
+                    "label": "Replace all Hand Weapons",
+                    "options":
+                    [
+                        {
+                            "uid": "ImcXw",
+                            "cost": 15,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Dual Hand Weapons",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Dual Hand Weapons (A2)",
+                                    "range": 0,
+                                    "attacks": 2,
+                                    "condition": "",
+                                    "specialRules":
+                                    [],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Dual Hand Weapons (A2)",
+                            "proposedCost": 15,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "WvlDI",
+                            "parentSectionUid": "nUQoO",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Birdmen",
+                                    "newCostPrecise": "15.000",
+                                    "newCostRounded": 15
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "ImcXw"
+                        }
+                    ],
+                    "parentPackageUid": "WvlDI",
+                    "type": "replace",
+                    "affects": "all",
+                    "replaceWhat":
+                    [
+                        "Hand Weapons"
+                    ]
+                },
+                {
+                    "id": "tHQbpPQ",
+                    "uid": "JF3ve",
+                    "label": "Replace up to two Hand Weapons",
+                    "options":
+                    [
+                        {
+                            "uid": "EhMzS",
+                            "cost": 5,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Great Weapon",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Great Weapon (A1, AP(2))",
+                                    "range": 0,
+                                    "attacks": 1,
+                                    "condition": "",
+                                    "specialRules":
+                                    [
+                                        {
+                                            "key": "ap",
+                                            "name": "AP",
+                                            "type": "ArmyBookRule",
+                                            "label": "AP(2)",
+                                            "modify": false,
+                                            "rating": "2"
+                                        }
+                                    ],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Great Weapon (A1, AP(2))",
+                            "proposedCost": 5,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "WvlDI",
+                            "parentSectionUid": "JF3ve",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Birdmen",
+                                    "newCostPrecise": "2.400",
+                                    "newCostRounded": 5
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "EhMzS"
+                        }
+                    ],
+                    "parentPackageUid": "WvlDI",
+                    "type": "replace",
+                    "select": 2,
+                    "replaceWhat":
+                    [
+                        "Hand Weapons"
+                    ]
+                }
+            ]
+        },
+        {
+            "uid": "5pZx4",
+            "hint": "Birdmen Disc Riders",
+            "sections":
+            [
+                {
+                    "id": "nmnH5gl",
+                    "uid": "pWQZu",
+                    "label": "Replace all Lances",
+                    "options":
+                    [
+                        {
+                            "uid": "VoTPj",
+                            "cost": 20,
+                            "type": "ArmyBookUpgradeOption",
+                            "gains":
+                            [
+                                {
+                                    "name": "Shortbows",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Shortbows (18\", A3)",
+                                    "range": 18,
+                                    "attacks": 3,
+                                    "condition": "",
+                                    "specialRules":
+                                    [],
+                                    "count": 1
+                                },
+                                {
+                                    "name": "Hand Weapons",
+                                    "type": "ArmyBookWeapon",
+                                    "label": "Hand Weapons (A2)",
+                                    "range": 0,
+                                    "attacks": 2,
+                                    "condition": "",
+                                    "specialRules":
+                                    [],
+                                    "count": 1
+                                }
+                            ],
+                            "label": "Hand Weapons (A2), Shortbows (18\", A3)",
+                            "proposedCost": 20,
+                            "proposedVersion": "2.50",
+                            "parentPackageUid": "5pZx4",
+                            "parentSectionUid": "pWQZu",
+                            "proposedCostHint":
+                            [
+                                {
+                                    "isValid": true,
+                                    "unitName": "Change Birdmen Disc Riders",
+                                    "newCostPrecise": "19.500",
+                                    "newCostRounded": 20
+                                }
+                            ],
+                            "isModel": false,
+                            "id": "VoTPj"
+                        }
+                    ],
+                    "parentPackageUid": "5pZx4",
+                    "type": "replace",
+                    "affects": "all",
+                    "replaceWhat":
+                    [
+                        "Lances"
+                    ]
+                }
+            ]
+        }
+    ],
+    "specialRules":
+    [
+        {
+            "id": 405,
+            "name": "Dark March",
+            "aliasedRuleId": null,
+            "description": "Once per activation, before attacking, pick one other friendly unit within 12” of this model, which may move by up to 6\".",
+            "hasRating": false
+        },
+        {
+            "id": 403,
+            "name": "Chosen Warrior",
+            "aliasedRuleId": null,
+            "description": "This model gets +1 to hit rolls in melee and shooting.",
+            "hasRating": false
+        },
+        {
+            "id": 404,
+            "name": "Dark Blessing",
+            "aliasedRuleId": null,
+            "description": "Once per activation, pick 2 friendly units within 6”, which get +1 to hit rolls next time they fight in melee.",
+            "hasRating": false
+        },
+        {
+            "id": 409,
+            "name": "Blessing of Change",
+            "aliasedRuleId": null,
+            "description": "Enemy units over 18” away get -1 to hit rolls when shooting at the hero and its unit.",
+            "hasRating": false
+        },
+        {
+            "id": 402,
+            "name": "Battle Ready",
+            "aliasedRuleId": null,
+            "description": "The hero and its unit get the Scout special rule.",
+            "hasRating": false
+        },
+        {
+            "id": 210,
+            "name": "Mutations",
+            "aliasedRuleId": null,
+            "description": "When in melee, roll one die and apply one bonus to models with this rule:\n* 1-3: Attacks get Rending\n* 4-6: Attacks get AP(+1)",
+            "hasRating": false
+        },
+        {
+            "id": 406,
+            "name": "Doom Caller",
+            "aliasedRuleId": null,
+            "description": "Once per activation, before attacking, pick one enemy unit within 12”, which gets -2 to its next morale test roll.",
+            "hasRating": false
+        }
+    ],
+    "customRules":
+    [],
+    "spells":
+    [
+        {
+            "id": "zjoTS",
+            "name": "Breath of Change",
+            "effect": "Target 2 friendly units within 6” get +1\" next time they Advance, or +2\" next time they Charge/Rush.",
+            "threshold": 4
+        },
+        {
+            "id": "5bvfi",
+            "name": "Blaze",
+            "effect": "Target enemy unit within 6” takes 3 hits with AP(2).",
+            "threshold": 4
+        },
+        {
+            "id": "qDCwX",
+            "name": "Steal Power",
+            "effect": "Target 2 enemy units within 18” get -1 to hit next time they shoot.",
+            "threshold": 5
+        },
+        {
+            "id": "08X89",
+            "name": "Inferno",
+            "effect": "Target enemy unit within 6” rolls as many dice as models in it, and takes 1 hit for each 3+ rolled.",
+            "threshold": 5
+        },
+        {
+            "id": "N-03v",
+            "name": "Loyalty",
+            "effect": "Target friendly unit within 12” gets Regeneration next time it takes wounds.",
+            "threshold": 6
+        },
+        {
+            "id": "08ynz",
+            "name": "Bolt of Change",
+            "effect": "Target enemy unit within 6\" takes 1 hit with AP(4) and Deadly(6).",
+            "threshold": 6
+        }
+    ],
+    "modifiedAt": "2023-06-12T08:07:58.096Z",
+    "official": true,
+    "versionString": "v2.50",
+    "coverImagePath": "https://i.imgur.com/sbx4npK.png",
+    "coverImageCredit": "Brandon Gillam",
+    "bannerImagePath": null,
+    "isLive": true,
+    "factionName": "Havoc Warriors",
+    "factionRelation": "Disciples",
+    "popularity": 0,
+    "downvotes": 0,
+    "username": "onepagerules",
+    "voted": null,
+    "isPartner": false,
+    "armyForgeUrl": "https://army-forge.onepagerules.com/listConfiguration?armyId=CNOmkR5Q2C7Dc4Nm&faction=Havoc Warriors",
+    "gameSystemId": 4,
+    "gameSystemSlug": "age-of-fantasy",
+    "fullname": "Age of Fantasy",
+    "aberration": "AOF",
+    "universe": "Age of Fantasy",
+    "shortname": "Age of Fantasy",
+    "flavouredUid": "CNOmkR5Q2C7Dc4Nm~4"
+}

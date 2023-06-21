@@ -1,0 +1,343 @@
+const army = {
+    "gameSystem": "aof",
+    "armyId": "PGxKcq4R571OtwqD",
+    "armyIds":
+    [
+        "PGxKcq4R571OtwqD",
+        "CNOmkR5Q2C7Dc4Nm"
+    ],
+    "armyFaction": "Havoc Warriors",
+    "armyName": "Havoc Warriors with Change support",
+    "modified": "2023-06-12T21:46:14.108Z",
+    "saveVersion": 3,
+    "listPoints": 1000,
+    "list":
+    {
+        "id": "BaY_eAqQ",
+        "key": "9OXNyxHQOaz5q-nQLMZpx",
+        "name": "Chaos Warriors & Tzaangors",
+        "units":
+        [
+            {
+                "id": "EuRBdTX",
+                "armyId": "PGxKcq4R571OtwqD",
+                "customName": "Chosen Warriors",
+                "selectionId": "C7iXy",
+                "selectedUpgrades":
+                [
+                    {
+                        "instanceId": "YbT0z-PXu",
+                        "upgradeId": "9w7Zgee",
+                        "optionId": "9o3Qq"
+                    },
+                    {
+                        "instanceId": "eRA2eKDlj",
+                        "upgradeId": "02QBHyf",
+                        "optionId": "NdaV_Ee"
+                    }
+                ],
+                "combined": false,
+                "joinToUnit": null,
+                "xp": 0,
+                "traits":
+                [],
+                "notes": null
+            },
+            {
+                "id": "OJyY0_j",
+                "armyId": "PGxKcq4R571OtwqD",
+                "customName": "Lord on Kharkadrak",
+                "selectionId": "YPvsh",
+                "selectedUpgrades":
+                [
+                    {
+                        "instanceId": "RBISz8FvJ",
+                        "upgradeId": "YVgJPFp",
+                        "optionId": "7gHEUZM"
+                    },
+                    {
+                        "instanceId": "gI0QGOMqC",
+                        "upgradeId": "qPsrtux",
+                        "optionId": "Kh98k"
+                    },
+                    {
+                        "instanceId": "DND74knh_",
+                        "upgradeId": "-Hw57ol",
+                        "optionId": "wi3x0"
+                    }
+                ],
+                "combined": false,
+                "joinToUnit": "DSbaA",
+                "xp": 0,
+                "traits":
+                [],
+                "notes": null
+            },
+            {
+                "id": "GJGNWvj",
+                "armyId": "PGxKcq4R571OtwqD",
+                "selectionId": "DSbaA",
+                "selectedUpgrades":
+                [
+                    {
+                        "instanceId": "ITVgLSzgH",
+                        "upgradeId": "5CxcNHu",
+                        "optionId": "zYkUhcd"
+                    }
+                ],
+                "combined": false,
+                "joinToUnit": null,
+                "xp": 0,
+                "traits":
+                [],
+                "notes": null
+            },
+            {
+                "id": "KFftC9n",
+                "armyId": "CNOmkR5Q2C7Dc4Nm",
+                "customName": "Disk Rider Tzaangor Shaman",
+                "selectionId": "CIQTi",
+                "selectedUpgrades":
+                [
+                    {
+                        "instanceId": "M8oc1e-Zy",
+                        "upgradeId": "nT26a",
+                        "optionId": "oBgn4"
+                    },
+                    {
+                        "instanceId": "XSZogx5xw",
+                        "upgradeId": "Xtv30",
+                        "optionId": "7xCdy"
+                    }
+                ],
+                "combined": false,
+                "joinToUnit": "e53vs",
+                "xp": 0,
+                "traits":
+                [],
+                "notes": null
+            },
+            {
+                "id": "S6EpWLL",
+                "armyId": "CNOmkR5Q2C7Dc4Nm",
+                "customName": "Disc Rider Tzaangors Archers",
+                "selectionId": "e53vs",
+                "selectedUpgrades":
+                [
+                    {
+                        "instanceId": "ONEJ1-Tq-",
+                        "upgradeId": "pWQZu",
+                        "optionId": "VoTPj"
+                    }
+                ],
+                "combined": false,
+                "joinToUnit": null,
+                "xp": 0,
+                "traits":
+                [],
+                "notes": null
+            },
+            {
+                "id": "W5UR4wP",
+                "armyId": "CNOmkR5Q2C7Dc4Nm",
+                "customName": "Tzaangors",
+                "selectionId": "r2hkM",
+                "selectedUpgrades":
+                [
+                    {
+                        "instanceId": "XespRc2XV",
+                        "upgradeId": "nUQoO",
+                        "optionId": "ImcXw"
+                    }
+                ],
+                "combined": false,
+                "joinToUnit": null,
+                "xp": 0,
+                "traits":
+                [],
+                "notes": null
+            },
+            {
+                "id": "EuRBdTX",
+                "armyId": "PGxKcq4R571OtwqD",
+                "selectionId": "BFh8d",
+                "selectedUpgrades":
+                [
+                    {
+                        "instanceId": "nwPVHIqVX",
+                        "upgradeId": "73zh5cY",
+                        "optionId": "gyA2sDO"
+                    }
+                ],
+                "combined": true,
+                "joinToUnit": null,
+                "xp": 0,
+                "traits":
+                [],
+                "notes": null
+            },
+            {
+                "id": "EuRBdTX",
+                "armyId": "PGxKcq4R571OtwqD",
+                "selectionId": "WfYVK",
+                "selectedUpgrades":
+                [],
+                "combined": true,
+                "joinToUnit": "BFh8d",
+                "xp": 0,
+                "traits":
+                [],
+                "notes": null
+            }
+        ],
+        "points": 1000,
+        "pointsLimit": 1000,
+        "creationTime": "1685836801034",
+        "campaignMode": false,
+        "competitive": true,
+        "gameSystem": "aof",
+        "unitPreview": null,
+        "selectedUnitId": null,
+        "undoUnitRemove":
+        [
+            {
+                "id": "3SD9sRo",
+                "cost": 230,
+                "name": "Daemonic Guard Knights",
+                "size": 3,
+                "defense": 3,
+                "quality": 3,
+                "upgrades":
+                [
+                    "L1"
+                ],
+                "equipment":
+                [
+                    {
+                        "id": "ni_Wq",
+                        "name": "Hexed Weapons",
+                        "label": "Hexed Weapons",
+                        "attacks": 1,
+                        "specialRules":
+                        [
+                            {
+                                "key": "ap",
+                                "name": "AP",
+                                "rating": "1",
+                                "modify": false
+                            },
+                            {
+                                "key": "rending",
+                                "name": "Rending",
+                                "rating": "",
+                                "modify": false
+                            }
+                        ],
+                        "count": 3,
+                        "originalCount": 3,
+                        "type": "ArmyBookWeapon"
+                    },
+                    {
+                        "id": "ZtAPj",
+                        "name": "Hooves",
+                        "label": "Hooves",
+                        "attacks": 2,
+                        "specialRules":
+                        [
+                            {
+                                "key": "ap",
+                                "name": "AP",
+                                "rating": "1",
+                                "modify": false
+                            }
+                        ],
+                        "count": 3,
+                        "originalCount": 3,
+                        "type": "ArmyBookWeapon"
+                    }
+                ],
+                "specialRules":
+                [
+                    {
+                        "key": "fast",
+                        "name": "Fast",
+                        "modify": false,
+                        "rating": ""
+                    },
+                    {
+                        "key": "impact",
+                        "name": "Impact",
+                        "modify": false,
+                        "rating": "3"
+                    },
+                    {
+                        "key": "tough",
+                        "name": "Tough",
+                        "modify": false,
+                        "rating": "3"
+                    }
+                ],
+                "disabledUpgradeSections":
+                [],
+                "armyId": "PGxKcq4R571OtwqD",
+                "selectedUpgrades":
+                [],
+                "sortId": 13,
+                "selectionId": "A2dbL",
+                "combined": false,
+                "joinToUnit": null,
+                "loadout":
+                [
+                    {
+                        "id": "ni_Wq",
+                        "name": "Hexed Weapons",
+                        "label": "Hexed Weapons",
+                        "attacks": 1,
+                        "specialRules":
+                        [
+                            {
+                                "key": "ap",
+                                "name": "AP",
+                                "rating": "1",
+                                "modify": false
+                            },
+                            {
+                                "key": "rending",
+                                "name": "Rending",
+                                "rating": "",
+                                "modify": false
+                            }
+                        ],
+                        "count": 3,
+                        "originalCount": 3,
+                        "type": "ArmyBookWeapon"
+                    },
+                    {
+                        "id": "ZtAPj",
+                        "name": "Hooves",
+                        "label": "Hooves",
+                        "attacks": 2,
+                        "specialRules":
+                        [
+                            {
+                                "key": "ap",
+                                "name": "AP",
+                                "rating": "1",
+                                "modify": false
+                            }
+                        ],
+                        "count": 3,
+                        "originalCount": 3,
+                        "type": "ArmyBookWeapon"
+                    }
+                ],
+                "xp": 0,
+                "traits":
+                [],
+                "notes": null
+            }
+        ],
+        "modified": "2023-06-12T21:46:14.108Z"
+    },
+    "favourite": true
+}
