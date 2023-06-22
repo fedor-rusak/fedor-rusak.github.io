@@ -3,15 +3,16 @@
 	<head>
 		<meta charset='utf-8'>
 		<meta name='viewport' content='width=device-width, initial-scale=1'>
-		<title>Age of Fantasy v2.16 handbook</title>
+		<link href='https://fonts.googleapis.com/css2?family=Oswald:wght@600&amp;&amp;family=Source+Sans+Pro:wght@400;500;600&amp;display=swap' rel='stylesheet' data-optimized-fonts='true'>
 		<style>
 			body {
 				font-size: 20px;
 				margin: 20px;
 				background-color: rgb(242, 242, 242);
 				font-weight: 400;
-				font-size: 1.25rem;
-				line-height: 1.25;
+				font-size: 1.2rem;
+				line-height: 1.35;
+				font-family: Source Sans Pro;
 			}
 			div {
 				background-color: #fff;
@@ -35,7 +36,7 @@
 
 		<p>(Try to) Get a table of size 72 inch by 48 inch ( 183cm by 122cm). I have 48 inch by 32 inch gaming area. We can always modify some rules to our liking :).</p>
 
-		<p>Put some terrain pieces. Be it trees, ruins, swamps, just keep enough place to move units around yet not make to easy for shooting units to hit everyone.</p>
+		<p>Put some terrain pieces. Be it trees, ruins, swamps, just keep enough place to move units around yet not make too easy for shooting units to hit everyone.</p>
 
 		<p>Place D3+2 objective tokens with a distance of at least 9 inch between them. Dice can decide who puts first one then alternate between players.</p>
 
@@ -44,11 +45,12 @@
 
 	<div>
 		<h3>Win condition</h3>
+
 		<p>The one who captured more objectives after 4 rounds wins.</p>
 
 		<p>To capture objective you must ensure that at the end of around only your active units are in within 3 inch sphere centered on ojective marker. Objective stays captured if units move away.
 
-		<p>If both players units are near objective market then it is captured by no one.</p>
+		<p>If both players units are near objective marker then it is captured by no one.</p>
 	</div>
 
 	<div>
@@ -59,14 +61,18 @@
 		<p>So each round is a sequence of unit activation alternating between players. Until all units are activated.</p>
 
 		<p>What can be done during activation you ask? One of these choices:
-		 * stay (you can shoot)
-		 * walk up to 6 inch by default (you can shoot)
-		 * run up to 12 inch by default (you must finish at least 1 inch away from any unit)
-		 * charge is like run (for distance) but you must finish base to base with enemy unit with at least one of you units models
+			<ul>
+				<li>stay at your place (you can shoot)</li>
+				<li>walk up to 6 inch by default (you can shoot)</li>
+				<li>run up to 12 inch by default (you must finish at least 1 inch away from any unit)</li>
+				<li>charge is like run (for distance) but you must finish base to base with enemy unit with at least one of you units models</li>
+			</ul>
 
 		<p>IMPORTANT:
-		 * you can not move through any other unit if they block your path.
-		 * unit models must be always close to each other (max 2 inch for other model and all models in 6 inch reach or closest possible)
+			<ul>
+		 		<li>you can not move through any other unit if they block your path.</li>
+		 		<li>unit models must be always close to each other (max 2 inch for other model and all models in 6 inch reach or closest possible)</li>
+			</ul>
 		</p>
 	</div>
 
@@ -74,23 +80,27 @@
 		<h3>Army description</h3>
 
 		<p>So as we understand rounds, activations, objectives let's talk a bit about unit characteristics and how Age of Fantasy describes units and models to allow customization while limiting amount of bullshit expected to be learned. Every unit (except huge monsters or specialized things) contains multiple models which usually model characteristics:
-		 * Cost: obvious.
-		 * Quality: The score needed for attacks and morale.
-		 * Defense: The score needed for defense.
-		 * Tough: If unit has more than one health point (wound point).
-		 * Special Rules: Heart of unit uniqueness.
-		 * Weapons: Each weapon with distance (if ranged), number of attacks (dice to throw), Armor Penetration and other special rules.
-		 * Upgrades: Things that give special rules.</p>
+			<ul>
+		 <li>Cost: obvious</li>
+		 <li>Quality: minimal dice score needed to succeed with attacks rolls and morale checks</li>
+		 <li>Defense: minial dice score needed to succeed with defense rolls</li>
+		 <li>Tough: (Default 1) Practically health points. Model dies when all health lost.</li>
+		 <li>Special Rules: heart of unit uniqueness</li>
+		 <li>Weapons: each weapon with distance (if ranged), number of attacks (dices to throw), Armor Penetration and their special rules</li>
+		 <li>Upgrades: things that give even more special rules</li>
+			</ul>
+		</p>
 
 		<p>Special rules is sort of umbrella term to specify that some customization was applied and it is described in a rule form to simplify its usage during game.</p>
 
-		<p>To balance thins out games are played with fixed point (the thing to describe unit cost) budget, i.e. 1000. There is also balance specific limits on unit copies, used heroes and maximum cost of one unit <=35% of total point budget.</p>
+		<p>To balance thins out games are played with fixed point (the thing to describe unit cost) budget, i.e. 1000. There is also balance specific limits on unit copies, used heroes and maximum cost of one unit <=35% of total point budget. There is a cool <a href="https://army-forge.onepagerules.com/armyBookSelection?gameSystem=aof">Army Forge</a> web-site for building armies.</p>
 
-		<p>Once you have checked armies that we plan to use for an upcoming playtesting you can dive deeper in game mechanics.</p>
+		<p>Once you have checked <a href="aof_army_wardens.html">your army</a> and <a href="aof_army_havoc.html">my army</a> that we plan to use for an upcoming playtesting you can dive deeper in game mechanics.</p>
 	</div>
 
 	<div>
 		<h3>Activation details</h3>
+
 		<p>So what are ways to attack enemy units and what is important to know about this ruleset:
 			<ul>
 				<li>shooting and charging can be done once a round, yet you can choose to melee attack back charging enemy units more than once (beware the fatigue)</li>
@@ -103,10 +113,15 @@
 
 	<div>
 		<h3>Probably WTF?!</h3>
+
 		<p>More weird details of wargame fighting activities:
 			<ul>
+				<li>Heroes are NOT units! They are sort of attachement, addition to actual unit.</li>
 				<li>for attack/defense *1 is always failure, *6 always success</li>
+				<li>If unit has multiple melee weapons there is a great chance that it can use all of them at once.</li>
 				<li>when unit rolls for attacks and succeeds then defendant rolls this number of dices to check if any hit resulted in damage</li>
+				<li>if unit failed morale test and got morale debuff - one do-nothing activation is required to fix it</li>
+				<li>When you allocate damage you always finish with hero. If you have damaged model it must be damaged first.</li>
 				<li>if unit loses half of its models then it rolls for morale and can possibly route from battle</li>
 				<li>there is mumbo jumbo with checking how many models can actually attack and this is determined by how far models are from enemy models</li>
 				<li>similar mumbo jumbo with shooting, line of sight and cover bonus if there are obstacle on a shooting path</li>

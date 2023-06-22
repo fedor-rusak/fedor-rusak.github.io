@@ -1,0 +1,238 @@
+@media print {
+	* {
+		background-color:transparent!important;
+		color:#000!important
+	}
+
+	@media print {
+		.pagebreak { page-break-before: always; } /* page-break-after works, as well */
+	}
+
+	#units {
+		columns: 2!important;
+	}
+
+	#rules {
+		position: relative; top: 25px;
+	}
+}
+
+hr {
+	height:auto;
+	background-color:transparent
+}
+td.weapon-name-cell {
+	white-space:nowrap
+}
+.rule-list-item {
+	line-height:1.66;
+	user-select: none;
+	text-decoration: underline dashed;
+	text-underline-offset: 4px;
+}
+::-webkit-scrollbar {
+	display:none
+}
+
+body,html {
+	padding:0;
+	margin:0;
+	height:100%;
+	overflow-y:unset;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: rgb(242, 242, 242);
+}
+a {
+	color:inherit;
+	text-decoration:none
+}
+p {
+	margin:0
+}
+* {
+	box-sizing:border-box;
+	font-family:Source Sans Pro,sans-serif
+}
+
+#units {
+	columns: 3;
+	width: 100%;
+	padding: 24px;
+}
+
+@media screen and (max-width: 1200px) {
+	#units {
+		columns: 2 !important;
+	}
+}
+@media screen and (max-width: 800px) {
+	#units {
+		columns: 1 !important;
+	}
+	.badge > span:first-child {
+		font-size: 14px !important;
+		height: 28px !important;
+		line-height: 28px !important;
+	}
+	.badge > span:nth-child(3) {
+		font-size: 15px !important;
+		height: 22px !important;
+		line-height: 22px !important;
+	}
+	.statbreak {
+		border-bottom: 22px solid #fff !important;
+		border-left: 6px solid transparent !important;
+	}
+	.summary {
+		font-size: 17px !important;
+	}
+	.rule {
+		font-size: 1.15rem !important;
+	}
+}
+
+.unit {
+	background-color: rgb(255, 255, 255);
+	color: rgb(8, 30, 51);
+	border-radius: 4px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+	overflow: hidden;
+	display: inline-block;
+	width: 100%;
+}
+.summary {
+	padding: 8px 16px 0px;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	-moz-box-align: center;
+	align-items: center;
+	flex: 1 1 0%;
+	padding-bottom: 8px;
+	font-weight: 600;
+	font-size: 20px;
+}
+.summary-label {
+	font-weight: 600;
+	text-align: center;
+	font-size: 20px;
+	padding-bottom: 0px;
+}
+.summary-hint {
+	font-weight: 200;
+	font-size: 1rem;
+	color: rgb(74, 90, 106);
+}
+.summary > .summary-type {
+	text-align: center;
+	margin: 0px;
+	font-family: Source Sans Pro;
+	font-weight: 400;
+	font-size: 0.875rem;
+	line-height: 1.43;
+	color: rgb(74, 90, 106);
+}
+
+.combined {
+	display: flex;
+	flex-direction: row;
+	-moz-box-pack: center;
+	justify-content: center;
+	margin-bottom: 16px;
+} 
+
+.badges {
+	display: flex;
+	flex-direction: row;
+	-moz-box-pack: center;
+	justify-content: center;
+	margin-top: 8px;
+	margin-bottom: 8px;
+} 
+.badge {
+	display: flex;
+	background-color: #0f71b4;
+	margin-left: 8px;
+	margin-right: 8px;
+	border-radius: 5px;
+	border: 1px solid #ebebeb;
+	align-items: flex-end;
+}
+.badge > span:first-child {
+	padding-left: 8px;
+	padding-right: 8px;
+	color: #fff;
+	font-weight: 600;
+	font-size: 15px;
+	height: 32px;
+	line-height: 32px;
+}
+.badge > span:nth-child(3) {
+	background-color: #fff;
+	color: #121212;
+	font-weight: 900;
+	font-size: 18px;
+	padding-left: 4px;
+	padding-right: 6px;
+	height: 26px;
+	line-height: 26px;
+	border-bottom-right-radius: 3px;
+	position: relative;
+}
+.statbreak {
+	border-bottom: 26px solid #fff;
+	border-left: 12px solid transparent;
+}
+.specialtraights {
+	margin-bottom: 8px;
+	padding-left: 8px;
+	padding-right: 8px;
+	font-size: 14px;
+}
+
+table {
+	display: table;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+td {
+	text-align: center;
+}
+td:first-child, th:first-child {
+	text-align: left;
+}
+td:first-child {
+	font-weight: 600;
+}
+td, th {
+	padding: 2px 8px;
+	font-size: 0.875rem;
+	line-height: 1.5rem;
+}
+.weapons > tr > td:first-child, .upgrades > tr > td:first-child {
+	width: 33%;
+}
+.weapons > tr > td:nth-child(5) {
+	width: 30%;
+}
+.upgrades > tr > td:nth-child(2) {
+	text-align: left;
+}
+
+.rule {
+	break-inside: avoid;
+	font-weight: 400;
+	font-size: 1.25rem;
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+.rule > span:first-child {
+	font-weight: 600;
+}
+
+@media screen and (max-width: 900px) {
+	#rules {
+		columns: 1 !important;
+	}
+}
