@@ -271,8 +271,11 @@ aof.render = (armybooks, army) => {
 
 	const unitLinks = army.list.units.filter(unit => unit.joinToUnit !== null && unit.combined === false).map(unit => unit.joinToUnit);
 	const unitsDiv = document.querySelector('#units');
-	const unitStructs = army.list.units.filter(unit => !(unit.joinToUnit !== null && unit.combined === true)).map(unit => {
+	const unitStructs = 
+		army.list.units.filter(unit => !(unit.joinToUnit !== null && unit.combined === true)).map(unit => {
 		const combinedModifier = unit.combined ? 2 : 1;
+		console.log(unit);
+		console.log(combinedModifier);
 
 		const unitSpec = unitMap[unit.id];
 
@@ -411,7 +414,7 @@ aof.render = (armybooks, army) => {
 
 		return {
 			name: unit.customName ? unit.customName : unitSpec.name,
-			size: unitSpec.size,
+			size: unitSpec.size *combinedModifier,
 			cost: cost,
 			type: unitSpec.name,
 			quality: unitSpec.quality,
