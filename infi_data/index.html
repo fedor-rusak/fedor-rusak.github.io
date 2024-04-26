@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>InfiData!</title>
+		<script type='text/javascript' src='codeone_aleph.json'></script>
+		<script>
+			//https://api.corvusbelli.com/army/units/en/101
+			//Origin "https://infinitytheuniverse.com"
+
+			const elem = (tag, className, ...content) => {
+				const element = document.createElement(tag);
+				if (!className) {
+					//nothing
+				}
+				else if (typeof className === 'object') {
+					Object.keys(className).forEach( key => {
+						element.setAttribute(key, className[key]);
+					});
+				} else {
+					element.classList.add(className);
+				}
+
+				content.forEach(item => {
+					if (item === undefined || item === null) {
+						return;
+					} else if (Array.isArray(item)) {
+						element.appendChild(elem(...item));
+					} else if (typeof item === 'object') {
+						element.appendChild(item);
+					} else {
+						element.innerHTML += item;
+					}
+				});
+
+				return element;
+			};
+
+			const element = (data) => {
+				return elem(...data)
+			};
+
+			const fixDot = (value) => {
+				if (value % 1 === 0) {
+					return value +".0";
+				} else {
+					return value;
+				}
+			}
+			const toOptionText = (option) => {
+				return "pts: "+fixDot(option.points)+", swc: "+option.swc;
+			}
+
+			const toMap = (arrayWithIds) => {
+				return arrayWithIds.reduce((map, obj) => {
+				    map[obj.id] = obj;
+					return map;
+				}, {});
+			}
+
+			window.onload = () => {
+				const unitsBody = document.querySelector("#units");
+
+				const army = alephArmy;
+				const weapons = toMap(army.filters.weapons);
+				const skills = toMap(army.filters.skills);
+				const extras = toMap(army.filters.extras);
+
+				const result = [];
+
+				army.units.forEach(unit => {
+
+
+					const group = unit.profileGroups[0];
+					const profile = group.profiles[0];
+
+					const stats = {
+						s: profile.s,
+						bs: profile.bs,
+						cc: profile.cc,
+						ph: profile.ph,
+						arm: profile.arm,
+						wip: profile.wip,
+						bts: profile.bts,
+						ava: profile.ava,
+						w: profile.str? "-" : profile.w, 
+						str: profile.str? profile.w : "-",
+					};
+
+					stats.move = profile.move;
+					const moves = (stats.move[0]/2.5) +"-"+(profile.move[1]/2.5);
+
+					unitsBody.appendChild(
+						element([
+							'tr', "stats",
+							['td', null, group.isc],
+							['td', null, stats.s],
+							['td', null, moves],
+							['td', null, stats.bs],
+							['td', null, stats.cc],
+							['td', null, stats.ph],
+							['td', null, stats.arm],
+							['td', null, stats.wip],
+							['td', null, stats.bts],
+							['td', null, stats.w],
+							['td', null, stats.str],
+							['td', null, stats.ava],
+						])
+					);
+
+					const specialSkills = [];
+					profile.skills.sort((a,b) => a.order-b.order).forEach(skill => {
+							let skillText = skills[skill.id].name;
+							if (skill.extra && skill.extra.length > 0) {
+								const skillExtra = extras[skill.extra[0]];
+								let text = skillExtra.name;
+								if (skillExtra.type === "DISTANCE") {
+									text = "+"+ (text / 2.5) + "\"";
+								}
+								skillText += "( "+text+" )";
+							}
+							specialSkills.push(skillText);
+						}
+					);
+					if (specialSkills.length > 0) {
+						unitsBody.appendChild(
+							element([
+								'tr', "special",
+								[
+									'td', {'colspan':12},
+									['span', {'style': 'font-weight: 600;'},"Special skills: "],
+					 				specialSkills.join(" • ")
+								]
+							])
+						);
+					}
+
+					let optionRows = [];
+					group.options.forEach(option => {
+						let loadout = [];
+						option.weapons.sort((a,b) => a.order-b.order).forEach(weapon => {
+							loadout.push(weapons[weapon.id].name);
+						});
+
+						optionRows.push(['tr', null, 
+							['td', "price", "pts: " + fixDot(option.points) + " | swc: " + option.swc],
+							['td', null, loadout.join(' | ')]
+						]);
+					});
+
+					unitsBody.appendChild(
+						element([
+							'tr', null,
+							[
+								'td', {'class': 'simple', 'colspan':12},
+								['table', 'full-table'].concat(optionRows)
+							]
+						])
+					);
+				});
+			};
+		</script>
+		<style type="text/css">
+			td {
+				padding: 6px;
+			}
+			.pre {
+				white-space: pre;
+			}
+
+			#units > tr > td:not(:first-child), thead > tr > td:not(:first-child) {
+				text-align: center;
+			}
+			.stats {
+				background-color: #EEE;
+			}
+			.special {
+				background-color: #FEF;
+				font-family: sans-serif;
+				font-weight: 800;
+				font-size: 14px;
+			}
+			.full-table {
+				width: 100%;
+				margin 0 auto;
+				border-collapse: collapse;
+			}
+			.header, .full-table {
+				border-width: 0 0 2px 0;
+				border-style: solid;
+				border-color: #1af;
+			}
+			.full-table > tr:nth-child(even)  {
+				background-color: #EEF;
+			}
+			.simple {
+				padding: 0;
+			}
+			.price {
+				width: 20%;
+			}
+			.ul-no-style {
+				list-style: none;
+			}
+			li {
+				padding-bottom: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="width: 1000px; margin: 0 auto; font-size: 18px; font-family: sans-serif; line-height: 1.5em;">
+			<div style="padding: 25px;">
+				<h3 style="text-align: center;">Introduction</h3>
+				<p><a href="https://infinitytheuniverse.com/resources/infinity" target="_blank">Infinity The Game</a> by Corvus Belli is a 2-player tabletop skirmish wargame with <a href="https://store.corvusbelli.com/en/wargames/infinity/miniatures" target="_blank">miniatures</a> sculpted in sci-fi fashion.</p> 
+				<p>There is lighter ruleset called <a href="https://infinitytheuniverse.com/resources/codeone" target="_blank">CodeOne</a> aimed for shorter ~1hr game sessions of intense tactical decisions.<br></p>
+				<p>Beside ruleset and table with terrain you need an army list. It can be assemble via <a href="https://infinitytheuniverse.com/army/codeone" target="_blank">Army 7 official site</a> or you can try <b>this</b>(!) page to have better UX for learning about different units, loadouts and corresponding point prices.</p>
+				<p>For balanced gameplay it is advised to use armies limited to 25 points and 5 swc (support weapon cost) on a table with size of 32″ x 48″ (82cm x 123cm).</p>
+				<h3 style="text-align: center;">Unit attributes</h3>
+				<p>
+					Game is played using d20 dice. (Usually) Attribute check less than value = success, equals = crit, higher = failure.
+					<ul class="ul-no-style">
+						<li><input type="checkbox"> <b>S</b>ilhouette - volume of model inside game. Shape is cylinder. Bigger number = bigger size.</li>
+						<li><input type="checkbox"> <b>MOV</b>ement - first value for first move short action. Second value for optional additional one. In inches.</li>
+						<li><input type="checkbox"> <b>B</b>allistic <b>S</b>kill - your chance to score a hit using ranged weapon.</li>
+						<li><input type="checkbox"> <b>C</b>lose <b>C</b>ombat - your chance to score a hit when attacking base to base.</li>
+						<li><input type="checkbox"> <b>PH</b>ysique - your chance to dodge.</li>
+						<li><input type="checkbox"> <b>ARM</b>or - passive bonus to improve chances of ignoring damage from physical hits.</li>
+						<li><input type="checkbox"> <b>WI</b>ll <b>P</b>ower - your chance to hack or to evade being hacked.</li>
+						<li><input type="checkbox"> <b>BTS</b> - passive bonus to evade being hacked.</li>
+						<li><input type="checkbox"> <b>AVA</b> - how many units of this type you can include in your army.</li>
+					</ul>
+				</p>
+			</div>
+		</div>
+		<table style="width: 1000px; margin: 0 auto; font-size: 20px; border-collapse: collapse;">
+			<thead>
+				<tr class="header">
+					<td style="width: 34%;">Name</td>
+					<td style="width: 6%;">S</td>
+					<td style="width: 6%;">MOV</td>
+					<td style="width: 6%;">BS</td>
+					<td style="width: 6%;">CC</td>
+					<td style="width: 6%;">PH</td>
+					<td style="width: 6%;">ARM</td>
+					<td style="width: 6%;">WIP</td>
+					<td style="width: 6%;">BTS</td>
+					<td style="width: 6%;">W</td>
+					<td style="width: 6%;">STR</td>
+					<td style="width: 6%;">AVA</td>
+				</tr>
+			</thead>
+			<tbody id="units">
+			</tbody>
+		</table>
+	</body>
+</html>
