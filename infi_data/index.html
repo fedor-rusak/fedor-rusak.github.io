@@ -138,6 +138,16 @@
 
 					let optionRows = [];
 					group.options.forEach(option => {
+						let skillsDescription = "";
+
+						if (option.skills.length > 0) {
+							let tempSkills = [];
+
+							option.skills.forEach(skill => {
+								tempSkills.push(skills[skill.id].name);
+							});
+							skillsDescription = "("+ tempSkills.join(", ")+")"
+						}
 						let loadout = [];
 						option.weapons.sort((a,b) => a.order-b.order).forEach(weapon => {
 							loadout.push(weapons[weapon.id].name);
@@ -145,6 +155,7 @@
 
 						optionRows.push(['tr', null, 
 							['td', "price", "pts: " + fixDot(option.points) + " | swc: " + option.swc],
+							['td', null, skillsDescription],
 							['td', null, loadout.join(' | ')]
 						]);
 					});
