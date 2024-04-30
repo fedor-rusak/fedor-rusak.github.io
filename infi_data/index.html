@@ -59,6 +59,17 @@
 				}, {});
 			}
 
+			const getEquip = (equipArray, equipment) => {
+				const equipNames = [];
+				equipArray
+					.sort((a,b) => a.order-b.order)
+					.forEach(equip => {
+						let equipText = equipment[equip.id].name;
+						equipNames.push(equipText);
+					});
+				return equipNames;
+			}
+
 			window.onload = () => {
 				const unitsBody = document.querySelector("#units");
 
@@ -66,6 +77,7 @@
 				const weapons = toMap(army.filters.weapons);
 				const skills = toMap(army.filters.skills);
 				const extras = toMap(army.filters.extras);
+				const equipment = toMap(army.filters.equip);
 
 				const result = [];
 
@@ -109,6 +121,20 @@
 						])
 					);
 
+					if (profile.equip.length > 0) {
+						const profileEquip = getEquip(profile.equip, equipment);
+						unitsBody.appendChild(
+							element([
+								'tr', "special",
+								[
+									'td', {'colspan':12},
+									['span', {'style': 'font-weight: 600;'},"Equipment: "],
+					 				profileEquip.join(" • ")
+								]
+							])
+						);
+					}
+
 					const specialSkills = [];
 					profile.skills.sort((a,b) => a.order-b.order).forEach(skill => {
 							let skillText = skills[skill.id].name;
@@ -146,6 +172,7 @@
 							option.skills.forEach(skill => {
 								tempSkills.push(skills[skill.id].name);
 							});
+							tempSkills = tempSkills.concat(getEquip(option.equip, equipment));
 							skillsDescription = "("+ tempSkills.join(", ")+")"
 						}
 						let loadout = [];
@@ -204,6 +231,12 @@
 			}
 			.full-table > tr:nth-child(even)  {
 				background-color: #EEF;
+			}
+			.full-table > tr > td:nth-child(1) {
+				width: 16%;
+			}
+			.full-table > tr > td:nth-child(2) {
+				width: 24%;
 			}
 			.simple {
 				padding: 0;
