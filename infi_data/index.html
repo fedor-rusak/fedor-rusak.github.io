@@ -5,6 +5,7 @@
 		<meta charset="utf-8">
 		<title>InfiData!</title>
 		<script type='text/javascript' src='codeone_aleph.json'></script>
+		<script type='text/javascript' src='codeone_ariadna.json'></script>
 		<script>
 			//https://api.corvusbelli.com/army/units/en/101
 			//Origin "https://infinitytheuniverse.com"
@@ -70,10 +71,126 @@
 				return equipNames;
 			}
 
+			const renderUnit = (unitsBody, weapons, skills, extras, equipment, group, groupName) => {
+				const profile = group.profiles[0];
+				const stats = {
+					s: profile.s,
+					bs: profile.bs,
+					cc: profile.cc,
+					ph: profile.ph,
+					arm: profile.arm,
+					wip: profile.wip,
+					bts: profile.bts,
+					ava: profile.ava,
+					w: profile.str? "-" : profile.w, 
+					str: profile.str? profile.w : "-",
+				};
+
+				stats.move = profile.move;
+				const moves = (stats.move[0]/2.5) +"-"+(profile.move[1]/2.5);
+				let name = group.isc;
+				if (groupName) {
+					name = groupName + ": " + name;
+				}
+				unitsBody.appendChild(
+					element([
+						'tr', "stats",
+						['td', null, name],
+						['td', null, stats.s],
+						['td', null, moves],
+						['td', null, stats.bs],
+						['td', null, stats.cc],
+						['td', null, stats.ph],
+						['td', null, stats.arm],
+						['td', null, stats.wip],
+						['td', null, stats.bts],
+						['td', null, stats.w],
+						['td', null, stats.str],
+						['td', null, stats.ava],
+					])
+				);
+
+				if (profile.equip.length > 0) {
+					const profileEquip = getEquip(profile.equip, equipment);
+					unitsBody.appendChild(
+						element([
+							'tr', "special",
+							[
+								'td', {'colspan':12},
+								['span', {'style': 'font-weight: 600;'},"Equipment: "],
+				 				profileEquip.join(" • ")
+							]
+						])
+					);
+				}
+
+				const specialSkills = [];
+				profile.skills.sort((a,b) => a.order-b.order).forEach(skill => {
+						let skillText = skills[skill.id].name;
+						if (skill.extra && skill.extra.length > 0) {
+							const skillExtra = extras[skill.extra[0]];
+							let text = skillExtra.name;
+							if (skillExtra.type === "DISTANCE") {
+								text = "+"+ (text / 2.5) + "\"";
+							}
+							skillText += "( "+text+" )";
+						}
+						specialSkills.push(skillText);
+					}
+				);
+				if (specialSkills.length > 0) {
+					unitsBody.appendChild(
+						element([
+							'tr', "special",
+							[
+								'td', {'colspan':12},
+								['span', {'style': 'font-weight: 600;'},"Special skills: "],
+				 				specialSkills.join(" • ")
+							]
+						])
+					);
+				}
+
+				let optionRows = [];
+				group.options.forEach(option => {
+					let skillsDescription = "";
+
+					if (option.skills.length > 0) {
+						let tempSkills = [];
+
+						option.skills.forEach(skill => {
+							tempSkills.push(skills[skill.id].name);
+						});
+						tempSkills = tempSkills.concat(getEquip(option.equip, equipment));
+						skillsDescription = "("+ tempSkills.join(", ")+")"
+					}
+					let loadout = [];
+					option.weapons.sort((a,b) => a.order-b.order).forEach(weapon => {
+						loadout.push(weapons[weapon.id].name);
+					});
+
+					optionRows.push(['tr', null, 
+						['td', "price", "pts: " + fixDot(option.points) + " | swc: " + option.swc],
+						['td', null, skillsDescription],
+						['td', null, loadout.join(' | ')]
+					]);
+				});
+
+				unitsBody.appendChild(
+					element([
+						'tr', null,
+						[
+							'td', {'class': 'simple', 'colspan':12},
+							['table', 'full-table'].concat(optionRows)
+						]
+					])
+				);
+			}
+
 			window.onload = () => {
 				const unitsBody = document.querySelector("#units");
 
-				const army = alephArmy;
+				const army = ariadnaArmy;//alephArmy;
 				const weapons = toMap(army.filters.weapons);
 				const skills = toMap(army.filters.skills);
 				const extras = toMap(army.filters.extras);
@@ -82,120 +199,14 @@
 				const result = [];
 
 				army.units.forEach(unit => {
-
-
-					const group = unit.profileGroups[0];
-					const profile = group.profiles[0];
-
-					const stats = {
-						s: profile.s,
-						bs: profile.bs,
-						cc: profile.cc,
-						ph: profile.ph,
-						arm: profile.arm,
-						wip: profile.wip,
-						bts: profile.bts,
-						ava: profile.ava,
-						w: profile.str? "-" : profile.w, 
-						str: profile.str? profile.w : "-",
-					};
-
-					stats.move = profile.move;
-					const moves = (stats.move[0]/2.5) +"-"+(profile.move[1]/2.5);
-
-					unitsBody.appendChild(
-						element([
-							'tr', "stats",
-							['td', null, group.isc],
-							['td', null, stats.s],
-							['td', null, moves],
-							['td', null, stats.bs],
-							['td', null, stats.cc],
-							['td', null, stats.ph],
-							['td', null, stats.arm],
-							['td', null, stats.wip],
-							['td', null, stats.bts],
-							['td', null, stats.w],
-							['td', null, stats.str],
-							['td', null, stats.ava],
-						])
-					);
-
-					if (profile.equip.length > 0) {
-						const profileEquip = getEquip(profile.equip, equipment);
-						unitsBody.appendChild(
-							element([
-								'tr', "special",
-								[
-									'td', {'colspan':12},
-									['span', {'style': 'font-weight: 600;'},"Equipment: "],
-					 				profileEquip.join(" • ")
-								]
-							])
-						);
+					let groupName = undefined;
+					if (unit.profileGroups.length > 1) {
+						groupName = unit.isc;
 					}
 
-					const specialSkills = [];
-					profile.skills.sort((a,b) => a.order-b.order).forEach(skill => {
-							let skillText = skills[skill.id].name;
-							if (skill.extra && skill.extra.length > 0) {
-								const skillExtra = extras[skill.extra[0]];
-								let text = skillExtra.name;
-								if (skillExtra.type === "DISTANCE") {
-									text = "+"+ (text / 2.5) + "\"";
-								}
-								skillText += "( "+text+" )";
-							}
-							specialSkills.push(skillText);
-						}
-					);
-					if (specialSkills.length > 0) {
-						unitsBody.appendChild(
-							element([
-								'tr', "special",
-								[
-									'td', {'colspan':12},
-									['span', {'style': 'font-weight: 600;'},"Special skills: "],
-					 				specialSkills.join(" • ")
-								]
-							])
-						);
-					}
-
-					let optionRows = [];
-					group.options.forEach(option => {
-						let skillsDescription = "";
-
-						if (option.skills.length > 0) {
-							let tempSkills = [];
-
-							option.skills.forEach(skill => {
-								tempSkills.push(skills[skill.id].name);
-							});
-							tempSkills = tempSkills.concat(getEquip(option.equip, equipment));
-							skillsDescription = "("+ tempSkills.join(", ")+")"
-						}
-						let loadout = [];
-						option.weapons.sort((a,b) => a.order-b.order).forEach(weapon => {
-							loadout.push(weapons[weapon.id].name);
-						});
-
-						optionRows.push(['tr', null, 
-							['td', "price", "pts: " + fixDot(option.points) + " | swc: " + option.swc],
-							['td', null, skillsDescription],
-							['td', null, loadout.join(' | ')]
-						]);
+					unit.profileGroups.forEach(group => {
+						renderUnit(unitsBody, weapons, skills, extras, equipment, group, groupName);
 					});
-
-					unitsBody.appendChild(
-						element([
-							'tr', null,
-							[
-								'td', {'class': 'simple', 'colspan':12},
-								['table', 'full-table'].concat(optionRows)
-							]
-						])
-					);
 				});
 			};
 		</script>
@@ -212,6 +223,9 @@
 			}
 			.stats {
 				background-color: #EEE;
+			}
+			.stats > td:nth-child(even) {
+				background-color: #fff;
 			}
 			.special {
 				background-color: #FEF;
