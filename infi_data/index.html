@@ -6,6 +6,8 @@
 		<title>InfiData!</title>
 		<script type='text/javascript' src='codeone_aleph.json'></script>
 		<script type='text/javascript' src='codeone_ariadna.json'></script>
+		<script type='text/javascript' src='codeone_nomads.json'></script>
+		<script type='text/javascript' src='codeone_haqqislam.json'></script>
 		<script>
 			//https://api.corvusbelli.com/army/units/en/101
 			//Origin "https://infinitytheuniverse.com"
@@ -190,23 +192,42 @@
 			window.onload = () => {
 				const unitsBody = document.querySelector("#units");
 
-				const army = ariadnaArmy;//alephArmy;
-				const weapons = toMap(army.filters.weapons);
-				const skills = toMap(army.filters.skills);
-				const extras = toMap(army.filters.extras);
-				const equipment = toMap(army.filters.equip);
+;
 
-				const result = [];
+				const renderArmy = (army) => {
+					const weapons = toMap(army.filters.weapons);
+					const skills = toMap(army.filters.skills);
+					const extras = toMap(army.filters.extras);
+					const equipment = toMap(army.filters.equip)
 
-				army.units.forEach(unit => {
-					let groupName = undefined;
-					if (unit.profileGroups.length > 1) {
-						groupName = unit.isc;
-					}
+					army.units.forEach(unit => {
+						let groupName = undefined;
+						if (unit.profileGroups.length > 1) {
+							groupName = unit.isc;
+						}
 
-					unit.profileGroups.forEach(group => {
-						renderUnit(unitsBody, weapons, skills, extras, equipment, group, groupName);
+						unit.profileGroups.forEach(group => {
+							renderUnit(unitsBody, weapons, skills, extras, equipment, group, groupName);
+						});
 					});
+				};
+
+				renderArmy(alephArmy);
+
+				document.querySelector("#army").addEventListener("change", (e) => {
+					while (unitsBody.firstChild) {
+						unitsBody.removeChild(unitsBody.lastChild);
+					}
+					const chosen = e.target.value;
+					if (chosen == "ariadna") {
+						renderArmy(ariadnaArmy);
+					} else if (chosen === "aleph") {
+						renderArmy(alephArmy);
+					} else if (chosen === "nomads") {
+						renderArmy(nomadsArmy);
+					} else if (chosen === "haqqislam") {
+						renderArmy(haqqislamArmy);
+					}
 				});
 			};
 		</script>
@@ -264,6 +285,27 @@
 			li {
 				padding-bottom: 5px;
 			}
+
+			/* FIX OF UGLY SELECT */
+			select, .multiselect {
+				background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+				background-position: calc(100% - 0.75rem) center !important;
+				-moz-appearance:none !important;
+				-webkit-appearance: none !important; 
+				appearance: none !important;
+				padding-right: 2rem !important;
+				border-radius: 8px;
+				border-color: lightslategray;
+				border-width: 1px;
+				box-shadow: none;
+			}
+			#army {
+				font-size: 20px;
+				margin: 10px;
+				padding: 15px;
+				display: inline-block;
+				vertical-align: top;
+			}
 		</style>
 	</head>
 	<body>
@@ -290,6 +332,13 @@
 					</ul>
 				</p>
 			</div>
+		</div><div style="margin: 0 auto; width: 1000px; text-align: center; padding-bottom: 15px;">
+			<select id="army">
+				<option value="aleph">Aleph</option>
+				<option value="ariadna">Ariadna</option>
+				<option value="nomads">Nomads</option>
+				<option value="haqqislam">Haqqislam</option>
+			</select>
 		</div>
 		<table style="width: 1000px; margin: 0 auto; font-size: 20px; border-collapse: collapse;">
 			<thead>
