@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>InfiData - Team!</title>
+		<title>InfiData!</title>
 		<script type='text/javascript' src='codeone_aleph.json'></script>
 		<script type='text/javascript' src='codeone_ariadna.json'></script>
 		<script type='text/javascript' src='codeone_nomads.json'></script>
@@ -73,7 +73,7 @@
 				return equipNames;
 			}
 
-			const renderUnit = (unitsBody, weapons, skills, extras, equipment, group, groupName) => {
+			const renderUnit = (unitsBody, weapons, skills, extras, equipment, group, groupName, optionId) => {
 				const profile = group.profiles[0];
 				const stats = {
 					s: profile.s,
@@ -154,7 +154,10 @@
 				}
 
 				let optionRows = [];
-				group.options.forEach(option => {
+				group.options.forEach((option, index) => {
+					if (optionId !== undefined && optionId !== index) {
+						return;
+					}
 					let skillsDescription = "";
 
 					if (option.skills.length > 0) {
@@ -192,41 +195,90 @@
 			window.onload = () => {
 				const unitsBody = document.querySelector("#units");
 
-				const renderArmy = (army) => {
+				const iconsBody = document.querySelector(".icons");
+
+				const renderArmy = (army, unitId, optionId, profileId) => {
 					const weapons = toMap(army.filters.weapons);
 					const skills = toMap(army.filters.skills);
 					const extras = toMap(army.filters.extras);
 					const equipment = toMap(army.filters.equip)
 
-					army.units.forEach(unit => {
+					army.units.forEach((unit, index) => {
+						if (unitId !== undefined && (index !== unitId)) {
+							return;
+						}
 						let groupName = undefined;
 						if (unit.profileGroups.length > 1) {
 							groupName = unit.isc;
 						}
 
-						unit.profileGroups.forEach(group => {
-							renderUnit(unitsBody, weapons, skills, extras, equipment, group, groupName);
+						unit.profileGroups.forEach((group, index) => {
+							if (profileId !== undefined && index !== profileId) {
+								return;
+							}
+							renderUnit(unitsBody, weapons, skills, extras, equipment, group, groupName, optionId);
 						});
 					});
 				};
 
-				renderArmy(alephArmy);
+				const team = {
+					armyName: "Ariadna",
+					troopers: [
+						{unitId: 16, optionId: 0, profileId: 0},
+						{unitId: 16, optionId: 0, profileId: 1},
+						{unitId: 17, optionId: 0},
+					]
+				}
 
-				document.querySelector("#army").addEventListener("change", (e) => {
-					while (unitsBody.firstChild) {
-						unitsBody.removeChild(unitsBody.lastChild);
+				const getArmy = (armyName) => {
+					let army = alephArmy;
+					if (armyName === "Ariadna") {
+						army = ariadnaArmy;
 					}
-					const chosen = e.target.value;
-					if (chosen == "ariadna") {
-						renderArmy(ariadnaArmy);
-					} else if (chosen === "aleph") {
-						renderArmy(alephArmy);
-					} else if (chosen === "nomads") {
-						renderArmy(nomadsArmy);
-					} else if (chosen === "haqqislam") {
-						renderArmy(haqqislamArmy);
+					return army;
+				}
+				const renderTrooper = (armyName, params) => {
+					const army = getArmy(armyName);
+					renderArmy(army, params.unitId, params.optionId, params.profileId);
+				}
+
+				const getLetter = (army, params) => {
+					const unitLetter = army.units[params.unitId].isc[0];
+					return unitLetter;
+				}
+				const letterCountMap = {};
+				team.troopers.forEach((trooper, index) => {
+					const army = getArmy(team.armyName);
+					const letter = getLetter(army, trooper).toUpperCase();
+
+					if (letterCountMap[letter] === undefined) {
+						letterCountMap[letter] = 1;
+					} else {
+						letterCountMap[letter] += 1;
 					}
-				});
+
+					const iconLabel = letter + letterCountMap[letter];
+
+					iconsBody.appendChild(element(["div", {"class":"icon", "id": index}, iconLabel]));
+				})
+
+				const trooperClickHandler = (element) => {
+					const target = element.target;
+
+					for (let child of iconsBody.children) {
+						child.classList.remove("selected");
+					}
+					if (target.id !== "") {
+						while (unitsBody.firstChild) {
+							unitsBody.removeChild(unitsBody.lastChild);
+						}
+						target.classList.add("selected");
+						renderTrooper(team.armyName, team.troopers[parseInt(target.id)]);
+					}
+				};
+				document.querySelector(".icons").addEventListener("click", trooperClickHandler);
+
+				trooperClickHandler({target: iconsBody.firstChild});
 			};
 		</script>
 		<style type="text/css">
@@ -304,6 +356,35 @@
 				display: inline-block;
 				vertical-align: top;
 			}
+			.icons {
+				background-color: #eee;
+				width: 1000px;
+				margin: 0 auto;
+				padding: 1px;
+				display: flex;
+				border-radius: 5px;
+			}
+			.icon {
+				width:50px;
+				height:50px;
+				line-height: 50px;
+				margin: 15px;
+				text-align: center;
+				font-size: 35px;
+				border-radius: 5px;
+				background-color: beige;
+				box-sizing: border-box;
+				text-transform: uppercase;
+				border-width: 1px;
+				border-style: solid;
+				cursor: pointer;
+			}
+			.icons > .icon:not(:first-child) {
+				margin-left: 0px;
+			}
+			.selected {
+				background-color: lightblue;
+			}
 		</style>
 	</head>
 	<body>
@@ -338,7 +419,9 @@
 				<option value="haqqislam">Haqqislam</option>
 			</select>
 		</div>
-		<table style="width: 1000px; margin: 0 auto; font-size: 20px; border-collapse: collapse;">
+		<div class="icons"></div>
+
+		<table style="width: 1000px; margin: 0 auto; margin-top: 25px; font-size: 20px; border-collapse: collapse;">
 			<thead>
 				<tr class="header">
 					<td style="width: 34%;">Name</td>
